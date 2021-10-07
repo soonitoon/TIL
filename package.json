@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CMI-OSS/cmi-book.git"
+    "url": "git+https://github.com/soonitoon/TIL.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/CMI-OSS/cmi-book#readme",
+  "homepage": "https://soonitoon.github.io/TIL",
   "dependencies": {
     "gitbook-cli": "github:gengjiawen/gitbook-cli"
   }

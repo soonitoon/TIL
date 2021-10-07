@@ -2,7 +2,7 @@
 
 그날그날 배운 내용을 형식 없이 적어 나갑니다.
 
-[TIL-BOOK 페이지 🚀]()
+[TIL-BOOK 페이지 🚀](https://soonitoon.github.io/TIL/)
 
 ## 로컬 실행
 
