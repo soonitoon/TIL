@@ -1,0 +1,6 @@
+.gitignore
+publish.sh
+package.json
+docs
+_book
+.bookignore

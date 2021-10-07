@@ -1,0 +1,24 @@
+{
+  "name": "til-book",
+  "version": "1.0.0",
+  "description": "TIL",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "gitbook build",
+    "start": "gitbook serve",
+    "publish": "sh ./scripts/publish.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CMI-OSS/cmi-book.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/CMI-OSS/cmi-book#readme",
+  "dependencies": {
+    "gitbook-cli": "github:gengjiawen/gitbook-cli"
+  }
+}
