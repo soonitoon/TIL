@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>메소드 · GitBook</title>
+        <title>로그인 실패 상태코드 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,6 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="static.html" />
-    
-    
-    <link rel="prev" href="accessModifier.html" />
     
 
     </head>
@@ -188,9 +184,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.2.1" data-path="class.html">
+        <li class="chapter " data-level="1.3.2.1" data-path="../java/class.html">
             
-                <a href="class.html">
+                <a href="../java/class.html">
             
                     
                     클래스/객체
@@ -201,9 +197,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2.2" data-path="accessModifier.html">
+        <li class="chapter " data-level="1.3.2.2" data-path="../java/accessModifier.html">
             
-                <a href="accessModifier.html">
+                <a href="../java/accessModifier.html">
             
                     
                     접근 지정자
@@ -214,9 +210,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.2.3" data-path="method.html">
+        <li class="chapter " data-level="1.3.2.3" data-path="../java/method.html">
             
-                <a href="method.html">
+                <a href="../java/method.html">
             
                     
                     메소드
@@ -227,9 +223,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2.4" data-path="static.html">
+        <li class="chapter " data-level="1.3.2.4" data-path="../java/static.html">
             
-                <a href="static.html">
+                <a href="../java/static.html">
             
                     
                     static
@@ -240,9 +236,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2.5" data-path="final.html">
+        <li class="chapter " data-level="1.3.2.5" data-path="../java/final.html">
             
-                <a href="final.html">
+                <a href="../java/final.html">
             
                     
                     final
@@ -413,9 +409,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.7.1" data-path="../http/loginstatus.html">
+        <li class="chapter active" data-level="1.3.7.1" data-path="loginstatus.html">
             
-                <a href="../http/loginstatus.html">
+                <a href="loginstatus.html">
             
                     
                     로그인 실패 상태코드
@@ -530,7 +526,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >메소드</a>
+        <a href="../.." >로그인 실패 상태코드</a>
     </h1>
 </div>
 
@@ -545,49 +541,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#xC778;&#xC790;-&#xC804;&#xB2EC;&#xBC29;&#xC2DD;">&#xC778;&#xC790; &#xC804;&#xB2EC;&#xBC29;&#xC2DD;</h2>
-<ul>
-<li><p>&#xAE30;&#xBCF8; &#xD0C0;&#xC785;&#xC758; &#xACBD;&#xC6B0;:</p>
-<ul>
-<li>&#xAC12;&#xC774; &#xBCF5;&#xC0AC;&#xB418;&#xC5B4; &#xC804;&#xB2EC;.</li>
-<li>&#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xAC00; &#xBCC0;&#xACBD;&#xB418;&#xC5B4;&#xB3C4; &#xC2E4;&#xC778;&#xC790; &#xAC12;&#xC740; &#xBCC0;&#xACBD;&#xB418;&#xC9C0; &#xC54A;&#xC74C;.</li>
-</ul>
-</li>
-</ul>
-<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        <span class="hljs-keyword">int</span> n = <span class="hljs-number">10</span>;
-
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">increase</span><span class="hljs-params">(<span class="hljs-keyword">int</span> num)</span> </span>{
-            num += <span class="hljs-number">1</span>;
-        }
-
-        increase(n);
-        System.out.println(n); <span class="hljs-comment">// 10</span>
-    }
-}
-</code></pre>
-<ul>
-<li>&#xAC1D;&#xCCB4; &#xD639;&#xC740; &#xBC30;&#xC5F4;&#xC758; &#xACBD;&#xC6B0;:<ul>
-<li>&#xAC1D;&#xCCB4;, &#xBC30;&#xC5F4;&#xC758; &#xB808;&#xD37C;&#xB7F0;&#xC2A4; &#xC804;&#xB2EC;.</li>
-<li>&#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xC640; &#xC2E4;&#xC778;&#xC790;&#xAC00; &#xAC12;&#xC744; &#xACF5;&#xC720;&#xD568;.</li>
-</ul>
-</li>
-</ul>
-<h2 id="&#xBA54;&#xC18C;&#xB4DC;-&#xC624;&#xBC84;&#xB85C;&#xB529;">&#xBA54;&#xC18C;&#xB4DC; &#xC624;&#xBC84;&#xB85C;&#xB529;</h2>
-<ul>
-<li>&#xC774;&#xB984;&#xC774; &#xB3D9;&#xC77C;&#xD558;&#xACE0; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xC758; &#xAC1C;&#xC218;&#xB098; &#xD0C0;&#xC785;&#xC774; &#xB2E4;&#xB984;.</li>
-<li>&#xB9AC;&#xD134; &#xD0C0;&#xC785;&#xC740; &#xAD00;&#xACC4; &#xC5C6;&#xC74C;.</li>
-</ul>
-<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Method</span> </span>{
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sum</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>{
-    <span class="hljs-keyword">return</span> i + j;
-  }
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sum</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j, <span class="hljs-keyword">int</span> k)</span> </span>{
-    <span class="hljs-keyword">return</span> i + j + k;
-  }
-}
-</code></pre>
+                                <h2 id="&#xB85C;&#xADF8;&#xC778;-&#xC2E4;&#xD328;-&#xC2DC;-&#xC804;&#xC1A1;&#xD558;&#xB294;-&#xC0C1;&#xD0DC;&#xCF54;&#xB4DC;">&#xB85C;&#xADF8;&#xC778; &#xC2E4;&#xD328; &#xC2DC; &#xC804;&#xC1A1;&#xD558;&#xB294; &#xC0C1;&#xD0DC;&#xCF54;&#xB4DC;</h2>
+<blockquote>
+<p><strong>401 Unauthorized</strong> Similar to 403 Forbidden, but specifically for use when authentication is required and has failed or has not yet been provided. The response must include a WWW-Authenticate header field containing a challenge applicable to the requested resource.</p>
+</blockquote>
+<p>401&#xC744; &#xC4F0;&#xC790;. <code>403</code>&#xACFC;&#xB294; &#xC870;&#xAE08; &#xB2E4;&#xB978; &#xC758;&#xBBF8;&#xB85C;, &#xC778;&#xC99D;&#xC774; &#xC694;&#xAD6C;&#xB418;&#xAC70;&#xB098; &#xC2E4;&#xD328;&#xD588;&#xAC70;&#xB098;, &#xC544;&#xC9C1; &#xC81C;&#xACF5;&#xB418;&#xC9C0; &#xC54A;&#xC740; &#xACBD;&#xC6B0;&#xB97C; &#xBA85;&#xC2DC;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
 
                                 
                                 </section>
@@ -615,14 +573,6 @@
 
             
                 
-                <a href="accessModifier.html" class="navigation navigation-prev " aria-label="Previous page: 접근 지정자">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="static.html" class="navigation navigation-next " aria-label="Next page: static">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -631,7 +581,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"메소드","level":"1.3.2.3","depth":3,"next":{"title":"static","level":"1.3.2.4","depth":3,"path":"pages/java/static.md","ref":"pages/java/static.md","articles":[]},"previous":{"title":"접근 지정자","level":"1.3.2.2","depth":3,"path":"pages/java/accessModifier.md","ref":"pages/java/accessModifier.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/java/method.md","mtime":"2021-10-07T06:57:22.055Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-11T15:24:18.471Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"로그인 실패 상태코드","level":"1.3.7.1","depth":3,"next":{"title":"Git/GitHub","level":"1.3.8","depth":2,"ref":"","articles":[{"title":"GitHub Pages 404","level":"1.3.8.1","depth":3,"path":"pages/gitGithub/pages404.md","ref":"pages/gitGithub/pages404.md","articles":[]}]},"previous":{"title":"HTTP","level":"1.3.7","depth":2,"ref":"","articles":[{"title":"로그인 실패 상태코드","level":"1.3.7.1","depth":3,"path":"pages/http/loginstatus.md","ref":"pages/http/loginstatus.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/http/loginstatus.md","mtime":"2021-10-09T06:42:56.744Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-11T15:24:18.471Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

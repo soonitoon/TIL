@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>메소드 · GitBook</title>
+        <title>Async vs Sync · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,6 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="static.html" />
-    
-    
-    <link rel="prev" href="accessModifier.html" />
     
 
     </head>
@@ -188,9 +184,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.2.1" data-path="class.html">
+        <li class="chapter " data-level="1.3.2.1" data-path="../java/class.html">
             
-                <a href="class.html">
+                <a href="../java/class.html">
             
                     
                     클래스/객체
@@ -201,9 +197,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2.2" data-path="accessModifier.html">
+        <li class="chapter " data-level="1.3.2.2" data-path="../java/accessModifier.html">
             
-                <a href="accessModifier.html">
+                <a href="../java/accessModifier.html">
             
                     
                     접근 지정자
@@ -214,9 +210,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.2.3" data-path="method.html">
+        <li class="chapter " data-level="1.3.2.3" data-path="../java/method.html">
             
-                <a href="method.html">
+                <a href="../java/method.html">
             
                     
                     메소드
@@ -227,9 +223,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2.4" data-path="static.html">
+        <li class="chapter " data-level="1.3.2.4" data-path="../java/static.html">
             
-                <a href="static.html">
+                <a href="../java/static.html">
             
                     
                     static
@@ -240,9 +236,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2.5" data-path="final.html">
+        <li class="chapter " data-level="1.3.2.5" data-path="../java/final.html">
             
-                <a href="final.html">
+                <a href="../java/final.html">
             
                     
                     final
@@ -349,9 +345,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.5.1" data-path="../bcrypt/recommandAsync.html">
+        <li class="chapter active" data-level="1.3.5.1" data-path="recommandAsync.html">
             
-                <a href="../bcrypt/recommandAsync.html">
+                <a href="recommandAsync.html">
             
                     
                     Async vs Sync
@@ -530,7 +526,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >메소드</a>
+        <a href="../.." >Async vs Sync</a>
     </h1>
 </div>
 
@@ -545,48 +541,16 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#xC778;&#xC790;-&#xC804;&#xB2EC;&#xBC29;&#xC2DD;">&#xC778;&#xC790; &#xC804;&#xB2EC;&#xBC29;&#xC2DD;</h2>
-<ul>
-<li><p>&#xAE30;&#xBCF8; &#xD0C0;&#xC785;&#xC758; &#xACBD;&#xC6B0;:</p>
-<ul>
-<li>&#xAC12;&#xC774; &#xBCF5;&#xC0AC;&#xB418;&#xC5B4; &#xC804;&#xB2EC;.</li>
-<li>&#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xAC00; &#xBCC0;&#xACBD;&#xB418;&#xC5B4;&#xB3C4; &#xC2E4;&#xC778;&#xC790; &#xAC12;&#xC740; &#xBCC0;&#xACBD;&#xB418;&#xC9C0; &#xC54A;&#xC74C;.</li>
-</ul>
-</li>
-</ul>
-<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        <span class="hljs-keyword">int</span> n = <span class="hljs-number">10</span>;
+                                <h2 id="hash-vs-hashsync"><code>hash()</code> vs <code>hashSync()</code></h2>
+<blockquote>
+<p>Why is async mode recommended over sync mode?
+If you are using bcrypt on a simple script, using the sync mode is perfectly fine. However, if you are using bcrypt on a server, the async mode is recommended. This is because the hashing done by bcrypt is CPU intensive, so the sync version will block the event loop and prevent your application from servicing any other inbound requests or events. The async version uses a thread pool which does not block the main event loop.</p>
+<p><a href="https://www.npmjs.com/package/bcrypt" target="_blank">NPM &#xBB38;&#xC11C;</a></p>
+</blockquote>
+<p>&#xACF5;&#xC2DD;&#xBB38;&#xC11C;&#xC5D0; &#xB530;&#xB974;&#xBA74;, &#xC11C;&#xBC84;&#xC5D0;&#xC11C; <code>hash()</code>, <code>compare()</code> &#xC0AC;&#xC6A9; &#xC2DC; &#xBE44;&#xB3D9;&#xAE30; &#xCC98;&#xB9AC;&#xB97C; &#xAD8C;&#xC7A5;&#xD568;. &#xB450; &#xC791;&#xC5C5;&#xC740; CPU &#xC790;&#xC6D0;&#xC744; &#xB9CE;&#xC774; &#xC18C;&#xBAA8;&#xD558;&#xBBC0;&#xB85C; <code>hashSync()</code>, <code>compareSync()</code>&#xB97C; &#xD1B5;&#xD574; &#xB3D9;&#xAE30; &#xCC98;&#xB9AC;&#xB85C; &#xAD6C;&#xD604;&#xD558;&#xBA74; &#xC11C;&#xBC84;&#xAC00; &#xB2E4;&#xB978; &#xC774;&#xBCA4;&#xD2B8;&#xC5D0; &#xB300;&#xC751;&#xD558;&#xC9C0; &#xBABB;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC74C;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> hash = hashSync(password, salt); <span class="hljs-comment">// &#x26D4;&#xFE0F; &#xC11C;&#xBC84; &#xC791;&#xC5C5;&#xC5D0;&#xC11C; &#xAD8C;&#xC7A5;&#xD558;&#xC9C0; &#xC54A;&#xC74C;</span>
 
-        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">increase</span><span class="hljs-params">(<span class="hljs-keyword">int</span> num)</span> </span>{
-            num += <span class="hljs-number">1</span>;
-        }
-
-        increase(n);
-        System.out.println(n); <span class="hljs-comment">// 10</span>
-    }
-}
-</code></pre>
-<ul>
-<li>&#xAC1D;&#xCCB4; &#xD639;&#xC740; &#xBC30;&#xC5F4;&#xC758; &#xACBD;&#xC6B0;:<ul>
-<li>&#xAC1D;&#xCCB4;, &#xBC30;&#xC5F4;&#xC758; &#xB808;&#xD37C;&#xB7F0;&#xC2A4; &#xC804;&#xB2EC;.</li>
-<li>&#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xC640; &#xC2E4;&#xC778;&#xC790;&#xAC00; &#xAC12;&#xC744; &#xACF5;&#xC720;&#xD568;.</li>
-</ul>
-</li>
-</ul>
-<h2 id="&#xBA54;&#xC18C;&#xB4DC;-&#xC624;&#xBC84;&#xB85C;&#xB529;">&#xBA54;&#xC18C;&#xB4DC; &#xC624;&#xBC84;&#xB85C;&#xB529;</h2>
-<ul>
-<li>&#xC774;&#xB984;&#xC774; &#xB3D9;&#xC77C;&#xD558;&#xACE0; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xC758; &#xAC1C;&#xC218;&#xB098; &#xD0C0;&#xC785;&#xC774; &#xB2E4;&#xB984;.</li>
-<li>&#xB9AC;&#xD134; &#xD0C0;&#xC785;&#xC740; &#xAD00;&#xACC4; &#xC5C6;&#xC74C;.</li>
-</ul>
-<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Method</span> </span>{
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sum</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>{
-    <span class="hljs-keyword">return</span> i + j;
-  }
-  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sum</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j, <span class="hljs-keyword">int</span> k)</span> </span>{
-    <span class="hljs-keyword">return</span> i + j + k;
-  }
-}
+<span class="hljs-keyword">const</span> hash <span class="hljs-keyword">await</span> hash(password, salt); <span class="hljs-comment">// &#x2705; &#xAD8C;&#xC7A5;</span>
 </code></pre>
 
                                 
@@ -615,14 +579,6 @@
 
             
                 
-                <a href="accessModifier.html" class="navigation navigation-prev " aria-label="Previous page: 접근 지정자">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="static.html" class="navigation navigation-next " aria-label="Next page: static">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -631,7 +587,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"메소드","level":"1.3.2.3","depth":3,"next":{"title":"static","level":"1.3.2.4","depth":3,"path":"pages/java/static.md","ref":"pages/java/static.md","articles":[]},"previous":{"title":"접근 지정자","level":"1.3.2.2","depth":3,"path":"pages/java/accessModifier.md","ref":"pages/java/accessModifier.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/java/method.md","mtime":"2021-10-07T06:57:22.055Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-11T15:24:18.471Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Async vs Sync","level":"1.3.5.1","depth":3,"next":{"title":"Axios","level":"1.3.6","depth":2,"ref":"","articles":[{"title":"쿠키","level":"1.3.6.1","depth":3,"path":"pages/axios/withCookies.md","ref":"pages/axios/withCookies.md","articles":[]}]},"previous":{"title":"bcrypt","level":"1.3.5","depth":2,"ref":"","articles":[{"title":"Async vs Sync","level":"1.3.5.1","depth":3,"path":"pages/bcrypt/recommandAsync.md","ref":"pages/bcrypt/recommandAsync.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/bcrypt/recommandAsync.md","mtime":"2021-10-09T07:04:00.424Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-11T15:24:18.471Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
