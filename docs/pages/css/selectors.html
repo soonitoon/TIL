@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>오브젝트 선언 · GitBook</title>
+        <title>선택자 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -56,8 +56,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
-    
-    <link rel="next" href="method.html" />
     
     
 
@@ -173,9 +171,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.2.1" data-path="../css/selectors.html">
+        <li class="chapter active" data-level="1.3.2.1" data-path="selectors.html">
             
-                <a href="../css/selectors.html">
+                <a href="selectors.html">
             
                     
                     선택자
@@ -205,9 +203,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.3.1" data-path="declareObject.html">
+        <li class="chapter " data-level="1.3.3.1" data-path="../javascript/declareObject.html">
             
-                <a href="declareObject.html">
+                <a href="../javascript/declareObject.html">
             
                     
                     오브젝트 선언
@@ -218,9 +216,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3.2" data-path="method.html">
+        <li class="chapter " data-level="1.3.3.2" data-path="../javascript/method.html">
             
-                <a href="method.html">
+                <a href="../javascript/method.html">
             
                     
                     메소드
@@ -231,9 +229,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3.3" data-path="throwAndError.html">
+        <li class="chapter " data-level="1.3.3.3" data-path="../javascript/throwAndError.html">
             
-                <a href="throwAndError.html">
+                <a href="../javascript/throwAndError.html">
             
                     
                     thorw & Error
@@ -244,9 +242,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3.4" data-path="DOMAPI.html">
+        <li class="chapter " data-level="1.3.3.4" data-path="../javascript/DOMAPI.html">
             
-                <a href="DOMAPI.html">
+                <a href="../javascript/DOMAPI.html">
             
                     
                     DOM API
@@ -708,7 +706,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >오브젝트 선언</a>
+        <a href="../.." >선택자</a>
     </h1>
 </div>
 
@@ -723,16 +721,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#xC624;&#xBE0C;&#xC81D;&#xD2B8;-&#xC120;&#xC5B8;-&#xBC29;&#xBC95;">&#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xC120;&#xC5B8; &#xBC29;&#xBC95;</h2>
-<pre><code class="lang-javascript"><span class="hljs-comment">// &#xC0DD;&#xC131;&#xC790; &#xC0AC;&#xC6A9;</span>
-<span class="hljs-keyword">const</span> newObj = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
-
-<span class="hljs-comment">// create() &#xBA54;&#xC18C;&#xB4DC; &#xC0AC;&#xC6A9;</span>
-<span class="hljs-keyword">const</span> newObj = <span class="hljs-built_in">Object</span>.create({});
-
-<span class="hljs-comment">// &#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xB9AC;&#xD130;&#xB7F4; &#xC0AC;&#xC6A9;</span>
-<span class="hljs-keyword">const</span> newObj = {};
-</code></pre>
+                                <h2 id="nth-child"><code>:nth-child()</code></h2>
+<p><code>:</code> &#xC55E;&#xC758; &#xD0DC;&#xADF8;&#xB97C; &#xB300;&#xC0C1;&#xC73C;&#xB85C; &#xC801;&#xC6A9;&#xB41C;&#xB2E4;. &#xC989;, <code>div:nth-child(2)</code>&#xB77C;&#xACE0; &#xD55C;&#xB2E4;&#xBA74;, &#xAC19;&#xC740; &#xBD80;&#xBAA8; &#xD0DC;&#xADF8; &#xBC11;&#xC5D0; &#xC788;&#xB294; &#xC5EC;&#xB7EC; <code>div</code>&#xC911; &#xB450; &#xBC88;&#xC9F8; <code>div</code>&#xAC00; &#xC804;&#xBD80; &#xC120;&#xD0DD;&#xB41C;&#xB2E4;. &#xB9CC;&#xC57D; &#xD0DC;&#xADF8;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xAC19;&#xC740; &#xBD80;&#xBAA8; &#xD0DC;&#xADF8; &#xB0B4;&#xC5D0; &#xC788;&#xB294; &#xAC19;&#xC740; &#xC885;&#xB958;&#xC758; &#xD0DC;&#xADF8; &#xC911; &#xB450; &#xBC88;&#xC9F8;&#xC5D0; &#xC704;&#xCE58;&#xD558;&#xB294; &#xD0DC;&#xADF8;&#xB4E4;&#xC774; &#xBAA8;&#xB450; &#xC120;&#xD0DD;&#xB41C;&#xB2E4;.</p>
+<p><code>:nth-child()</code> &#xC120;&#xD0DD;&#xC790;&#xB294; <code>odd</code>, <code>even</code> &#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;.</p>
+<ul>
+<li>&#xD640;&#xC218; &#xBC88;&#xC9F8; &#xD0DC;&#xADF8;&#xB9CC; &#xC120;&#xD0DD;: <code>:nth-child(odd)</code></li>
+<li>&#xC9DD;&#xC218; &#xBC88;&#xC9F8; &#xD0DC;&#xADF8;&#xB9CC; &#xC120;&#xD0DD;: <code>:nth-child(even)</code></li>
+</ul>
+<p>&#xD639;&#xC740;, &#xC9C1;&#xC811; &#xC218;&#xC5F4;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4; &#xC804;&#xB2EC;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xB2E4;. <code>An + B</code>&#xC758; &#xD615;&#xD0DC;&#xB85C; &#xC804;&#xB2EC;&#xD55C;&#xB2E4;. <code>n</code>&#xC740; 0&#xBD80;&#xD130; &#xC2DC;&#xC791;&#xD55C;&#xB2E4;.</p>
+<ul>
+<li>&#xD640;&#xC218;&#xB9CC; &#xC120;&#xD0DD;: <code>2n + 1</code></li>
+<li>&#xC9DD;&#xC218;&#xB9CC; &#xC120;&#xD0DD;: <code>2n</code></li>
+<li>5&#xC758; &#xBC30;&#xC218;&#xB9CC; &#xC120;&#xD0DD;: <code>5n</code></li>
+</ul>
 
                                 
                                 </section>
@@ -761,10 +762,6 @@
             
                 
                 
-                <a href="method.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 메소드">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
             
         
     </div>
@@ -772,7 +769,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"오브젝트 선언","level":"1.3.3.1","depth":3,"next":{"title":"메소드","level":"1.3.3.2","depth":3,"path":"pages/javascript/method.md","ref":"pages/javascript/method.md","articles":[]},"previous":{"title":"JavaScript","level":"1.3.3","depth":2,"ref":"","articles":[{"title":"오브젝트 선언","level":"1.3.3.1","depth":3,"path":"pages/javascript/declareObject.md","ref":"pages/javascript/declareObject.md","articles":[]},{"title":"메소드","level":"1.3.3.2","depth":3,"path":"pages/javascript/method.md","ref":"pages/javascript/method.md","articles":[]},{"title":"thorw & Error","level":"1.3.3.3","depth":3,"path":"pages/javascript/throwAndError.md","ref":"pages/javascript/throwAndError.md","articles":[]},{"title":"DOM API","level":"1.3.3.4","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/declareObject.md","mtime":"2021-10-09T06:45:05.525Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-14T04:42:14.449Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"선택자","level":"1.3.2.1","depth":3,"next":{"title":"JavaScript","level":"1.3.3","depth":2,"ref":"","articles":[{"title":"오브젝트 선언","level":"1.3.3.1","depth":3,"path":"pages/javascript/declareObject.md","ref":"pages/javascript/declareObject.md","articles":[]},{"title":"메소드","level":"1.3.3.2","depth":3,"path":"pages/javascript/method.md","ref":"pages/javascript/method.md","articles":[]},{"title":"thorw & Error","level":"1.3.3.3","depth":3,"path":"pages/javascript/throwAndError.md","ref":"pages/javascript/throwAndError.md","articles":[]},{"title":"DOM API","level":"1.3.3.4","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]}]},"previous":{"title":"CSS","level":"1.3.2","depth":2,"ref":"","articles":[{"title":"선택자","level":"1.3.2.1","depth":3,"path":"pages/css/selectors.md","ref":"pages/css/selectors.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/css/selectors.md","mtime":"2021-10-12T16:00:03.328Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-14T04:42:14.449Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

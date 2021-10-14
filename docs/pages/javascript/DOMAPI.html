@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>오브젝트 선언 · GitBook</title>
+        <title>DOM API · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="method.html" />
     
+    <link rel="prev" href="throwAndError.html" />
     
 
     </head>
@@ -205,7 +205,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.3.1" data-path="declareObject.html">
+        <li class="chapter " data-level="1.3.3.1" data-path="declareObject.html">
             
                 <a href="declareObject.html">
             
@@ -244,7 +244,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3.4" data-path="DOMAPI.html">
+        <li class="chapter active" data-level="1.3.3.4" data-path="DOMAPI.html">
             
                 <a href="DOMAPI.html">
             
@@ -708,7 +708,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >오브젝트 선언</a>
+        <a href="../.." >DOM API</a>
     </h1>
 </div>
 
@@ -723,16 +723,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#xC624;&#xBE0C;&#xC81D;&#xD2B8;-&#xC120;&#xC5B8;-&#xBC29;&#xBC95;">&#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xC120;&#xC5B8; &#xBC29;&#xBC95;</h2>
-<pre><code class="lang-javascript"><span class="hljs-comment">// &#xC0DD;&#xC131;&#xC790; &#xC0AC;&#xC6A9;</span>
-<span class="hljs-keyword">const</span> newObj = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
+                                <h2 id="queryselector&#xB85C;-&#xC5EC;&#xB7EC;-&#xD074;&#xB798;&#xC2A4;-&#xAC00;&#xC9C4;-&#xC694;&#xC18C;-&#xC120;&#xD0DD;&#xD558;&#xAE30;"><code>querySelector()</code>&#xB85C; &#xC5EC;&#xB7EC; &#xD074;&#xB798;&#xC2A4; &#xAC00;&#xC9C4; &#xC694;&#xC18C; &#xC120;&#xD0DD;&#xD558;&#xAE30;</h2>
+<p><code>querySelector(&apos;.class1.class2.class3&apos;)</code> &#xAC19;&#xC740; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xD560; &#xC218; &#xC788;&#xC74C;.</p>
+<h2 id="array-vs-nodelist"><code>Array</code> vs <code>NodeList</code></h2>
+<p><code>querySelectorAll()</code> &#xB4F1;&#xC758; javascript DOM API&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC11C; &#xC5EC;&#xB7EC; HTML &#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xB97C; &#xAC00;&#xC838;&#xC624;&#xB294; &#xACBD;&#xC6B0;, &#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xB4E4;&#xC774; &apos;&#xBC30;&#xC5F4;&apos;&#xC5D0; &#xB2F4;&#xACA8;&#xC628;&#xB2E4;. (&#xC624;&#xB298;&#xAE4C;&#xC9C0;&#xC758; &#xB098;&#xB97C; &#xD3EC;&#xD568;&#xD55C;) &#xCD08;&#xBCF4; &#xAC1C;&#xBC1C;&#xC790;&#xC758; &#xACBD;&#xC6B0; &#xC774; &#xBC30;&#xC5F4;&#xC744; javascript&#xC758; Array&#xC640; &#xAC19;&#xB2E4;&#xACE0; &#xBCFC; &#xC218; &#xC788;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xC774; &#xBC30;&#xC5F4;&#xC740; Array &#xAC1D;&#xCCB4;&#xAC00; &#xC544;&#xB2C8;&#xB77C; NodeList &#xAC1D;&#xCCB4;&#xB2E4;.</p>
+<p>&#xC2B5;&#xAD00;&#xC801;&#xC73C;&#xB85C; <code>splice()</code> &#xB4F1;&#xC758; Array &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB824; &#xD558;&#xC9C0;&#xB9CC;, NodeList&#xC5D0;&#xB294; &#xD574;&#xB2F9; &#xBA54;&#xC18C;&#xB4DC;&#xAC00; &#xC5C6;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC624;&#xB958;&#xAC00; &#xBC1C;&#xC0DD;&#xD55C;&#xB2E4;. NodeList &#xAC1D;&#xCCB4;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; &#xBA54;&#xC18C;&#xB4DC;&#xB294; <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList" target="_blank">MDN</a> &#xC124;&#xBA85; &#xCC38;&#xACE0;.</p>
+<p>&#xB9CC;&#xC57D; NodeList&#xAC00; &#xC544;&#xB2C8;&#xB77C; Node &#xAC1D;&#xCCB4;&#xAC00; &#xB2F4;&#xACA8;&#xC788;&#xB294; Array&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; &#xC2F6;&#xB2E4;&#xBA74; NodeList&#xB97C; Array&#xB85C; &#xBCC0;&#xD658;&#xD558;&#xBA74; &#xB41C;&#xB2E4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> nodes = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&quot;.target&quot;</span>);
 
-<span class="hljs-comment">// create() &#xBA54;&#xC18C;&#xB4DC; &#xC0AC;&#xC6A9;</span>
-<span class="hljs-keyword">const</span> newObj = <span class="hljs-built_in">Object</span>.create({});
+<span class="hljs-comment">// &#xBC29;&#xBC95; 1</span>
+<span class="hljs-keyword">const</span> nodeArray = <span class="hljs-built_in">Array</span>.from(nodes);
 
-<span class="hljs-comment">// &#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xB9AC;&#xD130;&#xB7F4; &#xC0AC;&#xC6A9;</span>
-<span class="hljs-keyword">const</span> newObj = {};
+<span class="hljs-comment">// &#xBC29;&#xBC95; 2</span>
+<span class="hljs-keyword">let</span> emptyArray = [];
+nodes.forEach((node) =&gt; emptyArray.push(node));
 </code></pre>
+<h3 id="live-nodelist">Live NodeList</h3>
+<p><code>Node.childNodes</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC11C; &#xB178;&#xB4DC;&#xB4E4;&#xC744; &#xBC1B;&#xC544;&#xC628; &#xACBD;&#xC6B0;, DOM&#xC5D0; &#xAC00;&#xD55C; &#xBCC0;&#xD654;&#xB294; &#xC2E4;&#xC2DC;&#xAC04;&#xC73C;&#xB85C; NodeList&#xC5D0; &#xBC18;&#xC601;&#xB41C;&#xB2E4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> parent = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;.target&quot;</span>);
+<span class="hljs-keyword">let</span> children = parent.childNodes;
+<span class="hljs-built_in">console</span>.log(children.length); <span class="hljs-comment">// &#xB9CC;&#xC57D; 3&#xC774;&#xB77C;&#xBA74;</span>
+parent.appendChild(<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;div&quot;</span>));
+<span class="hljs-built_in">console</span>.log(children.length); <span class="hljs-comment">// &#xC790;&#xB3D9;&#xC73C;&#xB85C; 4&#xB85C; &#xBCC0;&#xD55C;&#xB2E4;.</span>
+</code></pre>
+<h3 id="static-nodelist">Static NodeList</h3>
+<p><code>querySelectorAll()</code> API&#xB97C; &#xC0AC;&#xC6A9;&#xD574; &#xBC1B;&#xC544;&#xC628; NodeList&#xB294; DOM&#xACFC;&#xC758; &#xC5F0;&#xACB0;&#xACE0;&#xB9AC;&#xAC00; &#xB04A;&#xC5B4;&#xC838;&#xC788;&#xB2E4;.</p>
 
                                 
                                 </section>
@@ -760,10 +775,10 @@
 
             
                 
-                
-                <a href="method.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 메소드">
-                    <i class="fa fa-angle-right"></i>
+                <a href="throwAndError.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: thorw & Error">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -772,7 +787,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"오브젝트 선언","level":"1.3.3.1","depth":3,"next":{"title":"메소드","level":"1.3.3.2","depth":3,"path":"pages/javascript/method.md","ref":"pages/javascript/method.md","articles":[]},"previous":{"title":"JavaScript","level":"1.3.3","depth":2,"ref":"","articles":[{"title":"오브젝트 선언","level":"1.3.3.1","depth":3,"path":"pages/javascript/declareObject.md","ref":"pages/javascript/declareObject.md","articles":[]},{"title":"메소드","level":"1.3.3.2","depth":3,"path":"pages/javascript/method.md","ref":"pages/javascript/method.md","articles":[]},{"title":"thorw & Error","level":"1.3.3.3","depth":3,"path":"pages/javascript/throwAndError.md","ref":"pages/javascript/throwAndError.md","articles":[]},{"title":"DOM API","level":"1.3.3.4","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/declareObject.md","mtime":"2021-10-09T06:45:05.525Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-14T04:42:14.449Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"DOM API","level":"1.3.3.4","depth":3,"next":{"title":"Typescript","level":"1.3.4","depth":2,"ref":"","articles":[{"title":"추상 클래스","level":"1.3.4.1","depth":3,"path":"pages/typescript/abstractClass.md","ref":"pages/typescript/abstractClass.md","articles":[]}]},"previous":{"title":"thorw & Error","level":"1.3.3.3","depth":3,"path":"pages/javascript/throwAndError.md","ref":"pages/javascript/throwAndError.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/DOMAPI.md","mtime":"2021-10-12T15:33:09.280Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-14T04:42:14.449Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

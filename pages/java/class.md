@@ -112,3 +112,72 @@ b = a // b가 가리켰던 객체가 가비지가 됨.
 ```
 
 강제 가비지 컬렉션 수행: `System.gc();`
+
+## 상속
+
+서브 클래스에서 슈퍼 클래스의 생성자 하나를 선택할 수 있음(매개변수의 개수에 따라 자동 선택). 아무 생성자도 선택하지 않을 경우, 자동으로 슈퍼 클래스의 기본 생성자가 삽입됨.
+
+업캐스팅 & 다운캐스팅
+
+**업캐스팅**: 서브 클래스 타입의 객체를 슈퍼 클래스 타입으로 바꾸는 것.
+
+```java
+class Student extends Person {
+    ...
+}
+
+Student s = new Student();
+
+Person p = s; // 업캐스팅
+// 이후 서브 클래스 멤버 접근 불가(슈퍼 클래스의 메모리 공간으로 한정되기 때문).
+
+// instanceof 키워드로 업캐스팅된 객체의 원래 타입을 알 수있음.
+
+System.out.println(s instanceof Person) // true
+System.out.println(s instanceof Student) // true
+```
+
+**다운캐스팅**: 업캐스팅된 서브 클래스를 되돌리는 것.
+
+```java
+class Student extends Person {
+    ...
+}
+
+Person p = new Student(); // 업캐스팅
+
+Student p = (Student) s; // 다운캐스팅
+```
+
+## 추상 클래스
+
+추상 클래스: 추상메소드를 하나 이상 가지거나, `abstract` 키워드가 붙은 클래스.
+
+```java
+// Animal.java
+abstract class Animal {
+    abstract void say();
+
+    void eat(String food) {
+        System.out.println("냠냠");
+    }
+}
+
+// Person.java
+class Person extends Animal {
+    void say() {
+        System.out.println("안녕하세요.");
+    }
+}
+
+// Cat.java
+class Cat extends Animal {
+    void say() {
+        System.out.println("야옹.");
+    }
+}
+
+```
+
+- 추상 클래스를 상속받으면 추상 메소드를 모두 구현해야 함. 그렇지 않으면 에러 발생.
+- 추상 메소드를 추상 메소드가 상속받을 수도 있음.
