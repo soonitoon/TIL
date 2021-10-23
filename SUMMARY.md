@@ -13,19 +13,13 @@
 
   - JavaScript
 
-    - [오브젝트 선언](pages/javascript/declareObject.md)
+    - [자바스크립트 일반](pages/javascript/general.md)
     - [메소드](pages/javascript/method.md)
-    - [thorw & Error](pages/javascript/throwAndError.md)
     - [DOM API](pages/javascript/DOMAPI.md)
 
   - Typescript
 
     - [추상 클래스](pages/typescript/abstractClass.md)
-
-  - Express.js
-
-    - [middleware](pages/express/middleware.md)
-    - [response](/pages/express/response.md)
 
   - JWT
 
@@ -43,6 +37,11 @@
 
     - [상태코드](pages/http/statusCode.md)
 
+  - 프레임워크 & 툴
+
+    - [모노레포 관리](pages/frameworks-and-tools/monorepo.md)
+    - [Express.js](pages/frameworks-and-tools/express.md)
+
   - Java ☕️
 
     - [클래스/객체](pages/java/class.md)
@@ -53,6 +52,10 @@
     - [final](pages/java/final.md)
     - [자바 일반](pages/java/generalJava.md)
 
+  - Python3
+
+    - [유용한 함수 & 메소드 정리](pages/python/functionAndMethod.md)
+
   - Git/GitHub
 
     - [GitHub Pages 404](pages/gitGithub/pages404.md)
@@ -60,6 +63,7 @@
   - CS
 
     - [용어정리](pages/cs/term.md)
+    - [쉘 커멘드](pages/cs/shellCommands.md)
 
 - 타임라인
 

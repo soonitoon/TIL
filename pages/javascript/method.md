@@ -37,3 +37,19 @@ console.log(result); // 1
 - 첫 인덱스만 전달하면 첫 인덱스부터 배열의 끝까지 적용
 - 첫 인덱스와 끝 인덱스를 입력하면 해당 범위까지 적용.
 - 첫 인덱스 + 끝 인덱스 + 새로운 아이템을 전부 건네주면 삭제한 자리에 새로운 아이템을 대신 넣는다.
+
+## Number
+
+`Number.prototype.toString(2)`
+
+해당 숫자를 이진수로 변환하기. `toString()` 메소드에 인자로 2 <= n <= 36 범위의 숫자를 넘겨 해당 진수로 변환할 수 있다.
+
+## String
+
+`String.prototype.padStart(len, str)`
+
+해당 문자열의 길이가 `len` 이 될 때까지 문자열의 앞에 `str` 을 추가해나간다.
+
+`String.prototype.padEnd(len, str)`
+
+해당 문자열의 길이가 `len`이 될 때까지 문자열의 뒤에 `str` 을 추가해나간다.

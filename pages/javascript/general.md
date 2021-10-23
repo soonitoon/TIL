@@ -1,3 +1,16 @@
+## 오브젝트 선언 방법
+
+```javascript
+// 생성자 사용
+const newObj = new Object();
+
+// create() 메소드 사용
+const newObj = Object.create({});
+
+// 오브젝트 리터럴 사용
+const newObj = {};
+```
+
 ## `throw`
 
 - 사용자 정의 에러를 발생시킬 수 있음.
@@ -36,4 +49,23 @@ try {
 } catch (err) {
   console.log(err); // Something went wrong!
 }
+```
+
+## 비트 연산자
+
+- `|` : OR
+- `&` : AND
+- `^` : XOR
+
+```javascript
+console.log(1 | 0); // 1
+console.log(1 & 0); // 0
+console.log(1 ^ 0); // 1
+
+console.log(1 | 2); // 3
+
+// 1 = 0001
+// 2 = 0010
+// ----------
+// 3 = 0011
 ```
