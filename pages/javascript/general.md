@@ -69,3 +69,14 @@ console.log(1 | 2); // 3
 // ----------
 // 3 = 0011
 ```
+
+## `toString() & parseInt()`
+
+코딩 테스트에서 정수를 특정 진법으로 변환한 후에 어떤 처리를 하고, 다시 정수로 변환하는 문제에서 유용하게 쓸 수 있는 쌍.
+
+```javascript
+const int = 3;
+let decimal = int.toString(3); // 정수 => 3진법 문자열 변환
+// 어떤 처리
+const result = decimal.parseInt(3); // 3진법 문자열 => 정수 변환
+```
