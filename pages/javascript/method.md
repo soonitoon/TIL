@@ -30,13 +30,25 @@ console.log(result); // 1
 
 ### `Array.prototype.splice()`
 
-`splice(startIndex, endIndex, newItem)`
+`splice(startIndex, deleteCount, newItem)`
 
-배열의 요소 중 시작 인덱스부터 끝 인덱스까지를 삭제한 다음 반환한다. 삭제한 자리에는 새로운 아이템을 넣는다.
+배열의 요소 중 시작 인덱스부터 `deleteCount`만큼을 삭제한 후 반환한다. 삭제한 자리에는 새로운 아이템을 넣는다.
 
 - 첫 인덱스만 전달하면 첫 인덱스부터 배열의 끝까지 적용
 - 첫 인덱스와 끝 인덱스를 입력하면 해당 범위까지 적용.
 - 첫 인덱스 + 끝 인덱스 + 새로운 아이템을 전부 건네주면 삭제한 자리에 새로운 아이템을 대신 넣는다.
+
+자바스크립트에서 특정 인덱스의 값을 제거하고 싶을 때 간단하게 사용할 수 있음.
+
+#### 특정 인덱스의 아이템 삭제하기
+
+```javascript
+let arr = [1, 2, 3];
+arr.splice(2, 1);
+console.log(arr); // [1, 2]
+```
+
+위와 같이 `newItem`을 넘겨주지 않고 `deleteCount`를 1로 설정하면 해당 인덱스의 아이템만 삭제한다.
 
 ### `Array.prototype.sort()`
 
