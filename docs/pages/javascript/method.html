@@ -807,13 +807,26 @@ arr.sort((a, b) =&gt; a - b);
 </ul>
 <p>&#xC2E4;&#xC81C; &#xC815;&#xB82C;&#xC740; &#xBA54;&#xC18C;&#xB4DC; &#xB0B4;&#xBD80;&#xC801;&#xC73C;&#xB85C; &#xC77C;&#xC5B4;&#xB098;&#xBBC0;&#xB85C;, &#xC704; &#xADDC;&#xCE59;&#xC5D0; &#xB530;&#xB77C; &#xBE44;&#xAD50;&#xD568;&#xC218;&#xB9CC; &#xC791;&#xC131;&#xD574;&#xC8FC;&#xBA74; &#xB428;.</p>
 <h2 id="number">Number</h2>
-<p><code>Number.prototype.toString(2)</code></p>
+<h3 id="numberprototypetostring2"><code>Number.prototype.toString(2)</code></h3>
 <p>&#xD574;&#xB2F9; &#xC22B;&#xC790;&#xB97C; &#xC774;&#xC9C4;&#xC218;&#xB85C; &#xBCC0;&#xD658;&#xD558;&#xAE30;. <code>toString()</code> &#xBA54;&#xC18C;&#xB4DC;&#xC5D0; &#xC778;&#xC790;&#xB85C; 2 &lt;= n &lt;= 36 &#xBC94;&#xC704;&#xC758; &#xC22B;&#xC790;&#xB97C; &#xB118;&#xACA8; &#xD574;&#xB2F9; &#xC9C4;&#xC218;&#xB85C; &#xBCC0;&#xD658;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
 <h2 id="string">String</h2>
-<p><code>String.prototype.padStart(len, str)</code></p>
+<h3 id="stringprototypepadstartlen-str"><code>String.prototype.padStart(len, str)</code></h3>
 <p>&#xD574;&#xB2F9; &#xBB38;&#xC790;&#xC5F4;&#xC758; &#xAE38;&#xC774;&#xAC00; <code>len</code> &#xC774; &#xB420; &#xB54C;&#xAE4C;&#xC9C0; &#xBB38;&#xC790;&#xC5F4;&#xC758; &#xC55E;&#xC5D0; <code>str</code> &#xC744; &#xCD94;&#xAC00;&#xD574;&#xB098;&#xAC04;&#xB2E4;.</p>
-<p><code>String.prototype.padEnd(len, str)</code></p>
+<h3 id="stringprototypepadendlen-str"><code>String.prototype.padEnd(len, str)</code></h3>
 <p>&#xD574;&#xB2F9; &#xBB38;&#xC790;&#xC5F4;&#xC758; &#xAE38;&#xC774;&#xAC00; <code>len</code>&#xC774; &#xB420; &#xB54C;&#xAE4C;&#xC9C0; &#xBB38;&#xC790;&#xC5F4;&#xC758; &#xB4A4;&#xC5D0; <code>str</code> &#xC744; &#xCD94;&#xAC00;&#xD574;&#xB098;&#xAC04;&#xB2E4;.</p>
+<h3 id="stringprototypereplaceregex-newstr"><code>String.prototype.replace(regex, newStr)</code></h3>
+<ul>
+<li>&#xBB38;&#xC790;&#xC5F4; &#xC548;&#xC5D0;&#xC11C; <code>regex</code>&#xACFC; &#xB9E4;&#xCE58;&#xB418;&#xB294; &#xCCAB; &#xBC88;&#xC9F8; &#xBD80;&#xBD84;&#xC744; <code>newStr</code>&#xB85C; &#xBCC0;&#xD658;&#xD55C; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xBC18;&#xD658;&#xD568;.</li>
+<li>&#xBAA8;&#xB4E0; &#xB9E4;&#xCE58;&#xB97C; &#xBCC0;&#xD658;&#xD558;&#xACE0; &#xC2F6;&#xB2E4;&#xBA74; &#xC815;&#xADDC;&#xC2DD; &#xB4A4;&#xC5D0; <code>g</code> &#xC635;&#xC158;&#xC744; &#xBD99;&#xC5EC;&#xC8FC;&#xBA74; &#xB428;.</li>
+<li><strong>&#xAE30;&#xC874; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xBCC0;&#xD654;&#xC2DC;&#xD0A4;&#xC9C0; &#xC54A;&#xC74C;.</strong></li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> regex = <span class="hljs-regexp">/hello/g</span>;
+<span class="hljs-keyword">const</span> test = <span class="hljs-string">&quot;hello, I&apos;m Hyuno&quot;</span>;
+<span class="hljs-keyword">const</span> newTest = test.replace(regex, <span class="hljs-string">&quot;goodbye&quot;</span>);
+
+<span class="hljs-built_in">console</span>.log(newTest); <span class="hljs-comment">// goodbye, I&apos;m Hyuno</span>
+<span class="hljs-built_in">console</span>.log(test); <span class="hljs-comment">// hello, I&apos;m Hyuno</span>
+</code></pre>
 
                                 
                                 </section>
@@ -857,7 +870,7 @@ arr.sort((a, b) =&gt; a - b);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"메소드","level":"1.3.3.2","depth":3,"next":{"title":"DOM API","level":"1.3.3.3","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]},"previous":{"title":"자바스크립트 일반","level":"1.3.3.1","depth":3,"path":"pages/javascript/general.md","ref":"pages/javascript/general.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/method.md","mtime":"2021-11-05T10:38:17.540Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-06T15:48:17.332Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"메소드","level":"1.3.3.2","depth":3,"next":{"title":"DOM API","level":"1.3.3.3","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]},"previous":{"title":"자바스크립트 일반","level":"1.3.3.1","depth":3,"path":"pages/javascript/general.md","ref":"pages/javascript/general.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/method.md","mtime":"2021-11-08T04:15:10.998Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-08T04:15:49.513Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

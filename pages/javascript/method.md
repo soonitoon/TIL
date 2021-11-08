@@ -74,16 +74,31 @@ console.log(arr); // [3, 40, 200]
 
 ## Number
 
-`Number.prototype.toString(2)`
+### `Number.prototype.toString(2)`
 
 해당 숫자를 이진수로 변환하기. `toString()` 메소드에 인자로 2 <= n <= 36 범위의 숫자를 넘겨 해당 진수로 변환할 수 있다.
 
 ## String
 
-`String.prototype.padStart(len, str)`
+### `String.prototype.padStart(len, str)`
 
 해당 문자열의 길이가 `len` 이 될 때까지 문자열의 앞에 `str` 을 추가해나간다.
 
-`String.prototype.padEnd(len, str)`
+### `String.prototype.padEnd(len, str)`
 
 해당 문자열의 길이가 `len`이 될 때까지 문자열의 뒤에 `str` 을 추가해나간다.
+
+### `String.prototype.replace(regex, newStr)`
+
+- 문자열 안에서 `regex`과 매치되는 첫 번째 부분을 `newStr`로 변환한 문자열을 반환함.
+- 모든 매치를 변환하고 싶다면 정규식 뒤에 `g` 옵션을 붙여주면 됨.
+- **기존 문자열을 변화시키지 않음.**
+
+```javascript
+const regex = /hello/g;
+const test = "hello, I'm Hyuno";
+const newTest = test.replace(regex, "goodbye");
+
+console.log(newTest); // goodbye, I'm Hyuno
+console.log(test); // hello, I'm Hyuno
+```
