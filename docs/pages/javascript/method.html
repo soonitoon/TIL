@@ -806,6 +806,19 @@ arr.sort((a, b) =&gt; a - b);
 <li>&#xB9CC;&#xC57D; &#xBC18;&#xD658;&#xAC12;&#xC774; &#xC591;&#xC218;&#xB77C;&#xBA74;: a&#xAC00; b&#xBCF4;&#xB2E4; &#xB192;&#xC740; &#xC778;&#xB371;&#xC2A4;&#xAC00; &#xB428;.</li>
 </ul>
 <p>&#xC2E4;&#xC81C; &#xC815;&#xB82C;&#xC740; &#xBA54;&#xC18C;&#xB4DC; &#xB0B4;&#xBD80;&#xC801;&#xC73C;&#xB85C; &#xC77C;&#xC5B4;&#xB098;&#xBBC0;&#xB85C;, &#xC704; &#xADDC;&#xCE59;&#xC5D0; &#xB530;&#xB77C; &#xBE44;&#xAD50;&#xD568;&#xC218;&#xB9CC; &#xC791;&#xC131;&#xD574;&#xC8FC;&#xBA74; &#xB428;.</p>
+<h3 id="arrayprototypeslicestart-end"><code>Array.prototype.slice(start, end)</code></h3>
+<ul>
+<li>&#xD574;&#xB2F9; &#xBC30;&#xC5F4;&#xC5D0;&#xC11C; <code>start</code>&#xBD80;&#xD130; <code>end - 1</code>&#xAE4C;&#xC9C0;&#xC758; &#xC778;&#xB371;&#xC2A4; &#xBC94;&#xC704;&#xB97C; &#xC798;&#xB77C; &#xC0C8;&#xB85C;&#xC6B4; &#xBC30;&#xC5F4;&#xB85C; &#xBC18;&#xD658;&#xD568;.</li>
+<li>&#xD638;&#xCD9C;&#xD55C; &#xBC30;&#xC5F4;&#xC740; &#xAC74;&#xB4DC;&#xB9AC;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</li>
+<li>&#xC74C;&#xC218; &#xC778;&#xB371;&#xC2A4; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;.</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+<span class="hljs-keyword">const</span> subArr = arr.slice(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>);
+<span class="hljs-built_in">console</span>.log(subArr); <span class="hljs-comment">// [1, 2]</span>
+
+<span class="hljs-keyword">const</span> subArr2 = arr.slice(<span class="hljs-number">-2</span>);
+<span class="hljs-built_in">console</span>.log(subArr2); <span class="hljs-comment">// [2, 3]</span>
+</code></pre>
 <h2 id="number">Number</h2>
 <h3 id="numberprototypetostring2"><code>Number.prototype.toString(2)</code></h3>
 <p>&#xD574;&#xB2F9; &#xC22B;&#xC790;&#xB97C; &#xC774;&#xC9C4;&#xC218;&#xB85C; &#xBCC0;&#xD658;&#xD558;&#xAE30;. <code>toString()</code> &#xBA54;&#xC18C;&#xB4DC;&#xC5D0; &#xC778;&#xC790;&#xB85C; 2 &lt;= n &lt;= 36 &#xBC94;&#xC704;&#xC758; &#xC22B;&#xC790;&#xB97C; &#xB118;&#xACA8; &#xD574;&#xB2F9; &#xC9C4;&#xC218;&#xB85C; &#xBCC0;&#xD658;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
@@ -870,7 +883,7 @@ arr.sort((a, b) =&gt; a - b);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"메소드","level":"1.3.3.2","depth":3,"next":{"title":"DOM API","level":"1.3.3.3","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]},"previous":{"title":"자바스크립트 일반","level":"1.3.3.1","depth":3,"path":"pages/javascript/general.md","ref":"pages/javascript/general.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/method.md","mtime":"2021-11-08T04:15:10.998Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-08T04:15:49.513Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"메소드","level":"1.3.3.2","depth":3,"next":{"title":"DOM API","level":"1.3.3.3","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]},"previous":{"title":"자바스크립트 일반","level":"1.3.3.1","depth":3,"path":"pages/javascript/general.md","ref":"pages/javascript/general.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/method.md","mtime":"2021-11-11T01:24:22.430Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-11T01:32:10.165Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

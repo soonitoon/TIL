@@ -72,6 +72,21 @@ console.log(arr); // [3, 40, 200]
 
 실제 정렬은 메소드 내부적으로 일어나므로, 위 규칙에 따라 비교함수만 작성해주면 됨.
 
+### `Array.prototype.slice(start, end)`
+
+- 해당 배열에서 `start`부터 `end - 1`까지의 인덱스 범위를 잘라 새로운 배열로 반환함.
+- 호출한 배열은 건드리지 않는다.
+- 음수 인덱스 사용 가능.
+
+```javascript
+const arr = [1, 2, 3];
+const subArr = arr.slice(0, 2);
+console.log(subArr); // [1, 2]
+
+const subArr2 = arr.slice(-2);
+console.log(subArr2); // [2, 3]
+```
+
 ## Number
 
 ### `Number.prototype.toString(2)`

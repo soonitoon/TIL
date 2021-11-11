@@ -10,6 +10,7 @@
   - CSS
 
     - [선택자](pages/css/selectors.md)
+    - [속성](pages/css/properties.md)
 
   - JavaScript
 
