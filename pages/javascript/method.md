@@ -117,3 +117,15 @@ const newTest = test.replace(regex, "goodbye");
 console.log(newTest); // goodbye, I'm Hyuno
 console.log(test); // hello, I'm Hyuno
 ```
+
+## Math
+
+### `Math.max()`
+
+n 개의 숫자를 전달하면 그 중 최대값을 찾아주는 메소드. 이때 배열이 아니라 **n개의 정수**를 인자로 넘겨야 한다는 것을 잊지말자. 배열이 있을 경우 전개 연산자와 함께 사용할 수 있다.
+
+```javascript
+const arr = [1, 2, 3];
+const max = Math.max(...arr);
+console.log(max); // 3
+```
