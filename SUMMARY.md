@@ -61,10 +61,11 @@
 
     - [GitHub Pages 404](pages/gitGithub/pages404.md)
 
-  - CS
+  - 프로그래밍 모든 것
 
     - [용어정리](pages/cs/term.md)
     - [쉘 커멘드](pages/cs/shellCommands.md)
+    - [편집기](pages/cs/editer.md)
 
 - 타임라인
 
