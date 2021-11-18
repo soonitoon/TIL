@@ -21,6 +21,7 @@
   - Typescript
 
     - [추상 클래스](pages/typescript/abstractClass.md)
+    - [타입스크립트 일반](pages/typescript/general.md)
 
   - JWT
 
@@ -42,6 +43,7 @@
 
     - [모노레포 관리](pages/frameworks-and-tools/monorepo.md)
     - [Express.js](pages/frameworks-and-tools/express.md)
+    - [React.js](pages/frameworks-and-tools/react.md)
 
   - Java ☕️
 
