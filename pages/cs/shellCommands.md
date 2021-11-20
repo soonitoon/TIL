@@ -21,3 +21,21 @@ $ cat hello.txt # hello
 $ sed -i '' 's/hello/goodbye/g' hello.txt
 $ cat hello.txt # goodbye
 ```
+
+## Vim 커멘드
+
+- 아래로 천천히 스크롤: `ctrl + e`
+- 위로 천천히 스크롤: `ctrl + y`
+- 아래로 빨리 스크롤: `ctrl + f`
+- 위로 빨리 스크롤: `ctrl + b`
+- 문장 마지막에 삽입: `shift + a`
+- 원하는 라인으로 점프: `lineNum + gg`
+- Vim에서 멀티라인-커서 사용하기
+  - `ctrl + v`로 비주얼 블럭 모드 진입
+  - 원하는 라인까지 스크롤
+  - `shift + i + 삽입텍스트 + ESC`
+
+## Vim 플러그인 커맨드
+
+- (NERDTree) 트리 전체 새로고침: `shift + r`
+- {NERDTree) 세로 분할 열기: `s`
