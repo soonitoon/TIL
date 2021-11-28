@@ -61,7 +61,7 @@
 
   - Git/GitHub
 
-    - [GitHub Pages 404](pages/gitGithub/pages404.md)
+    - [Git 일반](pages/gitGithub/general.md)
 
   - 프로그래밍 모든 것
 

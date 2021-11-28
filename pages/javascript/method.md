@@ -93,6 +93,16 @@ console.log(subArr2); // [2, 3]
 
 해당 숫자를 이진수로 변환하기. `toString()` 메소드에 인자로 2 <= n <= 36 범위의 숫자를 넘겨 해당 진수로 변환할 수 있다.
 
+### `Number.prototype.toFixed()`
+
+실수를 고정소수점으로 반올림할 수 있음. 인자를 주지 않으면 정수로 반올림함. == 0을 인자로 준 것과 같음. 자연수를 인자로 넘기면 해당 자리의 소수점까지 반올림하여 표시됨.
+
+```javascript
+const float = 1.264;
+console.log(float.toFixed()); // 1
+console.log(float.toFixed(1)); // 1.3
+```
+
 ## String
 
 ### `String.prototype.padStart(len, str)`
@@ -116,6 +126,22 @@ const newTest = test.replace(regex, "goodbye");
 
 console.log(newTest); // goodbye, I'm Hyuno
 console.log(test); // hello, I'm Hyuno
+```
+
+## Object
+
+### `Object.keys()`
+
+인자로 받은 객체의 키들을 문자열로 변환해 배열에 담아 반환함.
+
+```javascript
+const testObj = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+const keyArr = Object.keys(testObj);
+console.log(keyArr); // ['a', 'b', 'c']
 ```
 
 ## Math
