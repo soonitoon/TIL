@@ -87,6 +87,10 @@ const subArr2 = arr.slice(-2);
 console.log(subArr2); // [2, 3]
 ```
 
+### forEach 동작 도중 특정 조건에서 멈추는 방법
+
+**없음**. forEach문은 호출한 배열의 모든 요소를 돌며 콜백 함수를 실행한다. 만약 특정 조건에서 순환을 멈추고 싶다면 `forEach`를 쓰면 안 된다.
+
 ## Number
 
 ### `Number.prototype.toString(2)`
@@ -155,3 +159,6 @@ const arr = [1, 2, 3];
 const max = Math.max(...arr);
 console.log(max); // 3
 ```
+
+## Map
+
