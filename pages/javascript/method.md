@@ -162,3 +162,73 @@ console.log(max); // 3
 
 ## Map
 
+ 키와 값의 쌍을 저장하고, 키를 사용해 값을 불러올 수 있는 자바스크립트 오브젝트. 키-값 쌍을 저장한 순서가 유지된다.
+
+ ### 기본 사용법
+
+ ```javascript
+const map = new Map();
+map.set(1, "apple");
+map.set(2, "orange");
+map.set(3, "mango");
+
+console.log(map.get(1)); // apple
+console.log(map.get(2)); // orange
+console.log(map.get(3)); // mango
+
+console.log(map.size); // 3
+ ```
+
+ ### 메소드
+
+ - `clear()` : 해당 맵의 모든 쌍 삭제.
+ - `delete(key)` : 해당 키와 키의 값 삭제. 삭제 성공시 `true`, 실패시 `false` 반환.
+ - `get(key)` : 해당 키와 연결된 값 반환.
+ - `has(key)` : 키와 연결된 값이 있는지의 여부를 불리언 값으로 반환.
+ - `set(key, value`) : 해당 맵에 키-값 쌍을 새로 저장.
+
+ ### 이터레이션 메소드
+
+ - `keys()` : 해당 맵의 키들이 담긴 이터레이터 객체 반환.
+
+```javascript
+ const map = new Map();
+
+map.set(1, "mango");
+map.set(2, "orange");
+map.set(3, "pineapple");
+
+const iterator = map.keys();
+
+let result = iterator.next();
+
+while (!result.done) {
+	console.log(result.value);
+	result = iterator.next();
+}
+// 1
+// 2
+// 3
+```
+
+- `values()` : 해당 맵의 값들이 담긴 이터레이터 객체 반환.
+
+```javascript
+const map = new Map();
+
+map.set(1, "mango");
+map.set(2, "orange");
+map.set(3, "pineapple");
+
+const iterator = map.values();
+
+let result = iterator.next();
+
+while (!result.done) {
+	console.log(result.value);
+	result = iterator.next();
+}
+// mango
+// orange
+// pineapple
+```

@@ -919,6 +919,70 @@ arr.sort((a, b) =&gt; a - b);
 <span class="hljs-built_in">console</span>.log(max); <span class="hljs-comment">// 3</span>
 </code></pre>
 <h2 id="map">Map</h2>
+<p> &#xD0A4;&#xC640; &#xAC12;&#xC758; &#xC30D;&#xC744; &#xC800;&#xC7A5;&#xD558;&#xACE0;, &#xD0A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD574; &#xAC12;&#xC744; &#xBD88;&#xB7EC;&#xC62C; &#xC218; &#xC788;&#xB294; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC624;&#xBE0C;&#xC81D;&#xD2B8;. &#xD0A4;-&#xAC12; &#xC30D;&#xC744; &#xC800;&#xC7A5;&#xD55C; &#xC21C;&#xC11C;&#xAC00; &#xC720;&#xC9C0;&#xB41C;&#xB2E4;.</p>
+<h3 id="&#xAE30;&#xBCF8;-&#xC0AC;&#xC6A9;&#xBC95;">&#xAE30;&#xBCF8; &#xC0AC;&#xC6A9;&#xBC95;</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> map = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
+map.set(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;apple&quot;</span>);
+map.set(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;orange&quot;</span>);
+map.set(<span class="hljs-number">3</span>, <span class="hljs-string">&quot;mango&quot;</span>);
+
+<span class="hljs-built_in">console</span>.log(map.get(<span class="hljs-number">1</span>)); <span class="hljs-comment">// apple</span>
+<span class="hljs-built_in">console</span>.log(map.get(<span class="hljs-number">2</span>)); <span class="hljs-comment">// orange</span>
+<span class="hljs-built_in">console</span>.log(map.get(<span class="hljs-number">3</span>)); <span class="hljs-comment">// mango</span>
+
+<span class="hljs-built_in">console</span>.log(map.size); <span class="hljs-comment">// 3</span>
+</code></pre>
+<h3 id="&#xBA54;&#xC18C;&#xB4DC;">&#xBA54;&#xC18C;&#xB4DC;</h3>
+<ul>
+<li><code>clear()</code> : &#xD574;&#xB2F9; &#xB9F5;&#xC758; &#xBAA8;&#xB4E0; &#xC30D; &#xC0AD;&#xC81C;.</li>
+<li><code>delete(key)</code> : &#xD574;&#xB2F9; &#xD0A4;&#xC640; &#xD0A4;&#xC758; &#xAC12; &#xC0AD;&#xC81C;. &#xC0AD;&#xC81C; &#xC131;&#xACF5;&#xC2DC; <code>true</code>, &#xC2E4;&#xD328;&#xC2DC; <code>false</code> &#xBC18;&#xD658;.</li>
+<li><code>get(key)</code> : &#xD574;&#xB2F9; &#xD0A4;&#xC640; &#xC5F0;&#xACB0;&#xB41C; &#xAC12; &#xBC18;&#xD658;.</li>
+<li><code>has(key)</code> : &#xD0A4;&#xC640; &#xC5F0;&#xACB0;&#xB41C; &#xAC12;&#xC774; &#xC788;&#xB294;&#xC9C0;&#xC758; &#xC5EC;&#xBD80;&#xB97C; &#xBD88;&#xB9AC;&#xC5B8; &#xAC12;&#xC73C;&#xB85C; &#xBC18;&#xD658;.</li>
+<li><p><code>set(key, value</code>) : &#xD574;&#xB2F9; &#xB9F5;&#xC5D0; &#xD0A4;-&#xAC12; &#xC30D;&#xC744; &#xC0C8;&#xB85C; &#xC800;&#xC7A5;.</p>
+<h3 id="&#xC774;&#xD130;&#xB808;&#xC774;&#xC158;-&#xBA54;&#xC18C;&#xB4DC;">&#xC774;&#xD130;&#xB808;&#xC774;&#xC158; &#xBA54;&#xC18C;&#xB4DC;</h3>
+</li>
+<li><p><code>keys()</code> : &#xD574;&#xB2F9; &#xB9F5;&#xC758; &#xD0A4;&#xB4E4;&#xC774; &#xB2F4;&#xAE34; &#xC774;&#xD130;&#xB808;&#xC774;&#xD130; &#xAC1D;&#xCCB4; &#xBC18;&#xD658;.</p>
+</li>
+</ul>
+<pre><code class="lang-javascript"> <span class="hljs-keyword">const</span> map = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
+
+map.set(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;mango&quot;</span>);
+map.set(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;orange&quot;</span>);
+map.set(<span class="hljs-number">3</span>, <span class="hljs-string">&quot;pineapple&quot;</span>);
+
+<span class="hljs-keyword">const</span> iterator = map.keys();
+
+<span class="hljs-keyword">let</span> result = iterator.next();
+
+<span class="hljs-keyword">while</span> (!result.done) {
+    <span class="hljs-built_in">console</span>.log(result.value);
+    result = iterator.next();
+}
+<span class="hljs-comment">// 1</span>
+<span class="hljs-comment">// 2</span>
+<span class="hljs-comment">// 3</span>
+</code></pre>
+<ul>
+<li><code>values()</code> : &#xD574;&#xB2F9; &#xB9F5;&#xC758; &#xAC12;&#xB4E4;&#xC774; &#xB2F4;&#xAE34; &#xC774;&#xD130;&#xB808;&#xC774;&#xD130; &#xAC1D;&#xCCB4; &#xBC18;&#xD658;.</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> map = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
+
+map.set(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;mango&quot;</span>);
+map.set(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;orange&quot;</span>);
+map.set(<span class="hljs-number">3</span>, <span class="hljs-string">&quot;pineapple&quot;</span>);
+
+<span class="hljs-keyword">const</span> iterator = map.values();
+
+<span class="hljs-keyword">let</span> result = iterator.next();
+
+<span class="hljs-keyword">while</span> (!result.done) {
+    <span class="hljs-built_in">console</span>.log(result.value);
+    result = iterator.next();
+}
+<span class="hljs-comment">// mango</span>
+<span class="hljs-comment">// orange</span>
+<span class="hljs-comment">// pineapple</span>
+</code></pre>
 
                                 
                                 </section>
@@ -962,7 +1026,7 @@ arr.sort((a, b) =&gt; a - b);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"메소드","level":"1.3.3.2","depth":3,"next":{"title":"DOM API","level":"1.3.3.3","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]},"previous":{"title":"자바스크립트 일반","level":"1.3.3.1","depth":3,"path":"pages/javascript/general.md","ref":"pages/javascript/general.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/method.md","mtime":"2021-12-04T16:11:56.481Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T13:59:11.255Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"메소드","level":"1.3.3.2","depth":3,"next":{"title":"DOM API","level":"1.3.3.3","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]},"previous":{"title":"자바스크립트 일반","level":"1.3.3.1","depth":3,"path":"pages/javascript/general.md","ref":"pages/javascript/general.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/method.md","mtime":"2021-12-26T12:41:18.852Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-26T12:41:34.989Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
