@@ -72,3 +72,4 @@
 - 타임라인
 
   - [2021](pages/timeline/2021.md)
+  - [2022](pages/timeline/2022.md)

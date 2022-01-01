@@ -2,7 +2,7 @@
 
 모노레포 관리 툴.
 
-`npx lerna init`으로 lerna 초기화(`lerna.json` 파일 생성.).
+`npx lerna init`으로 lerna 초기화(`lerna.json` 파일 및 프로젝트 기본 구조 생성.).
 
 ### `lerna.json` 옵션
 
@@ -51,21 +51,32 @@
 
 ## yarn
 
-`$ yarn add -D package-name`
-
-`package-name`을 데브 디펜던시로 설치.
+`$ yarn add -D package-name` : `package-name`을 데브 디펜던시로 설치.
 
 `$ yarn add -W package-name`
 
 == `$yarn add --ignore-workspace-root-check package-name`
 
-패키지를 설치할 때 지정한 워크스페이스 경로를 무시하고 패키지 설치(`lerna` 등의 도구를 프로젝트 최상단에 설치할 경우 사용)
+패키지를 설치할 때 지정한 워크스페이스 경로를 무시하고 패키지 설치(devDependency를 프로젝트 최상단에 설치할 경우 사용)
+
+`$ yarn create <starter-kit-package> [<args>]`
+
+`create-react-app` 같은 스타터 킷을 편리하게 사용하는 yarn 명령어. 해당 모듈을 글로벌로 설치하고 전달받은 인자로 스타터 킷을 실행한다.
+
+위의 명령어는 아래 두 명령어와 동일한 기능을 한다. [yarn 공식문서](https://classic.yarnpkg.com/en/docs/cli/create/)
+
+```shell
+$ yarn create create-react-app samle-app
+
+$ yarn global add create-react-app
+$ create-react-app my-app
+```
 
 ## yarn workspace
 
 `$ yarn init -y`로 `package.json` 생성.
 
-프로젝트 루트 경로에 있는 `package.json`
+프로젝트 루트 경로에 있는 `package.json`를 다음과 같이 설정한다.
 
 ```json
 {
@@ -77,9 +88,9 @@
 }
 ```
 
-이렇게 하면 프로젝트 폴더 내의 `packages` 라는 폴더에 여러 모듈을 모노레포로 관리할 수 있음.
+이렇게 하면 프로젝트 폴더 내의 `packages` 라는 폴더에 여러 모듈 디렉토리를 만들어 모노레포로 관리할 수 있디.
 
-NPM 배포를 원하지 않는다면 `private` 를 `true`로 설정.
+NPM 배포를 원하지 않는다면 `private` 를 `true`로 설정해야 함.
 
 ```
 sooni/
@@ -113,18 +124,20 @@ sooni/
 
 ```
 
-이제 `$ yarn install` 명령을 실행하면 다른 모듈을 `import` 할 때 상대경로를 쓰지 않고 다른 경로에 있는 모듈을 마치 npm 모듈처럼 사용이 가능함.
+이제 `$ yarn install` 명령을 실행하면 다른 모듈을 마치 NPM 모듈처럼 import할 수 있음.
 
 사용하고자 하는 모듈을 `dependencies` 안에 추가하고 `$ yarn install` 을 실행하면 프로젝트 루트 디렉토리의 `node_modules` 폴더에 링크를 생성.
 
 이후 `import module_name from "@sooni/common";` 과 같이 사용가능.
 
-이제 각 모듈 내부에서 의존성 모듈을 설치하면 전부 루트 디렉토리의 `node_modules` 폴더 안에 설치됨.
+이제 각 모듈 내부에서 의존성 모듈을 설치하면 전부 루트 디렉토리의 `node_modules` 폴더 안에 설치됨(호이스팅).
 
 동일한 패키지를 여러 모듈에서 사용하는 경우에 관리가 편함.
 
-기존에 설치한 모듈을 다른 버전으로 설치하면 그 버전이 루트 경로에 설치되고, 기존 버전은 기존 모듈을 사용했던 디렉토리 내부의 `node_modules` 폴더 안에 자동으로 설치됨.
+### 헷갈리는 경우
 
-만약 같은 모듈을 다른 버전으로 각각의 모듈 디렉토리에서 사용하다가 버전을 통일하면 어떻게 될까?
+기존에 설치한 모듈을 다른 버전으로 설치하면 그 버전이 루트 경로에 설치되고, 기존 버전은 기존 모듈을 사용했던 디렉토리 내부의 `node_modules` 폴더 안으로 이동됨.
+
+> 만약 같은 모듈을 다른 버전으로 각각의 모듈 디렉토리에서 사용하다가 버전을 통일하면 어떻게 될까?
 
 => yarn에서 자동으로 통일된 버전을 루트 `node_modules` 에 설치하고, 각 모듈 디렉토리 안에 존재했던 다른 버전들을 모두 삭제함.

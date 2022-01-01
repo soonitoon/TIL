@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>인터페이스 · GitBook</title>
+        <title>2022 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="accessModifier.html" />
     
-    
-    <link rel="prev" href="class.html" />
+    <link rel="prev" href="2021.html" />
     
 
     </head>
@@ -509,9 +507,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.10.1" data-path="class.html">
+        <li class="chapter " data-level="1.3.10.1" data-path="../java/class.html">
             
-                <a href="class.html">
+                <a href="../java/class.html">
             
                     
                     클래스/객체
@@ -522,9 +520,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.10.2" data-path="interface.html">
+        <li class="chapter " data-level="1.3.10.2" data-path="../java/interface.html">
             
-                <a href="interface.html">
+                <a href="../java/interface.html">
             
                     
                     인터페이스
@@ -535,9 +533,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.10.3" data-path="accessModifier.html">
+        <li class="chapter " data-level="1.3.10.3" data-path="../java/accessModifier.html">
             
-                <a href="accessModifier.html">
+                <a href="../java/accessModifier.html">
             
                     
                     접근 지정자
@@ -548,9 +546,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.10.4" data-path="method.html">
+        <li class="chapter " data-level="1.3.10.4" data-path="../java/method.html">
             
-                <a href="method.html">
+                <a href="../java/method.html">
             
                     
                     메소드
@@ -561,9 +559,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.10.5" data-path="static.html">
+        <li class="chapter " data-level="1.3.10.5" data-path="../java/static.html">
             
-                <a href="static.html">
+                <a href="../java/static.html">
             
                     
                     static
@@ -574,9 +572,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.10.6" data-path="final.html">
+        <li class="chapter " data-level="1.3.10.6" data-path="../java/final.html">
             
-                <a href="final.html">
+                <a href="../java/final.html">
             
                     
                     final
@@ -587,9 +585,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.10.7" data-path="generalJava.html">
+        <li class="chapter " data-level="1.3.10.7" data-path="../java/generalJava.html">
             
-                <a href="generalJava.html">
+                <a href="../java/generalJava.html">
             
                     
                     자바 일반
@@ -746,9 +744,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../timeline/2021.html">
+        <li class="chapter " data-level="1.4.1" data-path="2021.html">
             
-                <a href="../timeline/2021.html">
+                <a href="2021.html">
             
                     
                     2021
@@ -759,9 +757,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../timeline/2022.html">
+        <li class="chapter active" data-level="1.4.2" data-path="2022.html">
             
-                <a href="../timeline/2022.html">
+                <a href="2022.html">
             
                     
                     2022
@@ -807,7 +805,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >인터페이스</a>
+        <a href="../.." >2022</a>
     </h1>
 </div>
 
@@ -822,35 +820,17 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;">&#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;</h2>
-<pre><code class="lang-java"><span class="hljs-comment">// Person.java</span>
-<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Person</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sayHello</span><span class="hljs-params">(String name)</span></span>;
+                                <h1 id="2022&#xB144;">2022&#xB144;</h1>
+<hr>
 
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">returnAge</span><span class="hljs-params">(<span class="hljs-keyword">byte</span> age)</span></span>;
-}
-
-<span class="hljs-comment">// Choi.java</span>
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Choi</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Person</span> </span>{
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sayHello</span><span class="hljs-params">(String name)</span> </span>{
-        System.out.println(<span class="hljs-string">&quot;Hello,&quot;</span> + name);
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">returnAge</span><span class="hljs-params">(<span class="hljs-keyword">byte</span> age)</span> </span>{
-        System.out.println(<span class="hljs-string">&quot;I&apos;m&quot;</span> + age + <span class="hljs-string">&quot;years old.&quot;</span>);
-    }
-}
-</code></pre>
+<h2 id="1&#xC6D4;">1&#xC6D4;</h2>
 <ul>
-<li>&#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xAD6C;&#xD604;&#xD560; &#xB54C;&#xB294; <code>implements</code> &#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD568;.</li>
-<li>&#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xC548;&#xC5D0;&#xB294; &#xC815;&#xC758;&#xD560; &#xC218; &#xC788;&#xB294; &#xBA54;&#xC18C;&#xB4DC;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.<ul>
-<li>&#xCD94;&#xC0C1; &#xBA54;&#xC18C;&#xB4DC;: &#xBC14;&#xB514;&#xB97C; &#xAC00;&#xC9C8; &#xC218; &#xC5C6;&#xACE0;, &#xAD6C;&#xD604;&#xD558;&#xB294; &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xBC18;&#xB4DC;&#xC2DC; &#xC644;&#xC131;&#xD574;&#xC57C; &#xD568;.</li>
-<li>&#xB514;&#xD3F4;&#xD2B8; &#xBA54;&#xC18C;&#xB4DC;: &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xC5D0;&#xC11C; &#xC815;&#xC758;&#xD558;&#xB418;, &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xC624;&#xBC84;&#xB77C;&#xC774;&#xB529; &#xD560; &#xC218; &#xC788;&#xC74C;.</li>
-<li>static &#xBA54;&#xC18C;&#xB4DC;: &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xC5D0;&#xC11C; &#xC644;&#xC131;&#xD558;&#xACE0;, &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xC624;&#xBC84;&#xB77C;&#xC774;&#xB529; &#xD560; &#xC218; &#xC5C6;&#xC74C;.</li>
+<li><p>1&#xC77C;</p>
+<ul>
+<li>&#xBAA8;&#xB178;&#xB808;&#xD3EC; &#xAD00;&#xB9AC; &#xD234;(lerna, yarn) &#xACF5;&#xBD80;.</li>
+<li>TIL &#xC815;&#xB9AC;</li>
 </ul>
 </li>
-<li>&#xD544;&#xB4DC;&#xB294; <code>final public static</code>&#xB9CC; &#xC815;&#xC758;&#xD560; &#xC218; &#xC788;&#xC74C;(&#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xC0DD;&#xB7B5;&#xD574;&#xB3C4; &#xB428;). == &#xC0C1;&#xC218;&#xB9CC; &#xC815;&#xC758; &#xAC00;&#xB2A5;.</li>
-<li>&#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xAC00; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xC0C1;&#xC18D;&#xBC1B;&#xC744; &#xC218; &#xC788;&#xC74C;.</li>
 </ul>
 
                                 
@@ -879,14 +859,10 @@
 
             
                 
-                <a href="class.html" class="navigation navigation-prev " aria-label="Previous page: 클래스/객체">
+                <a href="2021.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 2021">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="accessModifier.html" class="navigation navigation-next " aria-label="Next page: 접근 지정자">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -895,7 +871,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"인터페이스","level":"1.3.10.2","depth":3,"next":{"title":"접근 지정자","level":"1.3.10.3","depth":3,"path":"pages/java/accessModifier.md","ref":"pages/java/accessModifier.md","articles":[]},"previous":{"title":"클래스/객체","level":"1.3.10.1","depth":3,"path":"pages/java/class.md","ref":"pages/java/class.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/java/interface.md","mtime":"2021-10-14T04:45:08.548Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-01T15:08:12.796Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2022","level":"1.4.2","depth":2,"previous":{"title":"2021","level":"1.4.1","depth":2,"path":"pages/timeline/2021.md","ref":"pages/timeline/2021.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/timeline/2022.md","mtime":"2022-01-01T14:59:11.004Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-01T15:08:12.796Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
