@@ -148,6 +148,20 @@ const keyArr = Object.keys(testObj);
 console.log(keyArr); // ['a', 'b', 'c']
 ```
 
+### `Object.entries()`
+
+인자로 받은 객체의 속성과 값이 담긴 배열을 배열에 담아 반환. 이때 속성명은 문자열로 변환됨.
+
+```javascript
+const obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+const result = Object.entries(obj);
+console.log(result); // [['a', 1], ['b', 2], ['c', 3]]
+```
+
 ## Math
 
 ### `Math.max()`
@@ -162,11 +176,11 @@ console.log(max); // 3
 
 ## Map
 
- 키와 값의 쌍을 저장하고, 키를 사용해 값을 불러올 수 있는 자바스크립트 오브젝트. 키-값 쌍을 저장한 순서가 유지된다.
+키와 값의 쌍을 저장하고, 키를 사용해 값을 불러올 수 있는 자바스크립트 오브젝트. 키-값 쌍을 저장한 순서가 유지된다.
 
- ### 기본 사용법
+### 기본 사용법
 
- ```javascript
+```javascript
 const map = new Map();
 map.set(1, "apple");
 map.set(2, "orange");
@@ -177,22 +191,22 @@ console.log(map.get(2)); // orange
 console.log(map.get(3)); // mango
 
 console.log(map.size); // 3
- ```
+```
 
- ### 메소드
+### 메소드
 
- - `clear()` : 해당 맵의 모든 쌍 삭제.
- - `delete(key)` : 해당 키와 키의 값 삭제. 삭제 성공시 `true`, 실패시 `false` 반환.
- - `get(key)` : 해당 키와 연결된 값 반환.
- - `has(key)` : 키와 연결된 값이 있는지의 여부를 불리언 값으로 반환.
- - `set(key, value`) : 해당 맵에 키-값 쌍을 새로 저장.
+- `clear()` : 해당 맵의 모든 쌍 삭제.
+- `delete(key)` : 해당 키와 키의 값 삭제. 삭제 성공시 `true`, 실패시 `false` 반환.
+- `get(key)` : 해당 키와 연결된 값 반환.
+- `has(key)` : 키와 연결된 값이 있는지의 여부를 불리언 값으로 반환.
+- `set(key, value`) : 해당 맵에 키-값 쌍을 새로 저장.
 
- ### 이터레이션 메소드
+### 이터레이션 메소드
 
- - `keys()` : 해당 맵의 키들이 담긴 이터레이터 객체 반환.
+- `keys()` : 해당 맵의 키들이 담긴 이터레이터 객체 반환.
 
 ```javascript
- const map = new Map();
+const map = new Map();
 
 map.set(1, "mango");
 map.set(2, "orange");
@@ -203,8 +217,8 @@ const iterator = map.keys();
 let result = iterator.next();
 
 while (!result.done) {
-	console.log(result.value);
-	result = iterator.next();
+  console.log(result.value);
+  result = iterator.next();
 }
 // 1
 // 2
@@ -225,10 +239,28 @@ const iterator = map.values();
 let result = iterator.next();
 
 while (!result.done) {
-	console.log(result.value);
-	result = iterator.next();
+  console.log(result.value);
+  result = iterator.next();
 }
 // mango
 // orange
 // pineapple
+```
+
+## RegExp
+
+### 선언법
+
+```javascript
+const regex1 = /abc/g;
+// literal notation.
+// 슬래시로 패턴을 감싸고, 뒤에 옵션을 붙인다.
+
+const regex2 = new RegExp("abc", "g");
+// RegExp() 생성자 사용.
+// 패턴과 옵션을 문자열로 인자로 넘긴다.
+
+const regex3 = new RegExp(/abc/, "g");
+// RexExp() 생성자 사용법 2.
+// 패턴을 literal notation으로, 옵션을 문자열로 넘긴다.
 ```

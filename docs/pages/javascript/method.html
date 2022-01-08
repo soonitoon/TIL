@@ -924,6 +924,16 @@ arr.sort((a, b) =&gt; a - b);
 <span class="hljs-keyword">const</span> keyArr = <span class="hljs-built_in">Object</span>.keys(testObj);
 <span class="hljs-built_in">console</span>.log(keyArr); <span class="hljs-comment">// [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</span>
 </code></pre>
+<h3 id="objectentries"><code>Object.entries()</code></h3>
+<p>&#xC778;&#xC790;&#xB85C; &#xBC1B;&#xC740; &#xAC1D;&#xCCB4;&#xC758; &#xC18D;&#xC131;&#xACFC; &#xAC12;&#xC774; &#xB2F4;&#xAE34; &#xBC30;&#xC5F4;&#xC744; &#xBC30;&#xC5F4;&#xC5D0; &#xB2F4;&#xC544; &#xBC18;&#xD658;. &#xC774;&#xB54C; &#xC18D;&#xC131;&#xBA85;&#xC740; &#xBB38;&#xC790;&#xC5F4;&#xB85C; &#xBCC0;&#xD658;&#xB428;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> obj = {
+  a: <span class="hljs-number">1</span>,
+  b: <span class="hljs-number">2</span>,
+  c: <span class="hljs-number">3</span>,
+};
+<span class="hljs-keyword">const</span> result = <span class="hljs-built_in">Object</span>.entries(obj);
+<span class="hljs-built_in">console</span>.log(result); <span class="hljs-comment">// [[&apos;a&apos;, 1], [&apos;b&apos;, 2], [&apos;c&apos;, 3]]</span>
+</code></pre>
 <h2 id="math">Math</h2>
 <h3 id="mathmax"><code>Math.max()</code></h3>
 <p>n &#xAC1C;&#xC758; &#xC22B;&#xC790;&#xB97C; &#xC804;&#xB2EC;&#xD558;&#xBA74; &#xADF8; &#xC911; &#xCD5C;&#xB300;&#xAC12;&#xC744; &#xCC3E;&#xC544;&#xC8FC;&#xB294; &#xBA54;&#xC18C;&#xB4DC;. &#xC774;&#xB54C; &#xBC30;&#xC5F4;&#xC774; &#xC544;&#xB2C8;&#xB77C; <strong>n&#xAC1C;&#xC758; &#xC815;&#xC218;</strong>&#xB97C; &#xC778;&#xC790;&#xB85C; &#xB118;&#xACA8;&#xC57C; &#xD55C;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xC78A;&#xC9C0;&#xB9D0;&#xC790;. &#xBC30;&#xC5F4;&#xC774; &#xC788;&#xC744; &#xACBD;&#xC6B0; &#xC804;&#xAC1C; &#xC5F0;&#xC0B0;&#xC790;&#xC640; &#xD568;&#xAED8; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
@@ -932,7 +942,7 @@ arr.sort((a, b) =&gt; a - b);
 <span class="hljs-built_in">console</span>.log(max); <span class="hljs-comment">// 3</span>
 </code></pre>
 <h2 id="map">Map</h2>
-<p> &#xD0A4;&#xC640; &#xAC12;&#xC758; &#xC30D;&#xC744; &#xC800;&#xC7A5;&#xD558;&#xACE0;, &#xD0A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD574; &#xAC12;&#xC744; &#xBD88;&#xB7EC;&#xC62C; &#xC218; &#xC788;&#xB294; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC624;&#xBE0C;&#xC81D;&#xD2B8;. &#xD0A4;-&#xAC12; &#xC30D;&#xC744; &#xC800;&#xC7A5;&#xD55C; &#xC21C;&#xC11C;&#xAC00; &#xC720;&#xC9C0;&#xB41C;&#xB2E4;.</p>
+<p>&#xD0A4;&#xC640; &#xAC12;&#xC758; &#xC30D;&#xC744; &#xC800;&#xC7A5;&#xD558;&#xACE0;, &#xD0A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD574; &#xAC12;&#xC744; &#xBD88;&#xB7EC;&#xC62C; &#xC218; &#xC788;&#xB294; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC624;&#xBE0C;&#xC81D;&#xD2B8;. &#xD0A4;-&#xAC12; &#xC30D;&#xC744; &#xC800;&#xC7A5;&#xD55C; &#xC21C;&#xC11C;&#xAC00; &#xC720;&#xC9C0;&#xB41C;&#xB2E4;.</p>
 <h3 id="&#xAE30;&#xBCF8;-&#xC0AC;&#xC6A9;&#xBC95;">&#xAE30;&#xBCF8; &#xC0AC;&#xC6A9;&#xBC95;</h3>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> map = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
 map.set(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;apple&quot;</span>);
@@ -951,13 +961,13 @@ map.set(<span class="hljs-number">3</span>, <span class="hljs-string">&quot;mang
 <li><code>delete(key)</code> : &#xD574;&#xB2F9; &#xD0A4;&#xC640; &#xD0A4;&#xC758; &#xAC12; &#xC0AD;&#xC81C;. &#xC0AD;&#xC81C; &#xC131;&#xACF5;&#xC2DC; <code>true</code>, &#xC2E4;&#xD328;&#xC2DC; <code>false</code> &#xBC18;&#xD658;.</li>
 <li><code>get(key)</code> : &#xD574;&#xB2F9; &#xD0A4;&#xC640; &#xC5F0;&#xACB0;&#xB41C; &#xAC12; &#xBC18;&#xD658;.</li>
 <li><code>has(key)</code> : &#xD0A4;&#xC640; &#xC5F0;&#xACB0;&#xB41C; &#xAC12;&#xC774; &#xC788;&#xB294;&#xC9C0;&#xC758; &#xC5EC;&#xBD80;&#xB97C; &#xBD88;&#xB9AC;&#xC5B8; &#xAC12;&#xC73C;&#xB85C; &#xBC18;&#xD658;.</li>
-<li><p><code>set(key, value</code>) : &#xD574;&#xB2F9; &#xB9F5;&#xC5D0; &#xD0A4;-&#xAC12; &#xC30D;&#xC744; &#xC0C8;&#xB85C; &#xC800;&#xC7A5;.</p>
-<h3 id="&#xC774;&#xD130;&#xB808;&#xC774;&#xC158;-&#xBA54;&#xC18C;&#xB4DC;">&#xC774;&#xD130;&#xB808;&#xC774;&#xC158; &#xBA54;&#xC18C;&#xB4DC;</h3>
-</li>
-<li><p><code>keys()</code> : &#xD574;&#xB2F9; &#xB9F5;&#xC758; &#xD0A4;&#xB4E4;&#xC774; &#xB2F4;&#xAE34; &#xC774;&#xD130;&#xB808;&#xC774;&#xD130; &#xAC1D;&#xCCB4; &#xBC18;&#xD658;.</p>
-</li>
+<li><code>set(key, value</code>) : &#xD574;&#xB2F9; &#xB9F5;&#xC5D0; &#xD0A4;-&#xAC12; &#xC30D;&#xC744; &#xC0C8;&#xB85C; &#xC800;&#xC7A5;.</li>
 </ul>
-<pre><code class="lang-javascript"> <span class="hljs-keyword">const</span> map = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
+<h3 id="&#xC774;&#xD130;&#xB808;&#xC774;&#xC158;-&#xBA54;&#xC18C;&#xB4DC;">&#xC774;&#xD130;&#xB808;&#xC774;&#xC158; &#xBA54;&#xC18C;&#xB4DC;</h3>
+<ul>
+<li><code>keys()</code> : &#xD574;&#xB2F9; &#xB9F5;&#xC758; &#xD0A4;&#xB4E4;&#xC774; &#xB2F4;&#xAE34; &#xC774;&#xD130;&#xB808;&#xC774;&#xD130; &#xAC1D;&#xCCB4; &#xBC18;&#xD658;.</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> map = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
 
 map.set(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;mango&quot;</span>);
 map.set(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;orange&quot;</span>);
@@ -968,8 +978,8 @@ map.set(<span class="hljs-number">3</span>, <span class="hljs-string">&quot;pine
 <span class="hljs-keyword">let</span> result = iterator.next();
 
 <span class="hljs-keyword">while</span> (!result.done) {
-    <span class="hljs-built_in">console</span>.log(result.value);
-    result = iterator.next();
+  <span class="hljs-built_in">console</span>.log(result.value);
+  result = iterator.next();
 }
 <span class="hljs-comment">// 1</span>
 <span class="hljs-comment">// 2</span>
@@ -989,12 +999,26 @@ map.set(<span class="hljs-number">3</span>, <span class="hljs-string">&quot;pine
 <span class="hljs-keyword">let</span> result = iterator.next();
 
 <span class="hljs-keyword">while</span> (!result.done) {
-    <span class="hljs-built_in">console</span>.log(result.value);
-    result = iterator.next();
+  <span class="hljs-built_in">console</span>.log(result.value);
+  result = iterator.next();
 }
 <span class="hljs-comment">// mango</span>
 <span class="hljs-comment">// orange</span>
 <span class="hljs-comment">// pineapple</span>
+</code></pre>
+<h2 id="regexp">RegExp</h2>
+<h3 id="&#xC120;&#xC5B8;&#xBC95;">&#xC120;&#xC5B8;&#xBC95;</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> regex1 = <span class="hljs-regexp">/abc/g</span>;
+<span class="hljs-comment">// literal notation.</span>
+<span class="hljs-comment">// &#xC2AC;&#xB798;&#xC2DC;&#xB85C; &#xD328;&#xD134;&#xC744; &#xAC10;&#xC2F8;&#xACE0;, &#xB4A4;&#xC5D0; &#xC635;&#xC158;&#xC744; &#xBD99;&#xC778;&#xB2E4;.</span>
+
+<span class="hljs-keyword">const</span> regex2 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">&quot;abc&quot;</span>, <span class="hljs-string">&quot;g&quot;</span>);
+<span class="hljs-comment">// RegExp() &#xC0DD;&#xC131;&#xC790; &#xC0AC;&#xC6A9;.</span>
+<span class="hljs-comment">// &#xD328;&#xD134;&#xACFC; &#xC635;&#xC158;&#xC744; &#xBB38;&#xC790;&#xC5F4;&#xB85C; &#xC778;&#xC790;&#xB85C; &#xB118;&#xAE34;&#xB2E4;.</span>
+
+<span class="hljs-keyword">const</span> regex3 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-regexp">/abc/</span>, <span class="hljs-string">&quot;g&quot;</span>);
+<span class="hljs-comment">// RexExp() &#xC0DD;&#xC131;&#xC790; &#xC0AC;&#xC6A9;&#xBC95; 2.</span>
+<span class="hljs-comment">// &#xD328;&#xD134;&#xC744; literal notation&#xC73C;&#xB85C;, &#xC635;&#xC158;&#xC744; &#xBB38;&#xC790;&#xC5F4;&#xB85C; &#xB118;&#xAE34;&#xB2E4;.</span>
 </code></pre>
 
                                 
@@ -1039,7 +1063,7 @@ map.set(<span class="hljs-number">3</span>, <span class="hljs-string">&quot;pine
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"메소드","level":"1.3.3.2","depth":3,"next":{"title":"DOM API","level":"1.3.3.3","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]},"previous":{"title":"자바스크립트 일반","level":"1.3.3.1","depth":3,"path":"pages/javascript/general.md","ref":"pages/javascript/general.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/method.md","mtime":"2021-12-26T12:41:18.852Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-07T07:13:58.188Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"메소드","level":"1.3.3.2","depth":3,"next":{"title":"DOM API","level":"1.3.3.3","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]},"previous":{"title":"자바스크립트 일반","level":"1.3.3.1","depth":3,"path":"pages/javascript/general.md","ref":"pages/javascript/general.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/method.md","mtime":"2022-01-08T07:05:10.667Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-08T07:05:49.738Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
