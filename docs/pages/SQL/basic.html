@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>추상 클래스 · GitBook</title>
+        <title>SQL 기초 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -56,8 +56,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
-    
-    <link rel="next" href="general.html" />
     
     
 
@@ -276,9 +274,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.4.1" data-path="abstractClass.html">
+        <li class="chapter " data-level="1.3.4.1" data-path="../typescript/abstractClass.html">
             
-                <a href="abstractClass.html">
+                <a href="../typescript/abstractClass.html">
             
                     
                     추상 클래스
@@ -289,9 +287,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4.2" data-path="general.html">
+        <li class="chapter " data-level="1.3.4.2" data-path="../typescript/general.html">
             
-                <a href="general.html">
+                <a href="../typescript/general.html">
             
                     
                     타입스크립트 일반
@@ -681,9 +679,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.13.1" data-path="../SQL/basic.html">
+        <li class="chapter active" data-level="1.3.13.1" data-path="basic.html">
             
-                <a href="../SQL/basic.html">
+                <a href="basic.html">
             
                     
                     SQL 기초
@@ -837,7 +835,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >추상 클래스</a>
+        <a href="../.." >SQL 기초</a>
     </h1>
 </div>
 
@@ -852,28 +850,69 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="abstract-class"><code>abstract class</code></h2>
-<p>Typescript&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; Java&#xC640; &#xAC19;&#xC740; <code>abstract class</code> &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;.</p>
-<pre><code class="lang-typescript"><span class="hljs-comment">// &#xCD94;&#xC0C1; &#xD074;&#xB798;&#xC2A4; &#xC120;&#xC5B8;</span>
-<span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> SayHello {
-  <span class="hljs-comment">// &#xCD94;&#xC0C1; &#xBA54;&#xC18C;&#xB4DC; &#xC120;&#xC5B8;</span>
-  <span class="hljs-keyword">abstract</span> getName(): <span class="hljs-built_in">string</span>;
-
-  printName() {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Hello, <span class="hljs-subst">${this.getName()}</span>`</span>);
-  }
-}
-
-<span class="hljs-keyword">class</span> Choi extends SayHello {
-  getName() {
-    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Choi&quot;</span>;
-  }
-}
-
-<span class="hljs-keyword">const</span> choi = <span class="hljs-keyword">new</span> Choi();
-choi.printName();
+                                <h1 id="sql-&#xACF5;&#xBD80;-&#xB0B4;&#xC6A9;-&#xC815;&#xB9AC;">SQL &#xACF5;&#xBD80; &#xB0B4;&#xC6A9; &#xC815;&#xB9AC;</h1>
+<h2 id="&#xAE30;&#xBCF8;">&#xAE30;&#xBCF8;</h2>
+<ul>
+<li>SQL&#xC740; &#xB300;&#xC18C;&#xBB38;&#xC790;&#xB97C; &#xAC00;&#xB9AC;&#xC9C0; &#xC54A;&#xC74C;.</li>
+<li>SQL&#xC5D0;&#xC11C; &#xC138;&#xBBF8;&#xCF5C;&#xB860;(;)&#xC740; &#xAC01; &#xAD6C;&#xBB38;&#xC744; &#xAD6C;&#xBD84;&#xD558;&#xB294; &#xC5ED;&#xD560;&#xC744; &#xD568;.</li>
+</ul>
+<h2 id="select">SELECT</h2>
+<ul>
+<li>&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC5D0;&#xC11C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC120;&#xD0DD;&#xD560; &#xB54C; &#xC4F0;&#xC784;.</li>
+<li>&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xB294; result-set&#xC744; &#xBC18;&#xD658;&#xD568;.</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column1, column2, ...
+<span class="hljs-keyword">FROM</span> table_name;
 </code></pre>
-<p>&#xB300;&#xBD80;&#xBD84;&#xC758; &#xAE30;&#xB2A5;&#xC744; &#xBBF8;&#xB9AC; &#xAD6C;&#xD604;&#xD574;&#xB193;&#xACE0;, &#xC11C;&#xBE0C; &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xD544;&#xC694;&#xD55C; &#xBD80;&#xBD84;&#xB9CC; &#xC624;&#xBC84;&#xB77C;&#xC774;&#xB2F9;&#xD55C;&#xB2E4;.</p>
+<ul>
+<li>&#xD14C;&#xC774;&#xBE14;&#xC5D0;&#xC11C; &#xCC3E;&#xACE0; &#xC2F6;&#xC740; &#xD544;&#xB4DC;&#xBA85;&#xC744; &#xC785;&#xB825;&#xD558;&#xBA74; &#xD574;&#xB2F9; &#xD544;&#xB4DC;&#xC758; &#xB370;&#xC774;&#xD130;&#xB97C; &#xBC1B;&#xC744; &#xC218; &#xC788;&#xC74C;.</li>
+<li>&#xB9CC;&#xC57D; &#xD14C;&#xC774;&#xBE14;&#xC5D0; &#xC788;&#xB294; &#xBAA8;&#xB4E0; &#xD544;&#xB4DC;&#xB97C; &#xC6D0;&#xD55C;&#xB2E4;&#xBA74; *&#xC744; &#xC0AC;&#xC6A9;.</li>
+<li>&#xC5EC;&#xB7EC; &#xD544;&#xB4DC;&#xB97C; &#xCC3E;&#xC744; &#xB54C;&#xB294; &#xC27C;&#xD45C;(,)&#xB85C; &#xD544;&#xB4DC;&#xBA85;&#xC744; &#xAD6C;&#xBD84;&#xD568;.</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> table_name;
+</code></pre>
+<h2 id="select-distinct">SELECT DISTINCT</h2>
+<ul>
+<li><code>SELECT</code>&#xC640;&#xB294; &#xB2E4;&#xB974;&#xAC8C; &#xC911;&#xBCF5;&#xB418;&#xB294; &#xAC12;&#xC744; &#xC81C;&#xC678;&#xD55C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xBC18;&#xD658;&#xBC1B;&#xC74C;.</li>
+</ul>
+<pre><code class="lang-SQL"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> column1, column2, ...
+<span class="hljs-keyword">FROM</span> table_name;
+</code></pre>
+<ul>
+<li><code>COUNT()</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD574; &#xACE0;&#xC720;&#xAC12;&#xC758; &#xAC1C;&#xC218;&#xB97C; &#xC140; &#xC218; &#xC788;&#xC74C;.</li>
+</ul>
+<pre><code class="lang-SQL"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">COUNT</span>(<span class="hljs-keyword">DISTINCT</span> <span class="hljs-keyword">column</span>) <span class="hljs-keyword">FROM</span> table_name;
+</code></pre>
+<h2 id="where">WHERE</h2>
+<ul>
+<li>&#xD2B9;&#xC815; &#xC870;&#xAC74;&#xC744; &#xB9CC;&#xC871;&#xD558;&#xB294; &#xB808;&#xCF54;&#xB4DC;&#xB97C; &#xD544;&#xD130;&#xB9C1;&#xD560; &#xC218; &#xC788;&#xB2E4;.</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column1, column2, ...
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> condition;
+</code></pre>
+<ul>
+<li>&#xAC12;&#xC744; &#xBE44;&#xAD50;&#xD560; &#xB54C; &#xD14D;&#xC2A4;&#xD2B8;&#xB294; &#xC791;&#xC740; &#xB530;&#xC634;&#xD45C;&#xB85C; &#xAC10;&#xC2F8;&#xACE0;, &#xC22B;&#xC790;&#xB294; &#xADF8;&#xB300;&#xB85C; &#xC4F4;&#xB2E4;.</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column1 <span class="hljs-keyword">FROM</span> table_name <span class="hljs-keyword">WHERE</span> Country = <span class="hljs-string">&apos;USA&apos;</span>;
+</code></pre>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column1 <span class="hljs-keyword">FROM</span> table_name <span class="hljs-keyword">WHERE</span> Price &gt; <span class="hljs-number">10</span>;
+</code></pre>
+<ul>
+<li><p>&#xC870;&#xAC74;&#xC5D0; &#xC4F0;&#xC774;&#xB294; &#xBE44;&#xAD50; &#xC5F0;&#xC0B0;&#xC790;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC74C;.</p>
+<ul>
+<li><code>=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></li>
+<li><code>&lt;&gt;</code>: &#xAC19;&#xC9C0; &#xC54A;&#xC74C;</li>
+<li><code>BETWEEN a AND b</code>: a&#xC640; b &#xC0AC;&#xC774;</li>
+<li><code>LIKE pattern</code>: &#xD328;&#xD134;&#xACFC;&#xC758; &#xC77C;&#xCE58; &#xC5EC;&#xBD80;</li>
+<li><code>IN (a, b, c)</code>: a, b, c &#xC548;&#xC5D0; &#xB4E4;&#xC5B4;&#xC788;&#xB294;&#xC9C0;&#xC758; &#xC5EC;&#xBD80;</li>
+</ul>
+</li>
+<li><p>&#xAC01; &#xC870;&#xAC74;&#xB4E4;&#xC740; &#xB17C;&#xB9AC; &#xC5F0;&#xC0B0;&#xC790;&#xB85C; &#xBB36;&#xC744; &#xC218; &#xC788;&#xC74C;(AND, OR, NOT).</p>
+</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column1 <span class="hljs-keyword">FROM</span> table_name <span class="hljs-keyword">WHERE</span> Country = <span class="hljs-string">&apos;USA&apos;</span> <span class="hljs-keyword">AND</span> Price &lt; <span class="hljs-number">10</span>;
+</code></pre>
 
                                 
                                 </section>
@@ -902,10 +941,6 @@ choi.printName();
             
                 
                 
-                <a href="general.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 타입스크립트 일반">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
             
         
     </div>
@@ -913,7 +948,7 @@ choi.printName();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"추상 클래스","level":"1.3.4.1","depth":3,"next":{"title":"타입스크립트 일반","level":"1.3.4.2","depth":3,"path":"pages/typescript/general.md","ref":"pages/typescript/general.md","articles":[]},"previous":{"title":"Typescript","level":"1.3.4","depth":2,"ref":"","articles":[{"title":"추상 클래스","level":"1.3.4.1","depth":3,"path":"pages/typescript/abstractClass.md","ref":"pages/typescript/abstractClass.md","articles":[]},{"title":"타입스크립트 일반","level":"1.3.4.2","depth":3,"path":"pages/typescript/general.md","ref":"pages/typescript/general.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/typescript/abstractClass.md","mtime":"2021-10-14T04:45:08.549Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T04:13:53.468Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SQL 기초","level":"1.3.13.1","depth":3,"next":{"title":"프로그래밍 모든 것","level":"1.3.14","depth":2,"ref":"","articles":[{"title":"용어정리","level":"1.3.14.1","depth":3,"path":"pages/cs/term.md","ref":"pages/cs/term.md","articles":[]},{"title":"쉘 커멘드","level":"1.3.14.2","depth":3,"path":"pages/cs/shellCommands.md","ref":"pages/cs/shellCommands.md","articles":[]},{"title":"편집기","level":"1.3.14.3","depth":3,"path":"pages/cs/editer.md","ref":"pages/cs/editer.md","articles":[]}]},"previous":{"title":"SQL","level":"1.3.13","depth":2,"ref":"","articles":[{"title":"SQL 기초","level":"1.3.13.1","depth":3,"path":"pages/SQL/basic.md","ref":"pages/SQL/basic.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/SQL/basic.md","mtime":"2022-01-08T09:53:05.110Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T04:13:53.468Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

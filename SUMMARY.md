@@ -63,6 +63,10 @@
 
     - [Git 일반](pages/gitGithub/general.md)
 
+  - SQL
+
+    - [SQL 기초](pages/SQL/basic.md)
+
   - 프로그래밍 모든 것
 
     - [용어정리](pages/cs/term.md)
