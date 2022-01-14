@@ -913,6 +913,181 @@
 </ul>
 <pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column1 <span class="hljs-keyword">FROM</span> table_name <span class="hljs-keyword">WHERE</span> Country = <span class="hljs-string">&apos;USA&apos;</span> <span class="hljs-keyword">AND</span> Price &lt; <span class="hljs-number">10</span>;
 </code></pre>
+<h2 id="order-by">ORDER BY</h2>
+<p>&#xD2B9;&#xC815; &#xCEEC;&#xB7FC;&#xC744; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xC624;&#xB984;&#xCC28;&#xC21C;/&#xB0B4;&#xB9BC;&#xCC28;&#xC21C; &#xC815;&#xB82C;&#xC774; &#xB41C; &#xACB0;&#xACFC;&#xB97C; &#xBC1B;&#xC744; &#xC218; &#xC788;&#xC74C;(&#xC544;&#xBB34; &#xC635;&#xC158;&#xB3C4; &#xC8FC;&#xC9C0; &#xC54A;&#xC558;&#xC744; &#xB54C;&#xB294; &#xC624;&#xB984;&#xCC28;&#xC21C;&#xC774; &#xAE30;&#xBCF8;&#xAC12;&#xC73C;&#xB85C; &#xB3D9;&#xC791;).</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column1, column2, ...
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> column1, column2, ... <span class="hljs-keyword">ASC</span>|<span class="hljs-keyword">DESC</span>;
+</code></pre>
+<h2 id="insert-into">INSERT INTO</h2>
+<p>&#xD14C;&#xC774;&#xBE14; &#xC548;&#xC5D0; &#xC0C8;&#xB85C;&#xC6B4; &#xB808;&#xCF54;&#xB4DC;&#xB97C; &#xC0BD;&#xC785;. &#xBAA8;&#xB4E0; &#xCEEC;&#xB7FC;&#xC744; &#xCC44;&#xC6B0;&#xAC70;&#xB098; &#xD2B9;&#xC815; &#xCEEC;&#xB7FC;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xC5EC; &#xADF8; &#xBD80;&#xBD84;&#xB9CC; &#xC0BD;&#xC785;&#xD560; &#xC218; &#xC788;&#xC74C;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> table_name (column1, column2, column3, ...)
+<span class="hljs-keyword">VALUES</span> (value1, value2, value3, ...);
+</code></pre>
+<pre><code class="lang-sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> table_name
+<span class="hljs-keyword">VALUES</span> (value1, value2, value3, ...);
+</code></pre>
+<h2 id="is-null-is-not-null">IS NULL, IS NOT NULL</h2>
+<p>&#xC5B4;&#xB5A4; &#xD544;&#xB4DC;&#xC5D0; &#xAC12;&#xC744; &#xB123;&#xC9C0; &#xC54A;&#xACE0; &#xB808;&#xCF54;&#xB4DC;&#xB97C; &#xB9CC;&#xB4E4; &#xC218; &#xC788;&#xC744; &#xB54C;, &#xAC12;&#xC744; &#xB123;&#xC9C0; &#xC54A;&#xC740; &#xD544;&#xB4DC;&#xC5D0;&#xB294; <code>NULL</code> &#xAC12;&#xC774; &#xB4E4;&#xC5B4;&#xAC00;&#xAC8C; &#xB41C;&#xB2E4;(0 &#xD639;&#xC740; &#xACF5;&#xBC31; &#xAC12;&#xACFC;&#xB294; &#xB2E4;&#xB984;).</p>
+<p>&#xD2B9;&#xC815; &#xCEEC;&#xB7FC;&#xC774; NULL&#xC774; &#xC544;&#xB2CC; &#xB808;&#xCF54;&#xB4DC;&#xB9CC; &#xBCF4;&#xACE0; &#xC2F6;&#xB2E4;&#xBA74;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_names
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> column_name <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>;
+</code></pre>
+<p>&#xD2B9;&#xC815; &#xCEEC;&#xB7FC;&#xC774; NULL&#xC778; &#xB808;&#xCF54;&#xB4DC;&#xB9CC; &#xBCF4;&#xACE0; &#xC2F6;&#xB2E4;&#xBA74;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_names
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> column_name <span class="hljs-keyword">IS</span> <span class="hljs-literal">NULL</span>;
+</code></pre>
+<h2 id="update">UPDATE</h2>
+<p>&#xD14C;&#xC774;&#xBE14;&#xC758; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC218;&#xC815;&#xD558;&#xB294; &#xBA85;&#xB839;&#xC5B4;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">UPDATE</span> table_name
+<span class="hljs-keyword">SET</span> column1 = value1, column2 = value2, ...
+<span class="hljs-keyword">WHERE</span> condition;
+</code></pre>
+<p><code>SET</code> &#xB4A4;&#xC5D0; &#xAC12;&#xC744; &#xBC14;&#xAFC0; &#xCEEC;&#xB7FC;&#xACFC; &#xAC12;&#xC744; &#xC138;&#xD305;&#xD55C;&#xB2E4;.</p>
+<p><strong>&#xC8FC;&#xC758;: <code>WHERE</code>&#xB85C; &#xC870;&#xAC74;&#xC744; &#xC798;&#xBABB; &#xC124;&#xC815;&#xD558;&#xBA74; &#xC758;&#xB3C4;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xB808;&#xCF54;&#xB4DC;&#xC5D0; &#xBCC0;&#xD654;&#xAC00; &#xBC18;&#xC601;&#xB420; &#xC218; &#xC788;&#xC74C;. WHERE &#xAD6C;&#xBB38;&#xC744; &#xC0DD;&#xB7B5;&#xD558;&#xBA74; &#xD14C;&#xC774;&#xBE14;&#xC758; &#xB808;&#xCF54;&#xB4DC; &#xC804;&#xCCB4;&#xAC00; &#xBCC0;&#xACBD; &#xB300;&#xC0C1;&#xC774; &#xB428;.</strong></p>
+<h2 id="delete">DELETE</h2>
+<p>&#xC870;&#xAC74;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xB808;&#xCF54;&#xB4DC;&#xB97C; &#xD14C;&#xC774;&#xBE14;&#xC5D0;&#xC11C; &#xC9C0;&#xC6B4;&#xB2E4;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> table_name <span class="hljs-keyword">WHERE</span> condition;
+</code></pre>
+<p><strong>&#xC8FC;&#xC758;: UPDATE&#xC640; &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xB85C;, WHERE &#xAD6C;&#xBB38;&#xC744; &#xC0DD;&#xB7B5;&#xD558;&#xBA74; &#xB808;&#xCF54;&#xB4DC; &#xC804;&#xCCB4;&#xAC00; &#xC0AD;&#xC81C;&#xB428;. &#xC774;&#xB54C; &#xD14C;&#xC774;&#xBE14; &#xAD6C;&#xC870;&#xB294; &#xC720;&#xC9C0;&#xB41C;&#xB2E4;.</strong></p>
+<h2 id="select-top-limit-fetch-first-rownum">SELECT TOP, LIMIT, FETCH FIRST, ROWNUM</h2>
+<p>&#xAC80;&#xC0C9; &#xC870;&#xAC74;&#xC5D0; &#xB9DE;&#xB294; &#xB808;&#xCF54;&#xB4DC;&#xC758; &#xBC18;&#xD658; &#xCD5C;&#xB300;&#xAC12;&#xC744; &#xC815;&#xD568;. &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC2DC;&#xC2A4;&#xD15C;&#xB9C8;&#xB2E4; &#xD0A4;&#xC6CC;&#xB4DC;&#xAC00; &#xC870;&#xAE08;&#xC529; &#xB2E4;&#xB974;&#xB2E4;.</p>
+<h3 id="sql-server--ms-access-syntax">SQL Server / MS Access Syntax</h3>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> TOP <span class="hljs-built_in">number</span>|<span class="hljs-keyword">percent</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> condition;
+</code></pre>
+<p>&#xC608;&#xC2DC;: Customers &#xD14C;&#xC774;&#xBE14;&#xC5D0;&#xC11C; ID &#xC624;&#xB984;&#xCC28;&#xC21C;&#xC73C;&#xB85C; &#xC0C1;&#xC704; 3&#xAC1C; &#xB808;&#xCF54;&#xB4DC;&#xB97C; &#xBC18;&#xD658;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> TOP <span class="hljs-number">3</span> * <span class="hljs-keyword">FROM</span> Customers <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> CustomerID;
+</code></pre>
+<h3 id="mysql-syntax">MySQL Syntax</h3>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">LIMIT</span> <span class="hljs-built_in">number</span>;
+</code></pre>
+<p>&#xC704;&#xC640; &#xAC19;&#xC740; &#xC608;&#xC2DC;&#xB97C; MySQL&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74;:</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> Customers <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> CustomerID <span class="hljs-keyword">LIMIT</span> <span class="hljs-number">3</span>;
+</code></pre>
+<h3 id="oracle-12">Oracle 12</h3>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> column_name(s)
+<span class="hljs-keyword">FETCH</span> <span class="hljs-keyword">FIRST</span> <span class="hljs-built_in">number</span> <span class="hljs-keyword">ROWS</span> <span class="hljs-keyword">ONLY</span>;
+</code></pre>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> Customers <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> CustomerID <span class="hljs-keyword">FETCH</span> <span class="hljs-keyword">FIRST</span> <span class="hljs-number">3</span> <span class="hljs-keyword">ROWS</span> <span class="hljs-keyword">ONLY</span>;
+</code></pre>
+<h2 id="min-max">MIN(), MAX()</h2>
+<p>&#xD14C;&#xC774;&#xBE14;&#xC758; &#xD2B9;&#xC815; &#xCEEC;&#xB7FC;&#xC5D0;&#xC11C; &#xCD5C;&#xC18C;&#xAC12; &#xD639;&#xC740; &#xCD5C;&#xB300;&#xAC12;&#xC744; &#xBC18;&#xD658;&#xD558;&#xB294; &#xD568;&#xC218;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">MIN</span>(column_name)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> condition;
+</code></pre>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">MAX</span>(column_name)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> condition;
+</code></pre>
+<h2 id="sum-avg-count">SUM(), AVG(), COUNT()</h2>
+<p>&#xCC28;&#xB840;&#xB300;&#xB85C; &#xD14C;&#xC774;&#xBE14;&#xC758; &#xD2B9;&#xC815; &#xCEEC;&#xB7FC;&#xC758; &#xD569;, &#xD3C9;&#xADE0;, &#xAC1C;&#xC218;&#xB97C; &#xBC18;&#xD658;(NULL &#xAC12;&#xC740; &#xBAA8;&#xB450; &#xBB34;&#xC2DC;&#xB428;).</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">COUNT</span>(column_name)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> condition;
+</code></pre>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">AVG</span>(column_name)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> condition;
+</code></pre>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">SUM</span>(column_name)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> condition;
+</code></pre>
+<h2 id="like">LIKE</h2>
+<p>WHERE&#xACFC; &#xD568;&#xAED8; &#xC0AC;&#xC6A9;&#xD558;&#xBA70;, &#xD328;&#xD134;&#xC73C;&#xB85C; &#xD2B9;&#xC815; &#xCEEC;&#xB7FC;&#xC744; &#xAC80;&#xC0C9;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column1, column2, ...
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> columnN <span class="hljs-keyword">LIKE</span> pattern;
+</code></pre>
+<h3 id="&#xC640;&#xC77C;&#xB4DC;&#xCE74;&#xB4DC;">&#xC640;&#xC77C;&#xB4DC;&#xCE74;&#xB4DC;</h3>
+<p>&#xD328;&#xD134;&#xC5D0; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; &#xAE30;&#xD638;.</p>
+<ul>
+<li><code>_</code> : &#xD55C; &#xBB38;&#xC790;&#xAC00; &#xC784;&#xC758;&#xB85C; &#xB4E4;&#xC5B4;&#xAC08; &#xC218; &#xC788;&#xB2E4;.</li>
+<li><code>%</code> : &#xBB34;&#xD55C;&#xD55C; &#xAE38;&#xC774;&#xC758; &#xBB38;&#xC790;&#xAC00; &#xB4E4;&#xC5B4;&#xAC08; &#xC218; &#xC788;&#xB2E4;.</li>
+<li><code>[abc]</code> : &#xB300;&#xAD04;&#xD638; &#xC548;&#xC560; &#xC788;&#xB294; &#xBB38;&#xC790; &#xC911; &#xD558;&#xB098;&#xAC00; &#xD574;&#xB2F9; &#xC790;&#xB9AC;&#xC5D0; &#xB4E4;&#xC5B4;&#xAC08; &#xC218; &#xC788;&#xB2E4;.<ul>
+<li><code>[^abc]</code> : &#xB300;&#xAD04;&#xD638; &#xC548;&#xC5D0; &#xC788;&#xB294; &#xBB38;&#xC790; &#xC911; &#xC5B4;&#xB5A4; &#xAC83;&#xB3C4; &#xD574;&#xB2F9; &#xC790;&#xB9AC;&#xC5D0; &#xB4E4;&#xC5B4;&#xAC08; &#xC218; &#xC5C6;&#xB2E4;.</li>
+<li><code>[a-c]</code> : a&#xBD80;&#xD130; c&#xAE4C;&#xC9C0;&#xC758; &#xBC94;&#xC704; &#xC911; &#xD55C; &#xBB38;&#xC790;&#xAC00; &#xD574;&#xB2F9; &#xC790;&#xB9AC;&#xC5D0; &#xB4E4;&#xC5B4;&#xAC08; &#xC218; &#xC788;&#xB2E4;(&#xC5EC;&#xAE30;&#xC11C;&#xB294; a, b, c &#xC138; &#xBB38;&#xC790;&#xAC00; &#xD574;&#xB2F9;&#xB428;).</li>
+</ul>
+</li>
+</ul>
+<p>&apos;a&apos;&#xB85C; &#xC2DC;&#xC791;&#xD558;&#xB294; &#xAD6D;&#xAC00;&#xC758; &#xACE0;&#xAC1D;&#xB9CC; &#xBC18;&#xD658;&#xD558;&#xAE30;:</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> Customers <span class="hljs-keyword">WHERE</span> Country <span class="hljs-keyword">LIKE</span> <span class="hljs-string">&apos;a%&apos;</span>;
+</code></pre>
+<p>&#xB098;&#xB77C; &#xC774;&#xB984;&#xC758; &#xB450; &#xBC88;&#xC9F8; &#xAE00;&#xC790;&#xAC00; a &#xD639;&#xC740; b&#xC778; &#xACE0;&#xAC1D;&#xB9CC; &#xBC18;&#xD658;&#xD558;&#xAE30;:</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> Customers <span class="hljs-keyword">WHERE</span> Country <span class="hljs-keyword">LIKE</span> <span class="hljs-string">&apos;_[ab]%&apos;</span>;
+</code></pre>
+<h3 id="ms-access-&#xC640;&#xC77C;&#xB4DC;&#xCE74;&#xB4DC;">MS Access &#xC640;&#xC77C;&#xB4DC;&#xCE74;&#xB4DC;</h3>
+<ul>
+<li><code>?</code> : <code>_</code>&#xC640; &#xB3D9;&#xC77C;.</li>
+<li><code>*</code> : <code>%</code>&#xC640; &#xB3D9;&#xC77C;.</li>
+<li><code>[abc]</code> : <code>[]</code>&#xC640; &#xB3D9;&#xC77C;.<ul>
+<li><code>[!abc]</code> : <code>[^abc]</code>&#xC640; &#xB3D9;&#xC77C;.</li>
+<li><code>[a-c]</code> : <code>[a-c]</code>&#xC640; &#xB3D9;&#xC77C;.</li>
+</ul>
+</li>
+</ul>
+<h2 id="in">IN</h2>
+<p>WHERE &#xAD6C;&#xBB38;&#xC744; &#xC4F8; &#xB54C; &#xC5EC;&#xB7EC;&#xAC12;&#xC744; &#xBB36;&#xC5B4; OR &#xC5F0;&#xC0B0;&#xC790;&#xB85C; &#xC774;&#xC5B4;&#xC9C4; &#xAC83; &#xAC19;&#xC774; &#xAE30;&#xB2A5;&#xD558;&#xB294; &#xC5F0;&#xC0B0;&#xC790;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> column_name <span class="hljs-keyword">IN</span> (value1, value2, ...);
+</code></pre>
+<p>&#xC774;&#xAC83;&#xC740; &#xC544;&#xB798;&#xC640; &#xB611;&#xAC19;&#xC740; &#xAE30;&#xB2A5;&#xC744; &#xD568;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> column_name = value1
+<span class="hljs-keyword">OR</span> column_name = value2
+<span class="hljs-keyword">OR</span> ...
+</code></pre>
+<h2 id="between">BETWEEN</h2>
+<p><code>BETWEEN A AND B</code> &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;. &#xC22B;&#xC790; &#xBFD0;&#xB9CC; &#xC544;&#xB2C8;&#xB77C; &#xBB38;&#xC790;&#xC5F4; &#xAC12;&#xC5D0;&#xB3C4; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;(&#xC624;&#xB984;&#xCC28;&#xC21C; &#xC815;&#xB82C;&#xC744; &#xAC00;&#xC815;&#xD588;&#xC744; &#xB54C;).</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> column_name <span class="hljs-keyword">BETWEEN</span> value1 <span class="hljs-keyword">AND</span> value2;
+</code></pre>
+<p>A&#xC640; B &#xC0AC;&#xC774;&#xC5D0; &#xC788;&#xB294; &#xAC12;&#xC744; &#xC81C;&#xC678;&#xD558;&#xACE0; &#xC2F6;&#xC744; &#xB54C;&#xB294; <code>NOT</code> &#xC5F0;&#xC0B0;&#xC790;&#xB97C; &#xBD99;&#xC774;&#xBA74; &#xB41C;&#xB2E4;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> column_name <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">BETWEEN</span> value1 <span class="hljs-keyword">AND</span> value2;
+</code></pre>
+<h2 id="as">AS</h2>
+<p>&#xCEEC;&#xB7FC;&#xC774;&#xB098; &#xD14C;&#xC774;&#xBE14;&#xC758; &apos;&#xBCC4;&#xBA85;&apos;&#xC744; &#xBD99;&#xC778;&#xB2E4;. &#xD574;&#xB2F9; &#xBCC4;&#xBA85;&#xC73C;&#xB85C; &#xCEEC;&#xB7FC;&#xC774;&#xB098; &#xD14C;&#xC774;&#xBE14;&#xC5D0; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xBCC4;&#xBA85;&#xC740; &#xD604;&#xC7AC; &#xCFFC;&#xB9AC; &#xC548;&#xC5D0;&#xC11C;&#xB9CC; &#xC720;&#xD6A8;&#xD558;&#xB2E4;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name <span class="hljs-keyword">AS</span> alias_name
+<span class="hljs-keyword">FROM</span> table_name;
+</code></pre>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table_name <span class="hljs-keyword">AS</span> alias_name;
+</code></pre>
+<p>&#xC5EC;&#xB7EC; &#xCEEC;&#xB7FC;&#xC758; &#xAC12;&#xC744; &#xC870;&#xD569;&#xD55C; &#xACB0;&#xACFC;&#xC5D0; &#xBCC4;&#xBA85;&#xC744; &#xBD99;&#xC77C; &#xC218;&#xB3C4; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name1 + <span class="hljs-string">&apos;: &apos;</span> + column_name2 <span class="hljs-keyword">AS</span> NewValue <span class="hljs-keyword">FROM</span> tab
+le_name;
+</code></pre>
+<p><strong>MySQL&#xC5D0;&#xC11C;&#xB294; CONCAT &#xD568;&#xC218;&#xB97C; &#xC368;&#xC57C; &#xD55C;&#xB2E4;.</strong></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">CONCAT</span>(column_name1, <span class="hljs-string">&apos;: &apos;</span>, column_name2) <span class="hljs-keyword">AS</span> NewValue <span class="hljs-keyword">FROM</span> tab
+le_name;
+</code></pre>
+<p>&#xC5EC;&#xB7EC; &#xD14C;&#xC774;&#xBE14;&#xC5D0;&#xC11C; &#xAC01;&#xAC01; &#xCEEC;&#xB7FC;&#xC744; &#xAC00;&#xC838;&#xC62C; &#xB54C;, &#xD14C;&#xC774;&#xBE14; &#xC774;&#xB984;&#xC774; &#xAE34; &#xACBD;&#xC6B0; &#xBCC4;&#xBA85;&#xC73C;&#xB85C; &#xAC04;&#xB2E8;&#xD558;&#xAC8C; &#xCEEC;&#xB7FC;&#xC5D0; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> v.column1, s.column2
+<span class="hljs-keyword">FROM</span> very_long_table_name <span class="hljs-keyword">AS</span> v,
+super_long_table_name <span class="hljs-keyword">AS</span> s;
+</code></pre>
+<h2 id="join">JOIN</h2>
+<h3 id="inner-join">INNER JOIN</h3>
+<p>&#xD14C;&#xC774;&#xBE14; &#xB450; &#xAC1C;&#xC758; &#xACF5;&#xD1B5;&#xBD84;&#xBAA8;&#xB97C; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xAC01; &#xD14C;&#xC774;&#xBE14;&#xC758; &#xCEEC;&#xB7FC;&#xC744; &#xBB36;&#xB294;&#xB2E4;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table1
+<span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> table2
+<span class="hljs-keyword">ON</span> table1.column_name = table2.column_name;
+</code></pre>
 
                                 
                                 </section>
@@ -948,7 +1123,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SQL 기초","level":"1.3.13.1","depth":3,"next":{"title":"프로그래밍 모든 것","level":"1.3.14","depth":2,"ref":"","articles":[{"title":"용어정리","level":"1.3.14.1","depth":3,"path":"pages/cs/term.md","ref":"pages/cs/term.md","articles":[]},{"title":"쉘 커멘드","level":"1.3.14.2","depth":3,"path":"pages/cs/shellCommands.md","ref":"pages/cs/shellCommands.md","articles":[]},{"title":"편집기","level":"1.3.14.3","depth":3,"path":"pages/cs/editer.md","ref":"pages/cs/editer.md","articles":[]}]},"previous":{"title":"SQL","level":"1.3.13","depth":2,"ref":"","articles":[{"title":"SQL 기초","level":"1.3.13.1","depth":3,"path":"pages/SQL/basic.md","ref":"pages/SQL/basic.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/SQL/basic.md","mtime":"2022-01-08T09:53:05.110Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-13T13:17:33.705Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SQL 기초","level":"1.3.13.1","depth":3,"next":{"title":"프로그래밍 모든 것","level":"1.3.14","depth":2,"ref":"","articles":[{"title":"용어정리","level":"1.3.14.1","depth":3,"path":"pages/cs/term.md","ref":"pages/cs/term.md","articles":[]},{"title":"쉘 커멘드","level":"1.3.14.2","depth":3,"path":"pages/cs/shellCommands.md","ref":"pages/cs/shellCommands.md","articles":[]},{"title":"편집기","level":"1.3.14.3","depth":3,"path":"pages/cs/editer.md","ref":"pages/cs/editer.md","articles":[]}]},"previous":{"title":"SQL","level":"1.3.13","depth":2,"ref":"","articles":[{"title":"SQL 기초","level":"1.3.13.1","depth":3,"path":"pages/SQL/basic.md","ref":"pages/SQL/basic.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/SQL/basic.md","mtime":"2022-01-14T14:47:50.267Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-14T14:47:57.844Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
