@@ -602,3 +602,115 @@ FROM table_name;
 | SQL Server | ISNULL() |
 | MS Access  | IsNull() |
 |   Oracle   |  NVL()   |
+
+## Stored Procedure for SQL Server
+
+자주 쓰는 쿼리문에 이름을 붙여 저장해놓고, 나중에 이름만으로 실행할 수 있음. 또한 쿼리의 일부분을 매개변수로 만들어 실행시 인자로 전달받을 수 있음.
+
+새로운 프로시저 생성
+
+```sql
+CREATE PROCEDURE procedure_name
+AS
+sql_statement
+GO;
+```
+
+만들어놓은 프로시저 실행
+
+```sql
+EXEC procedure_name;
+```
+
+특정 컬럼에서 찾고 싶은 값을 입력하면 그 값을 포함한 레코드를 모두 반환하는 프로시저 작성:
+
+```sql
+CREATE PROCEDURE SelectValue @parameter
+AS
+  SELECT * FROM column
+  WHERE column = @parameter
+GO;
+```
+
+## Comment
+
+특정 라인을 주석 처리하여 실행을 막을 수 있음.
+
+**MS Access는 주석을 지원하지 않음.**
+
+싱글라인 주석:
+
+```sql
+-- This is comment
+SELECT * FROM table_name;
+```
+
+멀티라인 주석:
+
+```sql
+/*
+This is comment
+This is comment
+This is comment */
+SELECT * FROM table_name;
+```
+
+## Operators
+
+SQL 연산자 총정리
+
+### SQL 산술 연산자
+
+산술 연산자 모두 의미대로 동작함.
+
+| 연산자 |    설명     |
+| :----: | :---------: |
+|   +    |   더하기    |
+|   -    |    빼기     |
+|   \*   |   곱하기    |
+|   /    |   나누기    |
+|   %    | 나머지 연산 |
+
+### SQL 비트 연산자
+
+| 연산자 |         설명         |
+| :----: | :------------------: |
+|   &    |     Bitwise AND      |
+|   \|   |      Bitwise OR      |
+|   ^    | Bitwise exclusive OR |
+
+### SQL 비교 연산자
+
+| 연산자 |         설명         |
+| :----: | :------------------: |
+|   =    |         같다         |
+|   >    |     왼쪽이 크다      |
+|   <    |    오른쪽이 크다     |
+|   >=   |  왼쪽이 크거나 같다  |
+|   <=   | 오른쪽이 크거나 같다 |
+|   <>   |      같지 않다       |
+
+### SQL 축약 연산자
+
+| 연산자 | 설명 |
+| :----: | :--: |
+|   +=   | 생락 |
+|   -=   |      |
+|  \*=   |      |
+|   /=   |      |
+|   %=   |      |
+
+### SQL 논리 연산자
+
+| 연산자  |                      설명                       |
+| :-----: | :---------------------------------------------: |
+|   ALL   |     모든 값이 조건을 만족했을 때 참이 된다      |
+|   ANY   |     어떤 값이 조건을 만족했을 때 참이 된다      |
+|   AND   |         두 조건 모두 참일 때 참이 된다          |
+|   OR    |           한 조건이 참이면 참이 된다            |
+| BETWEEN |  왼쪽과 오른쪽 사이에 값이 위치하면 참이 된다   |
+| EXISTS  | 서브 쿼리가 하나 이상의 값을 반환하면 참이 된다 |
+|   IN    |     값이 목록 중 하나와 일치하면 참이 된다      |
+|  LIKE   |         값이 패턴과 일치하면 참이 된다          |
+|   NOT   |               거짓일 때 참이 된다               |
+|  SOME   |                 ANY와 동일하다                  |

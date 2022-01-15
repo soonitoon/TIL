@@ -1328,6 +1328,212 @@ INIT new_tanle
 </tr>
 </tbody>
 </table>
+<h2 id="stored-procedure-for-sql-server">Stored Procedure for SQL Server</h2>
+<p>&#xC790;&#xC8FC; &#xC4F0;&#xB294; &#xCFFC;&#xB9AC;&#xBB38;&#xC5D0; &#xC774;&#xB984;&#xC744; &#xBD99;&#xC5EC; &#xC800;&#xC7A5;&#xD574;&#xB193;&#xACE0;, &#xB098;&#xC911;&#xC5D0; &#xC774;&#xB984;&#xB9CC;&#xC73C;&#xB85C; &#xC2E4;&#xD589;&#xD560; &#xC218; &#xC788;&#xC74C;. &#xB610;&#xD55C; &#xCFFC;&#xB9AC;&#xC758; &#xC77C;&#xBD80;&#xBD84;&#xC744; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xB85C; &#xB9CC;&#xB4E4;&#xC5B4; &#xC2E4;&#xD589;&#xC2DC; &#xC778;&#xC790;&#xB85C; &#xC804;&#xB2EC;&#xBC1B;&#xC744; &#xC218; &#xC788;&#xC74C;.</p>
+<p>&#xC0C8;&#xB85C;&#xC6B4; &#xD504;&#xB85C;&#xC2DC;&#xC800; &#xC0DD;&#xC131;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">PROCEDURE</span> procedure_name
+<span class="hljs-keyword">AS</span>
+sql_statement
+<span class="hljs-keyword">GO</span>;
+</code></pre>
+<p>&#xB9CC;&#xB4E4;&#xC5B4;&#xB193;&#xC740; &#xD504;&#xB85C;&#xC2DC;&#xC800; &#xC2E4;&#xD589;</p>
+<pre><code class="lang-sql">EXEC procedure_name;
+</code></pre>
+<p>&#xD2B9;&#xC815; &#xCEEC;&#xB7FC;&#xC5D0;&#xC11C; &#xCC3E;&#xACE0; &#xC2F6;&#xC740; &#xAC12;&#xC744; &#xC785;&#xB825;&#xD558;&#xBA74; &#xADF8; &#xAC12;&#xC744; &#xD3EC;&#xD568;&#xD55C; &#xB808;&#xCF54;&#xB4DC;&#xB97C; &#xBAA8;&#xB450; &#xBC18;&#xD658;&#xD558;&#xB294; &#xD504;&#xB85C;&#xC2DC;&#xC800; &#xC791;&#xC131;:</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">PROCEDURE</span> SelectValue @parameter
+<span class="hljs-keyword">AS</span>
+  <span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> <span class="hljs-keyword">column</span>
+  <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">column</span> = @parameter
+<span class="hljs-keyword">GO</span>;
+</code></pre>
+<h2 id="comment">Comment</h2>
+<p>&#xD2B9;&#xC815; &#xB77C;&#xC778;&#xC744; &#xC8FC;&#xC11D; &#xCC98;&#xB9AC;&#xD558;&#xC5EC; &#xC2E4;&#xD589;&#xC744; &#xB9C9;&#xC744; &#xC218; &#xC788;&#xC74C;.</p>
+<p><strong>MS Access&#xB294; &#xC8FC;&#xC11D;&#xC744; &#xC9C0;&#xC6D0;&#xD558;&#xC9C0; &#xC54A;&#xC74C;.</strong></p>
+<p>&#xC2F1;&#xAE00;&#xB77C;&#xC778; &#xC8FC;&#xC11D;:</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- This is comment</span>
+<span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> table_name;
+</code></pre>
+<p>&#xBA40;&#xD2F0;&#xB77C;&#xC778; &#xC8FC;&#xC11D;:</p>
+<pre><code class="lang-sql"><span class="hljs-comment">/*
+This is comment
+This is comment
+This is comment */</span>
+<span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> table_name;
+</code></pre>
+<h2 id="operators">Operators</h2>
+<p>SQL &#xC5F0;&#xC0B0;&#xC790; &#xCD1D;&#xC815;&#xB9AC;</p>
+<h3 id="sql-&#xC0B0;&#xC220;-&#xC5F0;&#xC0B0;&#xC790;">SQL &#xC0B0;&#xC220; &#xC5F0;&#xC0B0;&#xC790;</h3>
+<p>&#xC0B0;&#xC220; &#xC5F0;&#xC0B0;&#xC790; &#xBAA8;&#xB450; &#xC758;&#xBBF8;&#xB300;&#xB85C; &#xB3D9;&#xC791;&#xD568;.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#xC5F0;&#xC0B0;&#xC790;</th>
+<th style="text-align:center">&#xC124;&#xBA85;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">&#xB354;&#xD558;&#xAE30;</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">&#xBE7C;&#xAE30;</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">&#xACF1;&#xD558;&#xAE30;</td>
+</tr>
+<tr>
+<td style="text-align:center">/</td>
+<td style="text-align:center">&#xB098;&#xB204;&#xAE30;</td>
+</tr>
+<tr>
+<td style="text-align:center">%</td>
+<td style="text-align:center">&#xB098;&#xBA38;&#xC9C0; &#xC5F0;&#xC0B0;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-&#xBE44;&#xD2B8;-&#xC5F0;&#xC0B0;&#xC790;">SQL &#xBE44;&#xD2B8; &#xC5F0;&#xC0B0;&#xC790;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#xC5F0;&#xC0B0;&#xC790;</th>
+<th style="text-align:center">&#xC124;&#xBA85;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&amp;</td>
+<td style="text-align:center">Bitwise AND</td>
+</tr>
+<tr>
+<td style="text-align:center">\</td>
+<td style="text-align:center"></td>
+<td>Bitwise OR</td>
+</tr>
+<tr>
+<td style="text-align:center">^</td>
+<td style="text-align:center">Bitwise exclusive OR</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-&#xBE44;&#xAD50;-&#xC5F0;&#xC0B0;&#xC790;">SQL &#xBE44;&#xAD50; &#xC5F0;&#xC0B0;&#xC790;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#xC5F0;&#xC0B0;&#xC790;</th>
+<th style="text-align:center">&#xC124;&#xBA85;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">=</td>
+<td style="text-align:center">&#xAC19;&#xB2E4;</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;</td>
+<td style="text-align:center">&#xC67C;&#xCABD;&#xC774; &#xD06C;&#xB2E4;</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;</td>
+<td style="text-align:center">&#xC624;&#xB978;&#xCABD;&#xC774; &#xD06C;&#xB2E4;</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;=</td>
+<td style="text-align:center">&#xC67C;&#xCABD;&#xC774; &#xD06C;&#xAC70;&#xB098; &#xAC19;&#xB2E4;</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;=</td>
+<td style="text-align:center">&#xC624;&#xB978;&#xCABD;&#xC774; &#xD06C;&#xAC70;&#xB098; &#xAC19;&#xB2E4;</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;&gt;</td>
+<td style="text-align:center">&#xAC19;&#xC9C0; &#xC54A;&#xB2E4;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-&#xCD95;&#xC57D;-&#xC5F0;&#xC0B0;&#xC790;">SQL &#xCD95;&#xC57D; &#xC5F0;&#xC0B0;&#xC790;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#xC5F0;&#xC0B0;&#xC790;</th>
+<th style="text-align:center">&#xC124;&#xBA85;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+=</td>
+<td style="text-align:center">&#xC0DD;&#xB77D;</td>
+</tr>
+<tr>
+<td style="text-align:center">-=</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">*=</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">/=</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">%=</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sql-&#xB17C;&#xB9AC;-&#xC5F0;&#xC0B0;&#xC790;">SQL &#xB17C;&#xB9AC; &#xC5F0;&#xC0B0;&#xC790;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#xC5F0;&#xC0B0;&#xC790;</th>
+<th style="text-align:center">&#xC124;&#xBA85;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">ALL</td>
+<td style="text-align:center">&#xBAA8;&#xB4E0; &#xAC12;&#xC774; &#xC870;&#xAC74;&#xC744; &#xB9CC;&#xC871;&#xD588;&#xC744; &#xB54C; &#xCC38;&#xC774; &#xB41C;&#xB2E4;</td>
+</tr>
+<tr>
+<td style="text-align:center">ANY</td>
+<td style="text-align:center">&#xC5B4;&#xB5A4; &#xAC12;&#xC774; &#xC870;&#xAC74;&#xC744; &#xB9CC;&#xC871;&#xD588;&#xC744; &#xB54C; &#xCC38;&#xC774; &#xB41C;&#xB2E4;</td>
+</tr>
+<tr>
+<td style="text-align:center">AND</td>
+<td style="text-align:center">&#xB450; &#xC870;&#xAC74; &#xBAA8;&#xB450; &#xCC38;&#xC77C; &#xB54C; &#xCC38;&#xC774; &#xB41C;&#xB2E4;</td>
+</tr>
+<tr>
+<td style="text-align:center">OR</td>
+<td style="text-align:center">&#xD55C; &#xC870;&#xAC74;&#xC774; &#xCC38;&#xC774;&#xBA74; &#xCC38;&#xC774; &#xB41C;&#xB2E4;</td>
+</tr>
+<tr>
+<td style="text-align:center">BETWEEN</td>
+<td style="text-align:center">&#xC67C;&#xCABD;&#xACFC; &#xC624;&#xB978;&#xCABD; &#xC0AC;&#xC774;&#xC5D0; &#xAC12;&#xC774; &#xC704;&#xCE58;&#xD558;&#xBA74; &#xCC38;&#xC774; &#xB41C;&#xB2E4;</td>
+</tr>
+<tr>
+<td style="text-align:center">EXISTS</td>
+<td style="text-align:center">&#xC11C;&#xBE0C; &#xCFFC;&#xB9AC;&#xAC00; &#xD558;&#xB098; &#xC774;&#xC0C1;&#xC758; &#xAC12;&#xC744; &#xBC18;&#xD658;&#xD558;&#xBA74; &#xCC38;&#xC774; &#xB41C;&#xB2E4;</td>
+</tr>
+<tr>
+<td style="text-align:center">IN</td>
+<td style="text-align:center">&#xAC12;&#xC774; &#xBAA9;&#xB85D; &#xC911; &#xD558;&#xB098;&#xC640; &#xC77C;&#xCE58;&#xD558;&#xBA74; &#xCC38;&#xC774; &#xB41C;&#xB2E4;</td>
+</tr>
+<tr>
+<td style="text-align:center">LIKE</td>
+<td style="text-align:center">&#xAC12;&#xC774; &#xD328;&#xD134;&#xACFC; &#xC77C;&#xCE58;&#xD558;&#xBA74; &#xCC38;&#xC774; &#xB41C;&#xB2E4;</td>
+</tr>
+<tr>
+<td style="text-align:center">NOT</td>
+<td style="text-align:center">&#xAC70;&#xC9D3;&#xC77C; &#xB54C; &#xCC38;&#xC774; &#xB41C;&#xB2E4;</td>
+</tr>
+<tr>
+<td style="text-align:center">SOME</td>
+<td style="text-align:center">ANY&#xC640; &#xB3D9;&#xC77C;&#xD558;&#xB2E4;</td>
+</tr>
+</tbody>
+</table>
 
                                 
                                 </section>
@@ -1363,7 +1569,7 @@ INIT new_tanle
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SQL 기초","level":"1.3.13.1","depth":3,"next":{"title":"프로그래밍 모든 것","level":"1.3.14","depth":2,"ref":"","articles":[{"title":"용어정리","level":"1.3.14.1","depth":3,"path":"pages/cs/term.md","ref":"pages/cs/term.md","articles":[]},{"title":"쉘 커멘드","level":"1.3.14.2","depth":3,"path":"pages/cs/shellCommands.md","ref":"pages/cs/shellCommands.md","articles":[]},{"title":"편집기","level":"1.3.14.3","depth":3,"path":"pages/cs/editer.md","ref":"pages/cs/editer.md","articles":[]}]},"previous":{"title":"SQL","level":"1.3.13","depth":2,"ref":"","articles":[{"title":"SQL 기초","level":"1.3.13.1","depth":3,"path":"pages/SQL/basic.md","ref":"pages/SQL/basic.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/SQL/basic.md","mtime":"2022-01-15T15:05:51.052Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-15T15:06:05.968Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SQL 기초","level":"1.3.13.1","depth":3,"next":{"title":"프로그래밍 모든 것","level":"1.3.14","depth":2,"ref":"","articles":[{"title":"용어정리","level":"1.3.14.1","depth":3,"path":"pages/cs/term.md","ref":"pages/cs/term.md","articles":[]},{"title":"쉘 커멘드","level":"1.3.14.2","depth":3,"path":"pages/cs/shellCommands.md","ref":"pages/cs/shellCommands.md","articles":[]},{"title":"편집기","level":"1.3.14.3","depth":3,"path":"pages/cs/editer.md","ref":"pages/cs/editer.md","articles":[]}]},"previous":{"title":"SQL","level":"1.3.13","depth":2,"ref":"","articles":[{"title":"SQL 기초","level":"1.3.13.1","depth":3,"path":"pages/SQL/basic.md","ref":"pages/SQL/basic.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/SQL/basic.md","mtime":"2022-01-15T15:34:59.772Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-15T15:35:09.656Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
