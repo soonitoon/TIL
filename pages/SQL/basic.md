@@ -487,3 +487,118 @@ FROM table_name
 WHERE EXISTS
 (SELECT column_name FROM table_name WHERE condition);
 ```
+
+## ALL, ANY
+
+하나의 컬럼을 여러 값들과 비교할 때 쓰는 연산자.
+
+### ANY
+
+현재 컬럼의 값이 비교 대상이 되는 값들 중 하나라도 매치되면 참으로 판단함.
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE column_name operator ANY
+  (SELECT column_name
+  FROM table_name
+  WHERE condition);
+```
+
+위의 예시에서 서브쿼리가 반환하는 여러 값들 중 하나라도 column_name과 매치되면 참으로 간주된다.
+
+### ALL
+
+현재 컬럼의 값이 비교 대상이 되는 값들 모두와 매치되어야 참으로 판단함.
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE column_name operator ALL
+  (SELECT column_name
+  FROM table_name
+  WHERE condition);
+```
+
+서브 쿼리가 반환하는 모든 값과 컬럼이 매치되어야 참으로 판단한다.
+
+## SELECT INTO
+
+기존 테이블의 전체 혹은 부분을 새로운 테이블로 저장한다. 만약 새로운 테이블을 다른 데이터베이스에 저장하고 싶다면, IN 절을 사용한다.
+
+```sql
+SELECT *
+INTO newtable [IN externaldb]
+FROM oldtable
+WHERE condition;
+```
+
+기존 테이블에서 아무런 값도 가져오지 않고 테이블 구조만 복사하고 싶을 때는, WEHRE절에 언제나 거짓인 조건을 달면 된다.
+
+```sql
+SELECT *
+INIT new_tanle
+FROM old_table
+WHERE 1 = 2;
+```
+
+## INSERT INTO SELECT
+
+한 테이블의 데이터를 복사해 다른 테이블에 붙여넣는다. 원본 데이터는 영향을 받지 않는다.
+
+```sql
+INSERT INTO table2
+SELECT * FROM table1
+WHERE condition;
+```
+
+컬럼을 지정하여 복사할 때는 아래와 같이 한다.
+
+```sql
+INSERT INTO table2 (column1, column2, column3, ...)
+SELECT column1, column2, column3, ...
+FROM table1
+WHERE condition;
+```
+
+A 테이블의 데이터를 B 테이블에 복사할 때 빈 컬럼은 NULL로 채워진다.
+
+## CASE
+
+마치 if-else 문처럼 각 조건에 해당하는 반환값을 설정할 수 있다.
+
+```sql
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    WHEN conditionN THEN resultN
+    ELSE result
+END;
+```
+
+NULL이 포함되어 있는 컬럼을 정렬의 기준으로 삼을 때, NULL인 부분만 다른 컬럼을 기준으로 정렬하게 할 수 있음.
+
+```sql
+SELECT * FROM table_name
+ORDER BY
+  CASE
+    WHEN column1 IS NULL THEN column2
+    ELSE column1
+  END;
+```
+
+## IFNULL(), ISNULL(), COALESCE(), NVL()
+
+만약 계산에 사용되는 컬럼에 NULL이 포함되어 있을 경우 사용할 수 있는 함수. NULL을 대신하여 반환할 값을 지정할 수 있다.
+
+```sql
+SELECT ISNULL(column, 1) * 2 AS CalculatedValue
+FROM table_name;
+```
+
+|  DB 종류   |   함수   |
+| :--------: | :------: |
+|   MySQL    | IFNULL() |
+| SQL Server | ISNULL() |
+| MS Access  | IsNull() |
+|   Oracle   |  NVL()   |
