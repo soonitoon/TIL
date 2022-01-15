@@ -341,11 +341,149 @@ super_long_table_name AS s;
 
 ### INNER JOIN
 
-테이블 두 개의 공통분모를 기준으로 각 테이블의 컬럼을 묶는다.
+테이블 두 개의 공통분모에 해당하는 컬럼만을 반환한다(두 테이블의 교집합 영역).
 
 ```sql
 SELECT column_name(s)
 FROM table1
 INNER JOIN table2
 ON table1.column_name = table2.column_name;
+```
+
+### LEFT JOIN
+
+table1의 컬럼 모두와 주어진 기준에서 table1과 겹치는 table2의 컬럼을 반환함(table1의 영역).
+
+```sql
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;
+```
+
+## RIGHT JOIN
+
+table2의 컬럼 모두와 주어진 기준에서 table2과 겹치는 table1의 컬럼을 반환함(table2의 영역).
+
+```sql
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+```
+
+## FULL JOIN
+
+table1과 table2의 기준이 되는 모든 컬럼을 반환함(table1과 table2의 합집합).
+
+```sql
+SELECT column_name(s)
+FROM table1
+FULL JOIN table2
+ON table1.column_name = table2.column_name;
+```
+
+## Self Join
+
+SELF라는 별도의 키워드가 있는 것은 아님. 하나의 테이블에 두 개의 별명을 부여하여 마치 두 테이블을 다루는 것처럼 사용하는 방식.
+
+```sql
+SELECT column_name(s)
+FROM table1 T1, table1 T2
+WHERE condition;
+```
+
+예: 고객 이름을 도시 별로 모아 받는 쿼리를 Self Join으로 구현하면
+
+```sql
+SELECT A.CustomerName, A.City
+FROM Customers A, Customers B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City;
+```
+
+## UNION
+
+두 SELECT 구문의 반환값을 중복값을 제외하고 합쳐준다.
+
+```sql
+SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2;
+```
+
+**두 SELECT 문이 가져오는 컬럼의 개수가 동일해야 함.**
+
+### UNION ALL
+
+UNION과는 다르게 중복값을 제거하지 않고 데이터를 합쳐줌
+
+## GROUP BY
+
+같은 값을 가진 컬럼을 하나로 묶어 요약된 정보를 보고자 할 때 사용함. 주로 COUNT, AVG 같은 함수와 같이 사용함.
+
+```sql
+SELECT column_name(s)
+FROM table_name
+GROUP BY column_name(s)
+```
+
+예를 들어 다음과 같은 테이블이 있을 때,
+
+| SellerID | OrderID |
+| :------: | :-----: |
+|    1     |  33423  |
+|    2     |  23234  |
+|    1     |  32343  |
+|    3     |  34234  |
+|    2     |  34342  |
+
+판매자별로 몇 개의 주문을 받았는지 GROUP을 사용하여 확인할 수 있다.
+
+```sql
+SELECT SellerID, COUNT(OrderID) AS NumberOfOrder
+FROM Sellers
+GROUP BY SellerID;
+```
+
+| SellerID | NumberOfOrder |
+| :------: | :-----------: |
+|    1     |       2       |
+|    2     |       2       |
+|    3     |       1       |
+
+## HAVING
+
+GROUP 절에서 조건을 설정할 때 함수를 사용할 수 있는 절.
+
+```sql
+SELECT column_name(s)
+FROM table_name
+GROUP BY column_name(s)
+HAVING condition
+```
+
+위의 예시에서 주문 수가 2 이상이 되는 판매자만 볼 수 있다.
+
+```sql
+SELECT SellerID, COUNT(OrderID) AS NumberOfOrder
+FROM Sellers
+GROUP BY SellerID
+HAVING COUNT(OrderID) >= 2;
+```
+
+| SellerID | NumberOfOrder |
+| :------: | :-----------: |
+|    1     |       2       |
+|    2     |       2       |
+
+## EXISTS
+
+WHERE 절 뒤에 이어서 사용한다. 다른 쿼리의 반환값의 존재 여부를 조건으로 사용할 수 있다.
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE EXISTS
+(SELECT column_name FROM table_name WHERE condition);
 ```

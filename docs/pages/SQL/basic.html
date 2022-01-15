@@ -1082,11 +1082,155 @@ super_long_table_name <span class="hljs-keyword">AS</span> s;
 </code></pre>
 <h2 id="join">JOIN</h2>
 <h3 id="inner-join">INNER JOIN</h3>
-<p>&#xD14C;&#xC774;&#xBE14; &#xB450; &#xAC1C;&#xC758; &#xACF5;&#xD1B5;&#xBD84;&#xBAA8;&#xB97C; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xAC01; &#xD14C;&#xC774;&#xBE14;&#xC758; &#xCEEC;&#xB7FC;&#xC744; &#xBB36;&#xB294;&#xB2E4;.</p>
+<p>&#xD14C;&#xC774;&#xBE14; &#xB450; &#xAC1C;&#xC758; &#xACF5;&#xD1B5;&#xBD84;&#xBAA8;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xCEEC;&#xB7FC;&#xB9CC;&#xC744; &#xBC18;&#xD658;&#xD55C;&#xB2E4;(&#xB450; &#xD14C;&#xC774;&#xBE14;&#xC758; &#xAD50;&#xC9D1;&#xD569; &#xC601;&#xC5ED;).</p>
 <pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
 <span class="hljs-keyword">FROM</span> table1
 <span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> table2
 <span class="hljs-keyword">ON</span> table1.column_name = table2.column_name;
+</code></pre>
+<h3 id="left-join">LEFT JOIN</h3>
+<p>table1&#xC758; &#xCEEC;&#xB7FC; &#xBAA8;&#xB450;&#xC640; &#xC8FC;&#xC5B4;&#xC9C4; &#xAE30;&#xC900;&#xC5D0;&#xC11C; table1&#xACFC; &#xACB9;&#xCE58;&#xB294; table2&#xC758; &#xCEEC;&#xB7FC;&#xC744; &#xBC18;&#xD658;&#xD568;(table1&#xC758; &#xC601;&#xC5ED;).</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table1
+<span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> table2
+<span class="hljs-keyword">ON</span> table1.column_name = table2.column_name;
+</code></pre>
+<h2 id="right-join">RIGHT JOIN</h2>
+<p>table2&#xC758; &#xCEEC;&#xB7FC; &#xBAA8;&#xB450;&#xC640; &#xC8FC;&#xC5B4;&#xC9C4; &#xAE30;&#xC900;&#xC5D0;&#xC11C; table2&#xACFC; &#xACB9;&#xCE58;&#xB294; table1&#xC758; &#xCEEC;&#xB7FC;&#xC744; &#xBC18;&#xD658;&#xD568;(table2&#xC758; &#xC601;&#xC5ED;).</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table1
+<span class="hljs-keyword">RIGHT</span> <span class="hljs-keyword">JOIN</span> table2
+<span class="hljs-keyword">ON</span> table1.column_name = table2.column_name;
+</code></pre>
+<h2 id="full-join">FULL JOIN</h2>
+<p>table1&#xACFC; table2&#xC758; &#xAE30;&#xC900;&#xC774; &#xB418;&#xB294; &#xBAA8;&#xB4E0; &#xCEEC;&#xB7FC;&#xC744; &#xBC18;&#xD658;&#xD568;(table1&#xACFC; table2&#xC758; &#xD569;&#xC9D1;&#xD569;).</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table1
+<span class="hljs-keyword">FULL</span> <span class="hljs-keyword">JOIN</span> table2
+<span class="hljs-keyword">ON</span> table1.column_name = table2.column_name;
+</code></pre>
+<h2 id="self-join">Self Join</h2>
+<p>SELF&#xB77C;&#xB294; &#xBCC4;&#xB3C4;&#xC758; &#xD0A4;&#xC6CC;&#xB4DC;&#xAC00; &#xC788;&#xB294; &#xAC83;&#xC740; &#xC544;&#xB2D8;. &#xD558;&#xB098;&#xC758; &#xD14C;&#xC774;&#xBE14;&#xC5D0; &#xB450; &#xAC1C;&#xC758; &#xBCC4;&#xBA85;&#xC744; &#xBD80;&#xC5EC;&#xD558;&#xC5EC; &#xB9C8;&#xCE58; &#xB450; &#xD14C;&#xC774;&#xBE14;&#xC744; &#xB2E4;&#xB8E8;&#xB294; &#xAC83;&#xCC98;&#xB7FC; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBC29;&#xC2DD;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table1 T1, table1 T2
+<span class="hljs-keyword">WHERE</span> condition;
+</code></pre>
+<p>&#xC608;: &#xACE0;&#xAC1D; &#xC774;&#xB984;&#xC744; &#xB3C4;&#xC2DC; &#xBCC4;&#xB85C; &#xBAA8;&#xC544; &#xBC1B;&#xB294; &#xCFFC;&#xB9AC;&#xB97C; Self Join&#xC73C;&#xB85C; &#xAD6C;&#xD604;&#xD558;&#xBA74;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> A.CustomerName, A.City
+<span class="hljs-keyword">FROM</span> Customers A, Customers B
+<span class="hljs-keyword">WHERE</span> A.CustomerID &lt;&gt; B.CustomerID
+<span class="hljs-keyword">AND</span> A.City = B.City;
+</code></pre>
+<h2 id="union">UNION</h2>
+<p>&#xB450; SELECT &#xAD6C;&#xBB38;&#xC758; &#xBC18;&#xD658;&#xAC12;&#xC744; &#xC911;&#xBCF5;&#xAC12;&#xC744; &#xC81C;&#xC678;&#xD558;&#xACE0; &#xD569;&#xCCD0;&#xC900;&#xB2E4;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table1
+<span class="hljs-keyword">UNION</span>
+<span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table2;
+</code></pre>
+<p><strong>&#xB450; SELECT &#xBB38;&#xC774; &#xAC00;&#xC838;&#xC624;&#xB294; &#xCEEC;&#xB7FC;&#xC758; &#xAC1C;&#xC218;&#xAC00; &#xB3D9;&#xC77C;&#xD574;&#xC57C; &#xD568;.</strong></p>
+<h3 id="union-all">UNION ALL</h3>
+<p>UNION&#xACFC;&#xB294; &#xB2E4;&#xB974;&#xAC8C; &#xC911;&#xBCF5;&#xAC12;&#xC744; &#xC81C;&#xAC70;&#xD558;&#xC9C0; &#xC54A;&#xACE0; &#xB370;&#xC774;&#xD130;&#xB97C; &#xD569;&#xCCD0;&#xC90C;</p>
+<h2 id="group-by">GROUP BY</h2>
+<p>&#xAC19;&#xC740; &#xAC12;&#xC744; &#xAC00;&#xC9C4; &#xCEEC;&#xB7FC;&#xC744; &#xD558;&#xB098;&#xB85C; &#xBB36;&#xC5B4; &#xC694;&#xC57D;&#xB41C; &#xC815;&#xBCF4;&#xB97C; &#xBCF4;&#xACE0;&#xC790; &#xD560; &#xB54C; &#xC0AC;&#xC6A9;&#xD568;. &#xC8FC;&#xB85C; COUNT, AVG &#xAC19;&#xC740; &#xD568;&#xC218;&#xC640; &#xAC19;&#xC774; &#xC0AC;&#xC6A9;&#xD568;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> column_name(s)
+</code></pre>
+<p>&#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xD14C;&#xC774;&#xBE14;&#xC774; &#xC788;&#xC744; &#xB54C;,</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">SellerID</th>
+<th style="text-align:center">OrderID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">33423</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">23234</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">32343</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">34234</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">34342</td>
+</tr>
+</tbody>
+</table>
+<p>&#xD310;&#xB9E4;&#xC790;&#xBCC4;&#xB85C; &#xBA87; &#xAC1C;&#xC758; &#xC8FC;&#xBB38;&#xC744; &#xBC1B;&#xC558;&#xB294;&#xC9C0; GROUP&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> SellerID, <span class="hljs-keyword">COUNT</span>(OrderID) <span class="hljs-keyword">AS</span> NumberOfOrder
+<span class="hljs-keyword">FROM</span> Sellers
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> SellerID;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">SellerID</th>
+<th style="text-align:center">NumberOfOrder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="having">HAVING</h2>
+<p>GROUP &#xC808;&#xC5D0;&#xC11C; &#xC870;&#xAC74;&#xC744; &#xC124;&#xC815;&#xD560; &#xB54C; &#xD568;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; &#xC808;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> column_name(s)
+<span class="hljs-keyword">HAVING</span> condition
+</code></pre>
+<p>&#xC704;&#xC758; &#xC608;&#xC2DC;&#xC5D0;&#xC11C; &#xC8FC;&#xBB38; &#xC218;&#xAC00; 2 &#xC774;&#xC0C1;&#xC774; &#xB418;&#xB294; &#xD310;&#xB9E4;&#xC790;&#xB9CC; &#xBCFC; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> SellerID, <span class="hljs-keyword">COUNT</span>(OrderID) <span class="hljs-keyword">AS</span> NumberOfOrder
+<span class="hljs-keyword">FROM</span> Sellers
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> SellerID
+<span class="hljs-keyword">HAVING</span> <span class="hljs-keyword">COUNT</span>(OrderID) &gt;= <span class="hljs-number">2</span>;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">SellerID</th>
+<th style="text-align:center">NumberOfOrder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exists">EXISTS</h2>
+<p>WHERE &#xC808; &#xB4A4;&#xC5D0; &#xC774;&#xC5B4;&#xC11C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;. &#xB2E4;&#xB978; &#xCFFC;&#xB9AC;&#xC758; &#xBC18;&#xD658;&#xAC12;&#xC758; &#xC874;&#xC7AC; &#xC5EC;&#xBD80;&#xB97C; &#xC870;&#xAC74;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">EXISTS</span>
+(<span class="hljs-keyword">SELECT</span> column_name <span class="hljs-keyword">FROM</span> table_name <span class="hljs-keyword">WHERE</span> condition);
 </code></pre>
 
                                 
@@ -1123,7 +1267,7 @@ super_long_table_name <span class="hljs-keyword">AS</span> s;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SQL 기초","level":"1.3.13.1","depth":3,"next":{"title":"프로그래밍 모든 것","level":"1.3.14","depth":2,"ref":"","articles":[{"title":"용어정리","level":"1.3.14.1","depth":3,"path":"pages/cs/term.md","ref":"pages/cs/term.md","articles":[]},{"title":"쉘 커멘드","level":"1.3.14.2","depth":3,"path":"pages/cs/shellCommands.md","ref":"pages/cs/shellCommands.md","articles":[]},{"title":"편집기","level":"1.3.14.3","depth":3,"path":"pages/cs/editer.md","ref":"pages/cs/editer.md","articles":[]}]},"previous":{"title":"SQL","level":"1.3.13","depth":2,"ref":"","articles":[{"title":"SQL 기초","level":"1.3.13.1","depth":3,"path":"pages/SQL/basic.md","ref":"pages/SQL/basic.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/SQL/basic.md","mtime":"2022-01-14T14:47:50.267Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-14T14:47:57.844Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SQL 기초","level":"1.3.13.1","depth":3,"next":{"title":"프로그래밍 모든 것","level":"1.3.14","depth":2,"ref":"","articles":[{"title":"용어정리","level":"1.3.14.1","depth":3,"path":"pages/cs/term.md","ref":"pages/cs/term.md","articles":[]},{"title":"쉘 커멘드","level":"1.3.14.2","depth":3,"path":"pages/cs/shellCommands.md","ref":"pages/cs/shellCommands.md","articles":[]},{"title":"편집기","level":"1.3.14.3","depth":3,"path":"pages/cs/editer.md","ref":"pages/cs/editer.md","articles":[]}]},"previous":{"title":"SQL","level":"1.3.13","depth":2,"ref":"","articles":[{"title":"SQL 기초","level":"1.3.13.1","depth":3,"path":"pages/SQL/basic.md","ref":"pages/SQL/basic.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/SQL/basic.md","mtime":"2022-01-15T10:42:37.649Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-15T10:42:58.390Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
