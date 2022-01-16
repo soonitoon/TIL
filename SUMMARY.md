@@ -66,6 +66,7 @@
   - SQL
 
     - [SQL 기초](pages/SQL/basic.md)
+    - [SQL DATABASE](pages/SQL/database.md)
 
   - 프로그래밍 모든 것
 
