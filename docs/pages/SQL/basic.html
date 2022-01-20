@@ -918,7 +918,7 @@
 <ul>
 <li><code>=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></li>
 <li><code>&lt;&gt;</code>: &#xAC19;&#xC9C0; &#xC54A;&#xC74C;</li>
-<li><code>BETWEEN a AND b</code>: a&#xC640; b &#xC0AC;&#xC774;</li>
+<li><code>BETWEEN a AND b</code>: a&#xC640; b &#xC0AC;&#xC774;(a, b&#xB97C; &#xD3EC;&#xD568;&#xD55C;)</li>
 <li><code>LIKE pattern</code>: &#xD328;&#xD134;&#xACFC;&#xC758; &#xC77C;&#xCE58; &#xC5EC;&#xBD80;</li>
 <li><code>IN (a, b, c)</code>: a, b, c &#xC548;&#xC5D0; &#xB4E4;&#xC5B4;&#xC788;&#xB294;&#xC9C0;&#xC758; &#xC5EC;&#xBD80;</li>
 </ul>
@@ -1103,6 +1103,78 @@ super_long_table_name <span class="hljs-keyword">AS</span> s;
 <span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> table2
 <span class="hljs-keyword">ON</span> table1.column_name = table2.column_name;
 </code></pre>
+<p>&#xD14C;&#xC774;&#xBE14; 1, 2&#xAC00; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;&#xACE0; &#xAC00;&#xC815;&#xD558;&#xBA74;,</p>
+<p>table1:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Choi</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Kim</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Lee</td>
+</tr>
+</tbody>
+</table>
+<p>table2:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">Country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Korea</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">USA</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Japan</td>
+</tr>
+</tbody>
+</table>
+<p>JOIN&#xC758; &#xACB0;&#xACFC;&#xB294; &#xC544;&#xB798;&#xC640; &#xAC19;&#xB2E4;.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">name</th>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">Country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Choi</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Korea</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Lee</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">USA</td>
+</tr>
+</tbody>
+</table>
 <h3 id="left-join">LEFT JOIN</h3>
 <p>table1&#xC758; &#xCEEC;&#xB7FC; &#xBAA8;&#xB450;&#xC640; &#xC8FC;&#xC5B4;&#xC9C4; &#xAE30;&#xC900;&#xC5D0;&#xC11C; table1&#xACFC; &#xACB9;&#xCE58;&#xB294; table2&#xC758; &#xCEEC;&#xB7FC;&#xC744; &#xBC18;&#xD658;&#xD568;(table1&#xC758; &#xC601;&#xC5ED;).</p>
 <pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
@@ -1110,6 +1182,83 @@ super_long_table_name <span class="hljs-keyword">AS</span> s;
 <span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> table2
 <span class="hljs-keyword">ON</span> table1.column_name = table2.column_name;
 </code></pre>
+<p>table1:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Choi</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Kim</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Lee</td>
+</tr>
+</tbody>
+</table>
+<p>table2:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">Country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Korea</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">USA</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Japan</td>
+</tr>
+</tbody>
+</table>
+<p>JOIN&#xC758; &#xACB0;&#xACFC;&#xB294; &#xC544;&#xB798;&#xC640; &#xAC19;&#xB2E4;.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">name</th>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">Country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Choi</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Korea</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Kim</td>
+<td style="text-align:center">NULL</td>
+<td style="text-align:center">NULL</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Lee</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">USA</td>
+</tr>
+</tbody>
+</table>
 <h2 id="right-join">RIGHT JOIN</h2>
 <p>table2&#xC758; &#xCEEC;&#xB7FC; &#xBAA8;&#xB450;&#xC640; &#xC8FC;&#xC5B4;&#xC9C4; &#xAE30;&#xC900;&#xC5D0;&#xC11C; table2&#xACFC; &#xACB9;&#xCE58;&#xB294; table1&#xC758; &#xCEEC;&#xB7FC;&#xC744; &#xBC18;&#xD658;&#xD568;(table2&#xC758; &#xC601;&#xC5ED;).</p>
 <pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
@@ -1117,6 +1266,83 @@ super_long_table_name <span class="hljs-keyword">AS</span> s;
 <span class="hljs-keyword">RIGHT</span> <span class="hljs-keyword">JOIN</span> table2
 <span class="hljs-keyword">ON</span> table1.column_name = table2.column_name;
 </code></pre>
+<p>table1:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Choi</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Kim</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Lee</td>
+</tr>
+</tbody>
+</table>
+<p>table2:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">Country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Korea</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">USA</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Japan</td>
+</tr>
+</tbody>
+</table>
+<p>JOIN&#xC758; &#xACB0;&#xACFC;&#xB294; &#xC544;&#xB798;&#xC640; &#xAC19;&#xB2E4;.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">name</th>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">Country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Choi</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Korea</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Lee</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">USA</td>
+</tr>
+<tr>
+<td style="text-align:center">NULL</td>
+<td style="text-align:center">NULL</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Japan</td>
+</tr>
+</tbody>
+</table>
 <h2 id="full-join">FULL JOIN</h2>
 <p>table1&#xACFC; table2&#xC758; &#xAE30;&#xC900;&#xC774; &#xB418;&#xB294; &#xBAA8;&#xB4E0; &#xCEEC;&#xB7FC;&#xC744; &#xBC18;&#xD658;&#xD568;(table1&#xACFC; table2&#xC758; &#xD569;&#xC9D1;&#xD569;).</p>
 <pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
@@ -1124,6 +1350,89 @@ super_long_table_name <span class="hljs-keyword">AS</span> s;
 <span class="hljs-keyword">FULL</span> <span class="hljs-keyword">JOIN</span> table2
 <span class="hljs-keyword">ON</span> table1.column_name = table2.column_name;
 </code></pre>
+<p>table1:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Choi</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Kim</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Lee</td>
+</tr>
+</tbody>
+</table>
+<p>table2:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">Country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Korea</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">USA</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Japan</td>
+</tr>
+</tbody>
+</table>
+<p>JOIN&#xC758; &#xACB0;&#xACFC;&#xB294; &#xC544;&#xB798;&#xC640; &#xAC19;&#xB2E4;.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">name</th>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">Country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Choi</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Korea</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Kim</td>
+<td style="text-align:center">NULL</td>
+<td style="text-align:center">NULL</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Lee</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">USA</td>
+</tr>
+<tr>
+<td style="text-align:center">NULL</td>
+<td style="text-align:center">NULL</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Japan</td>
+</tr>
+</tbody>
+</table>
 <h2 id="self-join">Self Join</h2>
 <p>SELF&#xB77C;&#xB294; &#xBCC4;&#xB3C4;&#xC758; &#xD0A4;&#xC6CC;&#xB4DC;&#xAC00; &#xC788;&#xB294; &#xAC83;&#xC740; &#xC544;&#xB2D8;. &#xD558;&#xB098;&#xC758; &#xD14C;&#xC774;&#xBE14;&#xC5D0; &#xB450; &#xAC1C;&#xC758; &#xBCC4;&#xBA85;&#xC744; &#xBD80;&#xC5EC;&#xD558;&#xC5EC; &#xB9C8;&#xCE58; &#xB450; &#xD14C;&#xC774;&#xBE14;&#xC744; &#xB2E4;&#xB8E8;&#xB294; &#xAC83;&#xCC98;&#xB7FC; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBC29;&#xC2DD;.</p>
 <pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
@@ -1588,7 +1897,7 @@ This is comment */</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SQL 기초","level":"1.3.13.1","depth":3,"next":{"title":"SQL DATABASE","level":"1.3.13.2","depth":3,"path":"pages/SQL/database.md","ref":"pages/SQL/database.md","articles":[]},"previous":{"title":"SQL","level":"1.3.13","depth":2,"ref":"","articles":[{"title":"SQL 기초","level":"1.3.13.1","depth":3,"path":"pages/SQL/basic.md","ref":"pages/SQL/basic.md","articles":[]},{"title":"SQL DATABASE","level":"1.3.13.2","depth":3,"path":"pages/SQL/database.md","ref":"pages/SQL/database.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/SQL/basic.md","mtime":"2022-01-16T06:01:15.479Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-16T14:01:46.007Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SQL 기초","level":"1.3.13.1","depth":3,"next":{"title":"SQL DATABASE","level":"1.3.13.2","depth":3,"path":"pages/SQL/database.md","ref":"pages/SQL/database.md","articles":[]},"previous":{"title":"SQL","level":"1.3.13","depth":2,"ref":"","articles":[{"title":"SQL 기초","level":"1.3.13.1","depth":3,"path":"pages/SQL/basic.md","ref":"pages/SQL/basic.md","articles":[]},{"title":"SQL DATABASE","level":"1.3.13.2","depth":3,"path":"pages/SQL/database.md","ref":"pages/SQL/database.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/SQL/basic.md","mtime":"2022-01-20T12:53:41.546Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-20T12:54:32.215Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

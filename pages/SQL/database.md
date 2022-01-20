@@ -590,3 +590,11 @@ FROM table_name
 ```
 
 > 뷰 이름(테이블, 컬럼 이름도 마찬가지로)이 공백을 포함하고 있을 경우, 이름을 대괄호([])로 감싼다.
+
+이미 만들어진 뷰를 수정할 때는 `CREATE VIEW` 대신 `CREATE OR REPLACE VIEW` 키워드를 사용한다.
+
+```sql
+CREATE OF REPLACE VIEW AS
+SELECT colum1, colum2, new_colum, ...
+FROM table_name;
+```

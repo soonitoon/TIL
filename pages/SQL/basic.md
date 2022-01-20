@@ -62,7 +62,7 @@ SELECT column1 FROM table_name WHERE Price > 10;
 
   - `=`, `>`, `<`, `>=`, `<=`
   - `<>`: 같지 않음
-  - `BETWEEN a AND b`: a와 b 사이
+  - `BETWEEN a AND b`: a와 b 사이(a, b를 포함한)
   - `LIKE pattern`: 패턴과의 일치 여부
   - `IN (a, b, c)`: a, b, c 안에 들어있는지의 여부
 
@@ -350,6 +350,31 @@ INNER JOIN table2
 ON table1.column_name = table2.column_name;
 ```
 
+테이블 1, 2가 다음과 같다고 가정하면,
+
+table1:
+
+| ID  | name |
+| :-: | :--: |
+|  1  | Choi |
+|  2  | Kim  |
+|  3  | Lee  |
+
+table2:
+
+| ID  | Country |
+| :-: | :-----: |
+|  1  |  Korea  |
+|  3  |   USA   |
+|  4  |  Japan  |
+
+JOIN의 결과는 아래와 같다.
+
+| ID  | name | ID  | Country |
+| :-: | :--: | :-: | :-----: |
+|  1  | Choi |  1  |  Korea  |
+|  3  | Lee  |  3  |   USA   |
+
 ### LEFT JOIN
 
 table1의 컬럼 모두와 주어진 기준에서 table1과 겹치는 table2의 컬럼을 반환함(table1의 영역).
@@ -360,6 +385,30 @@ FROM table1
 LEFT JOIN table2
 ON table1.column_name = table2.column_name;
 ```
+
+table1:
+
+| ID  | name |
+| :-: | :--: |
+|  1  | Choi |
+|  2  | Kim  |
+|  3  | Lee  |
+
+table2:
+
+| ID  | Country |
+| :-: | :-----: |
+|  1  |  Korea  |
+|  3  |   USA   |
+|  4  |  Japan  |
+
+JOIN의 결과는 아래와 같다.
+
+| ID  | name |  ID  | Country |
+| :-: | :--: | :--: | :-----: |
+|  1  | Choi |  1   |  Korea  |
+|  2  | Kim  | NULL |  NULL   |
+|  3  | Lee  |  3   |   USA   |
 
 ## RIGHT JOIN
 
@@ -372,6 +421,30 @@ RIGHT JOIN table2
 ON table1.column_name = table2.column_name;
 ```
 
+table1:
+
+| ID  | name |
+| :-: | :--: |
+|  1  | Choi |
+|  2  | Kim  |
+|  3  | Lee  |
+
+table2:
+
+| ID  | Country |
+| :-: | :-----: |
+|  1  |  Korea  |
+|  3  |   USA   |
+|  4  |  Japan  |
+
+JOIN의 결과는 아래와 같다.
+
+|  ID  | name | ID  | Country |
+| :--: | :--: | :-: | :-----: |
+|  1   | Choi |  1  |  Korea  |
+|  3   | Lee  |  3  |   USA   |
+| NULL | NULL |  4  |  Japan  |
+
 ## FULL JOIN
 
 table1과 table2의 기준이 되는 모든 컬럼을 반환함(table1과 table2의 합집합).
@@ -382,6 +455,31 @@ FROM table1
 FULL JOIN table2
 ON table1.column_name = table2.column_name;
 ```
+
+table1:
+
+| ID  | name |
+| :-: | :--: |
+|  1  | Choi |
+|  2  | Kim  |
+|  3  | Lee  |
+
+table2:
+
+| ID  | Country |
+| :-: | :-----: |
+|  1  |  Korea  |
+|  3  |   USA   |
+|  4  |  Japan  |
+
+JOIN의 결과는 아래와 같다.
+
+|  ID  | name |  ID  | Country |
+| :--: | :--: | :--: | :-----: |
+|  1   | Choi |  1   |  Korea  |
+|  2   | Kim  | NULL |  NULL   |
+|  3   | Lee  |  3   |   USA   |
+| NULL | NULL |  4   |  Japan  |
 
 ## Self Join
 
