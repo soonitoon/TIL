@@ -410,7 +410,7 @@ JOIN의 결과는 아래와 같다.
 |  2  | Kim  | NULL |  NULL   |
 |  3  | Lee  |  3   |   USA   |
 
-## RIGHT JOIN
+### RIGHT JOIN
 
 table2의 컬럼 모두와 주어진 기준에서 table2과 겹치는 table1의 컬럼을 반환함(table2의 영역).
 
@@ -445,7 +445,7 @@ JOIN의 결과는 아래와 같다.
 |  3   | Lee  |  3  |   USA   |
 | NULL | NULL |  4  |  Japan  |
 
-## FULL JOIN
+### FULL JOIN
 
 table1과 table2의 기준이 되는 모든 컬럼을 반환함(table1과 table2의 합집합).
 
@@ -481,7 +481,7 @@ JOIN의 결과는 아래와 같다.
 |  3   | Lee  |  3   |   USA   |
 | NULL | NULL |  4   |  Japan  |
 
-## Self Join
+### Self Join
 
 SELF라는 별도의 키워드가 있는 것은 아님. 하나의 테이블에 두 개의 별명을 부여하여 마치 두 테이블을 다루는 것처럼 사용하는 방식.
 
