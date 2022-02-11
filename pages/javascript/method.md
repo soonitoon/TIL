@@ -93,9 +93,9 @@ console.log(subArr2); // [2, 3]
 
 ## Number
 
-### `Number.prototype.toString(2)`
+### `Number.prototype.toString()`
 
-해당 숫자를 이진수로 변환하기. `toString()` 메소드에 인자로 2 <= n <= 36 범위의 숫자를 넘겨 해당 진수로 변환할 수 있다.
+`toString(2)`와 같은 방법으로 해당 숫자를 이진수로 변환하기. `toString()` 메소드에 인자로 2 <= n <= 36 범위의 숫자를 넘겨 해당 진수로 변환할 수 있다.
 
 ### `Number.prototype.toFixed()`
 
@@ -106,6 +106,10 @@ const float = 1.264;
 console.log(float.toFixed()); // 1
 console.log(float.toFixed(1)); // 1.3
 ```
+
+### `Number.isInteger(value)`
+
+인자로 받은 수가 정수인지 아닌지를 판별. 불리언 값을 반환한다.
 
 ## String
 
@@ -172,6 +176,14 @@ n 개의 숫자를 전달하면 그 중 최대값을 찾아주는 메소드. 이
 const arr = [1, 2, 3];
 const max = Math.max(...arr);
 console.log(max); // 3
+```
+
+### `Math.sqrt()`
+
+매개변수로 받은 수의 양의 제곱근을 반환함.
+
+```javascript
+console.log(Math.sqrt(4)); // 2
 ```
 
 ## Map
