@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>2022 · GitBook</title>
+        <title>정규표현식 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -58,7 +58,7 @@
 
     
     
-    <link rel="prev" href="2021.html" />
+    <link rel="prev" href="editer.html" />
     
 
     </head>
@@ -726,9 +726,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.14.1" data-path="../cs/term.html">
+        <li class="chapter " data-level="1.3.14.1" data-path="term.html">
             
-                <a href="../cs/term.html">
+                <a href="term.html">
             
                     
                     용어정리
@@ -739,9 +739,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.14.2" data-path="../cs/shellCommands.html">
+        <li class="chapter " data-level="1.3.14.2" data-path="shellCommands.html">
             
-                <a href="../cs/shellCommands.html">
+                <a href="shellCommands.html">
             
                     
                     쉘 커멘드
@@ -752,9 +752,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.14.3" data-path="../cs/editer.html">
+        <li class="chapter " data-level="1.3.14.3" data-path="editer.html">
             
-                <a href="../cs/editer.html">
+                <a href="editer.html">
             
                     
                     편집기
@@ -765,9 +765,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.14.4" data-path="../cs/regexp.html">
+        <li class="chapter active" data-level="1.3.14.4" data-path="regexp.html">
             
-                <a href="../cs/regexp.html">
+                <a href="regexp.html">
             
                     
                     정규표현식
@@ -802,9 +802,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="2021.html">
+        <li class="chapter " data-level="1.4.1" data-path="../timeline/2021.html">
             
-                <a href="2021.html">
+                <a href="../timeline/2021.html">
             
                     
                     2021
@@ -815,9 +815,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.2" data-path="2022.html">
+        <li class="chapter " data-level="1.4.2" data-path="../timeline/2022.html">
             
-                <a href="2022.html">
+                <a href="../timeline/2022.html">
             
                     
                     2022
@@ -863,7 +863,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >2022</a>
+        <a href="../.." >정규표현식</a>
     </h1>
 </div>
 
@@ -878,204 +878,40 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="2022&#xB144;">2022&#xB144;</h1>
-<hr>
+                                <h1 id="&#xC815;&#xADDC;&#xD45C;&#xD604;&#xC2DD;-&#xC815;&#xB9AC;">&#xC815;&#xADDC;&#xD45C;&#xD604;&#xC2DD; &#xC815;&#xB9AC;</h1>
+<ul>
+<li><code>(?!pattern)</code>: Nagative lookahead. &#xD574;&#xB2F9; &#xD328;&#xD134;&#xC744; &#xB9E4;&#xCE6D;&#xC5D0;&#xC11C; &#xC81C;&#xC678;&#xD55C;&#xB2E4;.</li>
+<li><code>pattern1|pattern2</code>: &#xC815;&#xADDC;&#xC2DD; OR &#xC5F0;&#xC0B0;&#xC790;.</li>
+<li><code>pattern{n, }</code>: &#xD574;&#xB2F9; &#xD328;&#xD134;&#xC774; n&#xBC88; &#xC774;&#xC0C1; &#xBC18;&#xBCF5;&#xB420; &#xACBD;&#xC6B0; &#xB9E4;&#xCE6D;&#xB428;. &#xC815;&#xADDC;&#xC2DD; &#xC218;&#xB7C9;&#xC790;&#xC758; &#xC77C;&#xC885;.</li>
+<li><code>pattern{n}</code>: &#xD574;&#xB2F9; &#xD328;&#xD134;&#xC774; &#xC815;&#xD655;&#xD788; n&#xBC88; &#xBC18;&#xBCF5;&#xB420; &#xB54C;&#xC5D0;&#xB9CC; &#xB9E4;&#xCE6D;&#xB428;.</li>
+<li><code>pattern*</code>: &#xBAA8;&#xB4E0; &#xBC18;&#xBCF5;&#xB418;&#xB294; &#xD328;&#xD134;&#xC744; &#xCC3E;&#xC74C;(&#xBC18;&#xBCF5; &#xD69F;&#xC218;&#xB294; &#xC0C1;&#xAD00; &#xC5C6;&#xC74C;).</li>
+<li><p><code>pattern1(pattern2)</code></p>
+<ul>
+<li>&#xCEA1;&#xCC98;.</li>
+<li><code>pattern1(pattern2)</code>&#xC640; <code>pattern1patern2</code>&#xC758; &#xB9E4;&#xCE6D; &#xACB0;&#xACFC;&#xB294; &#xAC19;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0;&#xC11C; <code>match</code> &#xBA54;&#xC18C;&#xB4DC; &#xC0AC;&#xC6A9;&#xC2DC; &#xBC18;&#xD658; &#xACB0;&#xACFC;&#xB294; &#xB2E4;&#xB974;&#xB2E4;.</li>
+<li><p>&#xCEA1;&#xCC98;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xCEA1;&#xCC98; &#xC548;&#xC5D0; &#xD3EC;&#xD568;&#xB41C; &#xC11C;&#xBE0C;&#xBB38;&#xC790;&#xC5F4;&#xC774; &#xBC18;&#xD658;&#xB418;&#xB294; &#xBC30;&#xC5F4;&#xC758; &#xB450; &#xBC88;&#xC9F8; &#xC694;&#xC18C;&#xB85C; &#xD3EC;&#xD568;&#xB41C;&#xB2E4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> string = <span class="hljs-string">&quot;hello&quot;</span>;
+<span class="hljs-keyword">const</span> regex = <span class="hljs-regexp">/hello/</span>;
+<span class="hljs-keyword">const</span> regexWithCapture = <span class="hljs-regexp">/(hel)lo/</span>;
 
-<h2 id="1&#xC6D4;">1&#xC6D4;</h2>
+<span class="hljs-built_in">console</span>.log(string.match(regex));
+<span class="hljs-comment">// [ &apos;hello&apos;, index: 0, input: &apos;hello&apos;, groups: undefined ]</span>
+
+<span class="hljs-built_in">console</span>.log(string.match(regexWithCapture));
+<span class="hljs-comment">// [ &apos;hello&apos;, &apos;hel&apos;, index: 0, input: &apos;hello&apos;, groups: undefined ]</span>
+</code></pre>
 <ul>
-<li><p>1&#xC77C;</p>
-<ul>
-<li>&#xBAA8;&#xB178;&#xB808;&#xD3EC; &#xAD00;&#xB9AC; &#xD234;(lerna, yarn) &#xACF5;&#xBD80;.</li>
-<li>TIL &#xC815;&#xB9AC;.</li>
+<li><code>pattern1(?&lt;name&gt;pattern2)</code>&#xC640; &#xAC19;&#xC740; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xCEA1;&#xCC98; &#xADF8;&#xB8F9;&#xC5D0; &#xADF8;&#xB8F9;&#xBA85;&#xC744; &#xBD99;&#xC77C; &#xC218; &#xC788;&#xB2E4;.</li>
+<li><code>match</code> &#xBA54;&#xC18C;&#xB4DC;&#xAC00; &#xBC18;&#xD658;&#xD558;&#xB294; &#xBC30;&#xC5F4;&#xC758; &#xC18D;&#xC131;&#xC778; <code>groups</code> &#xAC1D;&#xCCB4;&#xB97C; &#xCC38;&#xC870;&#xD558;&#xC5EC; &#xC124;&#xC815;&#xD55C; &#xCEA1;&#xCC98; &#xADF8;&#xB8F9; &#xC774;&#xB984;&#xC73C;&#xB85C; &#xC11C;&#xBE0C; &#xC2A4;&#xD2B8;&#xB9C1;&#xC5D0; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC788;&#xB2E4;.</li>
 </ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> string = <span class="hljs-string">&quot;hello&quot;</span>;
+<span class="hljs-keyword">const</span> regexWithCaptureGroupName = <span class="hljs-regexp">/(?&lt;first&gt;hel)(?&lt;second&gt;lo)/</span>;
+<span class="hljs-keyword">const</span> result = string.match(regexWithCaptureGroupName).groups.first;
+
+<span class="hljs-built_in">console</span>.log(result);
+<span class="hljs-comment">// hel</span>
+</code></pre>
 </li>
-<li><p>2&#xC77C;</p>
-<ul>
-<li>&#xCE74;&#xCE74;&#xC624; &#xC778;&#xD134;&#xC27D; &#xBB38;&#xC81C; &#xD480;&#xC774;.</li>
-<li>&#xD504;&#xB860;&#xD2B8; &#xC5D4;&#xB4DC; &#xBA74;&#xC811; &#xBB38;&#xC81C; &#xD6D1;&#xC5B4;&#xBCF4;&#xAE30;.</li>
-</ul>
-</li>
-<li><p>5&#xC77C;</p>
-<ul>
-<li>(CMI) &#xD504;&#xB860;&#xD2B8; &#xD68C;&#xC758;.</li>
-<li>&#xB514;&#xC790;&#xC778; &#xD234; &#xB3C4;&#xC785; &#xC5EC;&#xBD80;&#xC5D0; &#xB300;&#xD55C; &#xB17C;&#xC758;.</li>
-<li>&#xCEE8;&#xBCA4;&#xC158;, PR &#xC5C6;&#xB294; &#xC644;&#xC804; &apos;&#xC790;&#xC720;&#xB85C;&#xC6B4;&apos; &#xC2E4;&#xD5D8; &#xB808;&#xD3EC; &#xC81C;&#xC791;&#xC5D0; &#xB300;&#xD55C; &#xB17C;&#xC758;.</li>
-</ul>
-</li>
-<li><p>6&#xC77C;</p>
-<ul>
-<li>&#xCE74;&#xCE74;&#xC624; &#xC778;&#xD134;&#xC27D; &#xBB38;&#xC81C; &#xD480;&#xC774;.</li>
-<li>&#xCF54;&#xB529; &#xD14C;&#xC2A4;&#xD2B8; &#xD480;&#xBA74;&#xC11C; &#xCC98;&#xC74C; &#xC54C;&#xC558;&#xB358; &#xAC1C;&#xB150;&#xB4E4; &#xC815;&#xB9AC;</li>
-</ul>
-</li>
-<li><p>7&#xC77C;</p>
-<ul>
-<li>&#xD480;&#xC5C8;&#xB358; &#xCF54;&#xD14C; &#xBB38;&#xC81C; &#xB808;&#xD3EC;&#xC5D0; &#xC815;&#xB9AC;&#xD558;&#xAE30;.</li>
-</ul>
-</li>
-<li><p>9&#xC77C;</p>
-<ul>
-<li>7&#xC77C;&#xC5D0; &#xB2E4; &#xC815;&#xB9AC;&#xD558;&#xC9C0; &#xBABB;&#xD588;&#xB358; &#xBB38;&#xC81C; &#xB9C8;&#xC800; &#xC815;&#xB9AC;.</li>
-<li>&#xCF54;&#xD14C; &#xD480;&#xBA74;&#xC11C; &#xC0C8;&#xB85C; &#xC54C;&#xAC8C; &#xB41C; &#xAC1C;&#xB150; TIL &#xB808;&#xD3EC;&#xC5D0; &#xC815;&#xB9AC;.</li>
-<li>(CMI) <strong>&#xCDA9;&#xB9BC;&#xC774;</strong> &#xBC84;&#xC804; 2 &#xAE30;&#xD68D; &#xD68C;&#xC758;.</li>
-<li>SQL &#xAE30;&#xCD08;&#xBD80;&#xD130; &#xACF5;&#xBD80; &#xC2DC;&#xC791;! (&#xCF54;&#xB529; &#xD14C;&#xC2A4;&#xD2B8; &#xB300;&#xBE44;)</li>
-</ul>
-</li>
-<li><p>10&#xC77C;</p>
-<ul>
-<li>(CMI) &#xBC84;&#xC804;2 &apos;&#xD559;&#xC0AC;&#xC77C;&#xC815;&apos; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xD14C;&#xC2A4;&#xD2B8; &#xB808;&#xD3EC;&#xC5D0;&#xC11C; &#xB514;&#xC790;&#xC778;&#xD568;.</li>
-<li>&#xB514;&#xC790;&#xC778;&#xD558;&#xB294; &#xACB8; CSS flex-box, grid &#xC18D;&#xC131; &#xB2E4;&#xC2DC; &#xACF5;&#xBD80;.</li>
-</ul>
-</li>
-<li><p>11&#xC77C;</p>
-<ul>
-<li>(CMI) &#xD559;&#xC0AC;&#xC77C;&#xC815; &#xD398;&#xC774;&#xC9C0; &#xCE98;&#xB9B0;&#xB354; &#xB514;&#xC790;&#xC778; &#xBCC0;&#xACBD;.</li>
-</ul>
-</li>
-<li><p>12&#xC77C;</p>
-<ul>
-<li>&#xD559;&#xC0AC;&#xC77C;&#xC815; UI &#xB514;&#xC790;&#xC778; &#xD53C;&#xB4DC;&#xBC31; &#xBC14;&#xD0D5;&#xC73C;&#xB85C; &#xB2E4;&#xC2DC; &#xC218;&#xC815;.</li>
-<li>(CMI) &#xD504;&#xB860;&#xD2B8;&#xC5D4;&#xB4DC; &#xD300; &#xD68C;&#xC758;.<ul>
-<li>&#xD5A5;&#xD6C4; &#xAC1C;&#xBC1C; &#xC77C;&#xC815; &#xC870;&#xC728;.</li>
-<li>&#xD559;&#xC0AC;&#xC77C;&#xC815; &#xBD80;&#xBD84; &#xCE98;&#xB9B0;&#xB354; &#xB514;&#xC790;&#xC778;&#xC5D0; &#xB300;&#xD574; &#xB17C;&#xC758;.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>13&#xC77C;</p>
-<ul>
-<li>&#xD559;&#xC0AC;&#xC77C;&#xC815; &#xCE98;&#xB9B0;&#xB354; &#xB514;&#xC790;&#xC778; 2&#xCC28; &#xD53C;&#xB4DC;&#xBC31; &#xBC18;&#xC601;.</li>
-<li>&#xD300;&#xC6D0; PR &#xBCC0;&#xACBD; &#xBD80;&#xBD84; &#xD655;&#xC778; &#xD6C4; &#xCF54;&#xB4DC; &#xB9AC;&#xBDF0; &#xB2EC;&#xAE30;.</li>
-</ul>
-</li>
-<li><p>14&#xC77C;</p>
-<ul>
-<li>SQL &#xAE30;&#xCD08; &#xACF5;&#xBD80; &#xBC0F; TIL&#xC5D0; &#xB0B4;&#xC6A9; &#xC815;&#xB9AC;.</li>
-</ul>
-</li>
-<li><p>15&#xC77C;</p>
-<ul>
-<li>SQL &#xAE30;&#xCD08; &#xACF5;&#xBD80; &#xACC4;&#xC18D; &#xBC0F; TIL&#xC5D0; &#xB0B4;&#xC6A9; &#xC815;&#xB9AC;.</li>
-<li>SQL &#xAE30;&#xCD08; &#xACF5;&#xBD80; &#xB05D;!</li>
-</ul>
-</li>
-<li><p>16&#xC77C;</p>
-<ul>
-<li>SQL &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xAD00;&#xB828; &#xACF5;&#xBD80;</li>
-<li>&#xAC1C;&#xBC1C;&#xD300; ESC &#xAC00;&#xC785;.</li>
-<li>&#xCDA9;&#xBD81;&#xB300;&#xD559;&#xAD50; &#xB370;&#xC774;&#xD2B8; &#xC571; &#xAE30;&#xD68D;&#xC11C; &#xAC80;&#xD1A0; &#xBC0F; &#xD53C;&#xB4DC;&#xBC31;</li>
-</ul>
-</li>
-<li><p>18&#xC77C;</p>
-<ul>
-<li>SQL&#xAD00;&#xB828; &#xCF54;&#xB529; &#xD14C;&#xC2A4;&#xD2B8; &#xBB38;&#xC81C; &#xD480;&#xC774;</li>
-<li>SQL &#xBD80;&#xC871;&#xD55C; &#xAC1C;&#xB150; &#xC815;&#xB9AC;</li>
-</ul>
-</li>
-<li><p>19&#xC77C;</p>
-<ul>
-<li>SQL &#xCF54;&#xB529; &#xD14C;&#xC2A4;&#xD2B8; &#xBB38;&#xC81C; &#xD480;&#xC774;</li>
-<li>(CMI) &#xD504;&#xB860;&#xD2B8;&#xC5D4;&#xB4DC; &#xD68C;&#xC758;</li>
-</ul>
-</li>
-<li><p>20&#xC77C;</p>
-<ul>
-<li>SQL &#xCF54;&#xB529; &#xD14C;&#xC2A4;&#xD2B8; &#xD480;&#xBA74;&#xC11C; &#xC54C;&#xAC8C; &#xB41C; &#xAC1C;&#xB150;&#xB4E4; TIL&#xC5D0; &#xC815;&#xB9AC;.</li>
-<li>(CMI) &#xCDA9;&#xB9BC;&#xC774; &#xBC84;&#xC804;2 &#xD648;&#xD398;&#xC774;&#xC9C0;&#xC5D0; &#xB4E4;&#xC5B4;&#xAC08; &#xCF54;&#xB85C;&#xB098; &#xD604;&#xD669; &#xCE74;&#xB4DC; &#xB514;&#xC790;&#xC778;</li>
-</ul>
-</li>
-<li><p>21&#xC77C;</p>
-<ul>
-<li>(ESC) &#xD300; &#xAC1C;&#xC124; &#xD6C4; &#xCCAB; OT. &#xB370;&#xC774;&#xD2B8; &#xB9E4;&#xCE6D; &#xC571; &#xAE30;&#xD68D;&#xC11C; &#xAC80;&#xD1A0; &#xD6C4; &#xD504;&#xB860;&#xD2B8;&#xC5D4;&#xB4DC; &#xAE30;&#xC220; &#xC2A4;&#xD0DD; &#xC815;&#xD558;&#xAE30;.</li>
-</ul>
-</li>
-<li><p>22&#xC77C;</p>
-<ul>
-<li>&#xCE74;&#xCE74;&#xC624; &#xCF54;&#xB529;&#xD14C;&#xC2A4;&#xD2B8; &#xAE30;&#xCD9C; &#xBB38;&#xC81C; &#xD480;&#xC774;.</li>
-</ul>
-</li>
-<li><p>24&#xC77C;</p>
-<ul>
-<li>&#xD504;&#xB85C;&#xADF8;&#xB798;&#xBA38;&#xC2A4; 1&#xB2E8;&#xACC4; &#xCF54;&#xD14C; &#xBB38;&#xC81C; &#xC21C;&#xC11C;&#xB300;&#xB85C; &#xD480;&#xAE30;.</li>
-</ul>
-</li>
-<li><p>26&#xC77C;</p>
-<ul>
-<li>TIL &#xC815;&#xB9AC;.</li>
-<li>&#xCE74;&#xCE74;&#xC624; &#xCF54;&#xD14C; &#xD47C; &#xAC83; &#xCF54;&#xD14C; &#xB808;&#xD3EC;&#xC5D0; &#xC815;&#xB9AC; &#xD6C4; push.</li>
-</ul>
-</li>
-<li><p>1&#xC6D4; 27&#xC77C; ~ 2&#xC6D4; 3&#xC77C;</p>
-<ul>
-<li>SW&#xB9C8;&#xC5D0;&#xC2A4;&#xD2B8;&#xB85C; 13&#xAE30; &#xC790;&#xC18C;&#xC11C; &#xC791;&#xC131;.</li>
-</ul>
-</li>
-</ul>
-<h2 id="2&#xC6D4;">2&#xC6D4;</h2>
-<ul>
-<li><p>5&#xC77C;</p>
-<ul>
-<li>(ESC) &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; &#xB808;&#xD3EC;&#xC9C0;&#xD1A0;&#xB9AC; &#xCD08;&#xAE30; &#xC138;&#xD305;(react + redux-toolkit + typescript).</li>
-<li>&#xC18C;&#xB9C8; &#xC790;&#xC18C;&#xC11C; &#xC791;&#xC131;.</li>
-</ul>
-</li>
-<li><p>6&#xC77C;</p>
-<ul>
-<li>(ESC) &#xB808;&#xD3EC;&#xC9C0;&#xD1A0;&#xB9AC;&#xC5D0; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD560; &#xBAA8;&#xB4C8; &#xC124;&#xCE58; &amp; RTK &#xC815;&#xC0C1; &#xC791;&#xB3D9; &#xC5EC;&#xBD80; &#xBCF4;&#xC5EC;&#xC8FC;&#xAE30; &#xC704;&#xD574; &#xAC04;&#xB2E8;&#xD55C; &#xCE74;&#xC6B4;&#xD130; &#xC81C;&#xC791;.</li>
-</ul>
-</li>
-<li><p>8&#xC77C;</p>
-<ul>
-<li>&#xC18C;&#xB9C8; &#xC790;&#xC18C;&#xC11C; &#xC791;&#xC131;.</li>
-<li>&#xC18C;&#xB9C8; &#xAC19;&#xC774; &#xC900;&#xBE44;&#xD558;&#xB294; &#xC0AC;&#xB78C;&#xB4E4;&#xACFC; &#xC790;&#xC18C;&#xC11C; &#xB808;&#xD3EC; &#xB9CC;&#xB4E4;&#xC5B4;&#xC11C; PR &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xD53C;&#xB4DC;&#xBC31; &#xC8FC;&#xACE0; &#xBC1B;&#xAE30; &#xC2DC;&#xC791;.</li>
-<li>(ESC) &#xD504;&#xB860;&#xD2B8;&#xC5D4;&#xB4DC; &#xD68C;&#xC758;<ul>
-<li>&#xC5ED;&#xD560; &#xBC30;&#xC815;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>9&#xC77C;</p>
-<ul>
-<li>(CMI) &#xCDA9;&#xB9BC;&#xC774; v2 &#xCCAD;&#xC8FC;&#xC2DC; &#xCF54;&#xB85C;&#xB098; &#xD655;&#xC9C4;&#xC790; &#xC815;&#xBCF4; &#xC2A4;&#xD06C;&#xB798;&#xD37C; &#xC81C;&#xC791;.</li>
-<li>(CMI) &#xD504;&#xB860;&#xD2B8;&#xC5D4;&#xB4DC; &#xD68C;&#xC758;<ul>
-<li>&#xD604;&#xC7AC; &#xC791;&#xC5C5; &#xC0AC;&#xD56D; &#xACF5;&#xC720;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>10&#xC77C;</p>
-<ul>
-<li>(CMI) &#xCDA9;&#xB9BC;&#xC774; &#xCCAD;&#xC8FC;&#xC2DC; &#xCF54;&#xB85C;&#xB098; &#xC2A4;&#xD06C;&#xB798;&#xD37C; &#xC81C;&#xC791; &#xB05D;.</li>
-<li>TIL &#xB808;&#xD3EC; &#xC815;&#xB9AC;</li>
-</ul>
-</li>
-<li><p>11&#xC77C;</p>
-<ul>
-<li>(CMI) &#xCF54;&#xB85C;&#xB098; &#xC2A4;&#xD06C;&#xB808;&#xD37C; &#xC81C;&#xC791;&#xD55C; &#xAC70; PR&#xB85C; &#xB0A0;&#xB9AC;&#xAE30;</li>
-<li>&#xC18C;&#xB9C8; &#xC790;&#xC18C;&#xC11C; &#xC791;&#xC131;</li>
-</ul>
-</li>
-<li><p>12&#xC77C;</p>
-<ul>
-<li>&#xC18C;&#xB9C8; &#xC790;&#xC18C;&#xC11C; &#xC791;&#xC131;</li>
-</ul>
-</li>
-<li><p>13&#xC77C;</p>
-<ul>
-<li>(CMI) &#xCF54;&#xB85C;&#xB098; &#xC2A4;&#xD06C;&#xB798;&#xD37C; &#xC81C;&#xC791; PR&#xC5D0;&#xC11C; &#xCF54;&#xB4DC;&#xB9AC;&#xBDF0; &#xBC1B;&#xC740; &#xAC83;&#xB4E4; &#xBC18;&#xC601;.<ul>
-<li>&#xC2A4;&#xD06C;&#xB798;&#xD551;&#xD55C; &#xB370;&#xC774;&#xD130; &#xADF8;&#xB300;&#xB85C; &#xC800;&#xC7A5;&#xD558;&#xC9C0; &#xB9D0;&#xACE0; &#xB098;&#xC911;&#xC5D0; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xAE30; &#xC27D;&#xAC8C; &#xAC00;&#xACF5;&#xD574;&#xC11C; &#xC800;&#xC7A5;&#xD558;&#xAE30;.</li>
-<li>&#xBA87;&#xBA87; &#xC2E4;&#xC218;&#xB4E4; &#xC218;&#xC815;&#xD558;&#xAE30;.</li>
-</ul>
-</li>
-<li>&#xC18C;&#xB9C8; &#xC790;&#xC18C;&#xC11C; &#xCD08;&#xC548; &#xC791;&#xC131; &#xBAA8;&#xB450; &#xC644;&#xB8CC;.</li>
-</ul>
-</li>
-<li><p>14&#xC77C;</p>
-<ul>
-<li>(CMI) &#xCF54;&#xB4DC;&#xB9AC;&#xBDF0; &#xBC18;&#xC601;&#xD55C; &#xC791;&#xC5C5;&#xBB3C; &#xC885;&#xD569;&#xD574;&#xC11C; PR &#xB0A0;&#xB9AC;&#xAE30;.</li>
-<li>TIL &#xC815;&#xB9AC;.</li>
-<li>&#xC815;&#xADDC;&#xD45C;&#xD604;&#xC2DD; &#xCEA1;&#xCCD0; &#xADF8;&#xB8F9; &#xAC1C;&#xB150; &#xACF5;&#xBD80;.</li>
-<li>&#xAD50;&#xB0B4; &#xADFC;&#xB85C; &#xC911; &#xC790;&#xB3D9;&#xD654;&#xD560; &#xC218; &#xC788;&#xB294; &#xC77C;&#xC774; &#xC788;&#xC5B4; &#xC989;&#xC11D;&#xC5D0;&#xC11C; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC791;&#xC131;&#xD574;&#xC11C; &#xC790;&#xB3D9;&#xD654; &#x1F916;</li>
 </ul>
 </li>
 </ul>
@@ -1106,7 +942,7 @@
 
             
                 
-                <a href="2021.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 2021">
+                <a href="editer.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 편집기">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -1118,7 +954,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2022","level":"1.4.2","depth":2,"previous":{"title":"2021","level":"1.4.1","depth":2,"path":"pages/timeline/2021.md","ref":"pages/timeline/2021.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/timeline/2022.md","mtime":"2022-02-14T07:11:41.913Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-14T14:30:19.509Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"정규표현식","level":"1.3.14.4","depth":3,"next":{"title":"타임라인","level":"1.4","depth":1,"ref":"","articles":[{"title":"2021","level":"1.4.1","depth":2,"path":"pages/timeline/2021.md","ref":"pages/timeline/2021.md","articles":[]},{"title":"2022","level":"1.4.2","depth":2,"path":"pages/timeline/2022.md","ref":"pages/timeline/2022.md","articles":[]}]},"previous":{"title":"편집기","level":"1.3.14.3","depth":3,"path":"pages/cs/editer.md","ref":"pages/cs/editer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/cs/regexp.md","mtime":"2022-02-14T07:10:41.129Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-14T14:30:19.509Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

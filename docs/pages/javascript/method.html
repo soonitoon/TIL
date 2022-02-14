@@ -767,6 +767,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.14.4" data-path="../cs/regexp.html">
+            
+                <a href="../cs/regexp.html">
+            
+                    
+                    정규표현식
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -867,7 +880,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="array">Array</h2>
+                                <h1 id="&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;-&#xB0B4;&#xC7A5;-&#xAC1D;&#xCCB4;-&#xBA54;&#xC18C;&#xB4DC;-&#xC815;&#xB9AC;">&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xB0B4;&#xC7A5; &#xAC1D;&#xCCB4; &#xBA54;&#xC18C;&#xB4DC; &#xC815;&#xB9AC;</h1>
+<h2 id="array">Array</h2>
 <h3 id="arrayprototypereducecallback-initalvalue"><code>Array.prototype.reduce(callback, initalValue)</code></h3>
 <p>&#xC774;&#xC804; &#xAC12;&#xACFC; &#xD604;&#xC7AC; &#xAC12;&#xC744; &#xB2E4;&#xB8E8;&#xB294; <code>reducer</code> &#xD568;&#xC218;&#xB97C; &#xCF5C;&#xBC31;&#xC73C;&#xB85C; &#xBC1B;&#xC74C;. &#xAC00;&#xC7A5; &#xAC04;&#xB2E8;&#xD55C; &#xC608;&#xC2DC;&#xB294; &#xB9AC;&#xC2A4;&#xD2B8; &#xC548;&#xC758; &#xAC12; &#xC804;&#xBD80; &#xB354;&#xD558;&#xAE30;.</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
@@ -959,6 +973,31 @@ arr.sort((a, b) =&gt; a - b);
 
 <span class="hljs-built_in">console</span>.log(newTest); <span class="hljs-comment">// goodbye, I&apos;m Hyuno</span>
 <span class="hljs-built_in">console</span>.log(test); <span class="hljs-comment">// hello, I&apos;m Hyuno</span>
+</code></pre>
+<h3 id="stringprototypematchregex">`String.prototype.match(regex)</h3>
+<ul>
+<li>&#xBB38;&#xC790;&#xC5F4;&#xC5D0;&#xC11C; &#xC815;&#xADDC;&#xD45C;&#xD604;&#xC2DD;&#xACFC; &#xC77C;&#xCE58;&#xD558;&#xB294; &#xBD80;&#xBD84;&#xC744; &#xCC3E;&#xC544; <strong>&#xBC30;&#xC5F4;</strong>&#xB85C; &#xBC18;&#xD658;&#xD55C;&#xB2E4;. &#xBC18;&#xD658;&#xB418;&#xB294; &#xBC30;&#xC5F4;&#xC740; &#xC815;&#xADDC;&#xC2DD;&#xC758; &#xAE00;&#xB85C;&#xBC8C; &#xC635;&#xC158;(<code>g</code>)&#xC5D0; &#xB530;&#xB77C; &#xB2E4;&#xB974;&#xB2E4;.</li>
+<li>&#xAE00;&#xB85C;&#xBC8C; &#xC635;&#xC158;&#xC774; &#xC788;&#xB2E4;&#xBA74; &#xD574;&#xB2F9; &#xD328;&#xD134;&#xACFC; &#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xBAA8;&#xB4E0; &#xBB38;&#xC790;&#xC5F4;&#xC774; &#xB2F4;&#xAE34; &#xBC30;&#xC5F4;&#xC744; &#xBC18;&#xD658;&#xD55C;&#xB2E4;.</li>
+<li>&#xAE00;&#xB85C;&#xBC8C; &#xC635;&#xC158;&#xC774; &#xC5C6;&#xB2E4;&#xBA74; &#xD574;&#xB2F9; &#xD328;&#xD134;&#xACFC; <strong>&#xAC00;&#xC7A5; &#xBA3C;&#xC800;</strong> &#xB9E4;&#xCE6D;&#xB418;&#xB294; &#xBB38;&#xC790;&#xC5F4;&#xC774; &#xB2F4;&#xAE34; &#xBC30;&#xC5F4;&#xC744; &#xBC18;&#xD658;&#xD558;&#xB294;&#xB370;, <strong>&#xD2B9;&#xBCC4;&#xD55C; &#xC18D;&#xC131;</strong>&#xC774; &#xCD94;&#xAC00;&#xB41C; &#xBC30;&#xC5F4;&#xC774;&#xB2E4;.<ul>
+<li><code>index</code>: &#xD574;&#xB2F9; &#xD328;&#xD134;&#xC774; &#xC6D0;&#xBCF8; &#xBB38;&#xC790;&#xC5F4;&#xC5D0;&#xC11C; &#xC704;&#xCE58;&#xD558;&#xB294; &#xC778;&#xB371;&#xC2A4;.</li>
+<li><code>input</code>: &#xC6D0;&#xBCF8; &#xBB38;&#xC790;&#xC5F4;.</li>
+<li><code>groups</code>: &#xCEA1;&#xCCD0; &#xADF8;&#xB8F9;&#xC758; &#xADF8;&#xB8F9;&#xBA85;&#xACFC; &#xB9E4;&#xCE6D; &#xBB38;&#xC790;&#xC5F4;&#xC774; &#xD0A4;-&#xAC12; &#xC30D;&#xC73C;&#xB85C; &#xC800;&#xC7A5;&#xB41C; &#xAC1D;&#xCCB4;. &#xCEA1;&#xCCD0;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; <code>undefined</code> &#xAC12;&#xC744; &#xAC16;&#xB294;&#xB2E4;.</li>
+</ul>
+</li>
+<li>&#xAE00;&#xB85C;&#xBC8C; &#xC635;&#xC158; &#xC5C6;&#xC774; &#xCEA1;&#xCCD0;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xACBD;&#xC6B0;, &#xB9E4;&#xCE6D;&#xB41C; &#xC804;&#xCCB4; &#xBB38;&#xC790;&#xC5F4;&#xC774; &#xCCAB; &#xBC88;&#xC9F8; &#xC694;&#xC18C;&#xB85C; &#xB4E4;&#xC5B4;&#xAC00;&#xBA70;, &#xCEA1;&#xCC98;&#xB41C; &#xBB38;&#xC790;&#xC5F4;&#xC774; &#xC21C;&#xC11C;&#xB300;&#xB85C; &#xBC30;&#xC5F4; &#xC548;&#xC5D0; &#xB4E4;&#xC5B4;&#xAC04;&#xB2E4;.</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> regex = <span class="hljs-regexp">/(?&lt;first&gt;he)(?&lt;second&gt;llo)/</span>;
+<span class="hljs-keyword">const</span> string = <span class="hljs-string">&quot;hello&quot;</span>;
+
+<span class="hljs-built_in">console</span>.log(string.match(regex));
+<span class="hljs-comment">// [</span>
+<span class="hljs-comment">//   &apos;hello&apos;,</span>
+<span class="hljs-comment">//   &apos;he&apos;,</span>
+<span class="hljs-comment">//   &apos;llo&apos;,</span>
+<span class="hljs-comment">//   index: 0,</span>
+<span class="hljs-comment">//   input: &apos;hello&apos;,</span>
+<span class="hljs-comment">//   groups: [Object: null prototype] { first: &apos;he&apos;, second: &apos;llo&apos; }</span>
+<span class="hljs-comment">// ]</span>
 </code></pre>
 <h2 id="object">Object</h2>
 <h3 id="objectkeys"><code>Object.keys()</code></h3>
@@ -1114,7 +1153,7 @@ map.set(<span class="hljs-number">3</span>, <span class="hljs-string">&quot;pine
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"메소드","level":"1.3.3.2","depth":3,"next":{"title":"DOM API","level":"1.3.3.3","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]},"previous":{"title":"자바스크립트 일반","level":"1.3.3.1","depth":3,"path":"pages/javascript/general.md","ref":"pages/javascript/general.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/method.md","mtime":"2022-01-26T08:42:05.260Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-11T03:41:36.701Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"메소드","level":"1.3.3.2","depth":3,"next":{"title":"DOM API","level":"1.3.3.3","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]},"previous":{"title":"자바스크립트 일반","level":"1.3.3.1","depth":3,"path":"pages/javascript/general.md","ref":"pages/javascript/general.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/method.md","mtime":"2022-02-14T05:05:12.805Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-14T14:30:19.509Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

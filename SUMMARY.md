@@ -73,6 +73,7 @@
     - [용어정리](pages/cs/term.md)
     - [쉘 커멘드](pages/cs/shellCommands.md)
     - [편집기](pages/cs/editer.md)
+    - [정규표현식](pages/cs/regexp.md)
 
 - 타임라인
 

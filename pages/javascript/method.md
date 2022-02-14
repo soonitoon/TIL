@@ -1,3 +1,5 @@
+# 자바스크립트 내장 객체 메소드 정리
+
 ## Array
 
 ### `Array.prototype.reduce(callback, initalValue)`
@@ -134,6 +136,31 @@ const newTest = test.replace(regex, "goodbye");
 
 console.log(newTest); // goodbye, I'm Hyuno
 console.log(test); // hello, I'm Hyuno
+```
+
+### `String.prototype.match(regex)
+
+- 문자열에서 정규표현식과 일치하는 부분을 찾아 **배열**로 반환한다. 반환되는 배열은 정규식의 글로벌 옵션(`g`)에 따라 다르다.
+- 글로벌 옵션이 있다면 해당 패턴과 매칭되는 모든 문자열이 담긴 배열을 반환한다.
+- 글로벌 옵션이 없다면 해당 패턴과 **가장 먼저** 매칭되는 문자열이 담긴 배열을 반환하는데, **특별한 속성**이 추가된 배열이다.
+  - `index`: 해당 패턴이 원본 문자열에서 위치하는 인덱스.
+  - `input`: 원본 문자열.
+  - `groups`: 캡쳐 그룹의 그룹명과 매칭 문자열이 키-값 쌍으로 저장된 객체. 캡쳐를 사용하지 않으면 `undefined` 값을 갖는다.
+- 글로벌 옵션 없이 캡쳐를 사용하는 경우, 매칭된 전체 문자열이 첫 번째 요소로 들어가며, 캡처된 문자열이 순서대로 배열 안에 들어간다.
+
+```javascript
+const regex = /(?<first>he)(?<second>llo)/;
+const string = "hello";
+
+console.log(string.match(regex));
+// [
+//   'hello',
+//   'he',
+//   'llo',
+//   index: 0,
+//   input: 'hello',
+//   groups: [Object: null prototype] { first: 'he', second: 'llo' }
+// ]
 ```
 
 ## Object
