@@ -138,6 +138,13 @@ console.log(newTest); // goodbye, I'm Hyuno
 console.log(test); // hello, I'm Hyuno
 ```
 
+### `String` 메소드를 활용한 UTF-16 인코딩 / 디코딩
+
+"알파벳을 얼마만큼 옮기시오~" 같은 느낌의 코테 문제를 풀 때 알아두면 유용하다.
+
+- 인코딩: `String.prototype.charCodeAt(index)`
+- 디코딩: `String.fromCharCode(UTF-16)`
+
 ### `String.prototype.match(regex)
 
 - 문자열에서 정규표현식과 일치하는 부분을 찾아 **배열**로 반환한다. 반환되는 배열은 정규식의 글로벌 옵션(`g`)에 따라 다르다.
