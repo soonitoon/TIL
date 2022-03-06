@@ -33,3 +33,21 @@ px 단위 사용 시 브라우저의 폰트 크기를 무시하게 됨. 웹 접�
 
 - 명도가 다른 같은 색이 여럿 있을 경우 100부터 900까지 숫자를 지정해서 사용함.
 - 홈페이지에서 두루두루 쓰이는 테마 칼라의 경우 `primary` 이름 사용.
+
+## font
+
+여러 속성들을 1줄로 나열 가능.
+
+```css
+p {
+  font: italic small-caps bold 12px/30px Georgia, serif;
+}
+```
+
+속성은 순서대로:
+
+- font-style
+- font-variant
+- font-weight
+- font-size/line-height
+- font-family
