@@ -15,3 +15,22 @@ React Hook를 사용할 때는 컴포넌트 함수 최상단에 작성하는 것
 ## react-hook-form
 
 특정 필드만 초기화하고자 할 때: `resetField(fieldName)` API로 구현 가능.
+
+## yup
+
+메소드 체이닝으로 입력값 검증할 때 각 검증 메소드에 인자로 해당 검증을 통과하지 못했을 때 출력할 에러메시지를 줄 수 있음.
+
+```javascript
+const schema = yup
+  .object()
+  .shape({
+    email: yup
+      .string()
+      .email("이메일을 양식을 확인해주세요")
+      .required("이메일을 입력해주세요"),
+    password: yup.string().required("비밀번호를 입력해주세요"),
+    isSaveId: yup.boolean(),
+    isAutoLogin: yup.boolean(),
+  })
+  .required();
+```
