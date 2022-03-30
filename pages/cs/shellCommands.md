@@ -43,3 +43,34 @@ $ cat hello.txt # goodbye
 
 - (NERDTree) 트리 전체 새로고침: `shift + r`
 - {NERDTree) 세로 분할 열기: `s`
+
+## bach scripting
+
+- bash 스크립트에서는 모든 변수가 글로벌 변수임(심지어 함수 스코프 안에 있는 변수들도).
+- 만약 지역 변수를 사용하고 싶다면 변수 선언문 앞에 `local` 키워드를 붙이면 됨.
+
+## bash 스크립트에서 함수 만들기
+
+```sh
+function nameOfFunc {
+  echo $1
+}
+```
+
+`function` 키워드로 만든다. 매개변수의 경우 `$1`부터 숫자 올려가면서 사용.
+
+## bash에서 replace하기
+
+### replace
+
+```sh
+text='hello hello hello'
+echo "${text/h/H}" # Hello hello hello
+```
+
+### replace all
+
+```sh
+text='hello hello hello'
+echo "${text//h/H}" # Hello Hello Hello
+```

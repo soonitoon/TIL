@@ -5,3 +5,5 @@
 `<`는 `&lt`. `>`는 `&gt`으로 사용하면 문제가 생기지 않는다.
 
 모든 HTML Entities 목록은 [W3schools](https://www.w3schools.com/html/html_entities.asp) 참고.
+
+`autoFocus`: HTML5 input 태그에 도입된 속성. 웹 페이지가 로딩되고 자동으로 해당 input에 포커스가 가도록 함.

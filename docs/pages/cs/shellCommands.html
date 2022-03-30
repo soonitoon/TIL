@@ -915,6 +915,26 @@ $ cat hello.txt # goodbye
 <li>(NERDTree) &#xD2B8;&#xB9AC; &#xC804;&#xCCB4; &#xC0C8;&#xB85C;&#xACE0;&#xCE68;: <code>shift + r</code></li>
 <li>{NERDTree) &#xC138;&#xB85C; &#xBD84;&#xD560; &#xC5F4;&#xAE30;: <code>s</code></li>
 </ul>
+<h2 id="bach-scripting">bach scripting</h2>
+<ul>
+<li>bash &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0;&#xC11C;&#xB294; &#xBAA8;&#xB4E0; &#xBCC0;&#xC218;&#xAC00; &#xAE00;&#xB85C;&#xBC8C; &#xBCC0;&#xC218;&#xC784;(&#xC2EC;&#xC9C0;&#xC5B4; &#xD568;&#xC218; &#xC2A4;&#xCF54;&#xD504; &#xC548;&#xC5D0; &#xC788;&#xB294; &#xBCC0;&#xC218;&#xB4E4;&#xB3C4;).</li>
+<li>&#xB9CC;&#xC57D; &#xC9C0;&#xC5ED; &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; &#xC2F6;&#xB2E4;&#xBA74; &#xBCC0;&#xC218; &#xC120;&#xC5B8;&#xBB38; &#xC55E;&#xC5D0; <code>local</code> &#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xBD99;&#xC774;&#xBA74; &#xB428;.</li>
+</ul>
+<h2 id="bash-&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0;&#xC11C;-&#xD568;&#xC218;-&#xB9CC;&#xB4E4;&#xAE30;">bash &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0;&#xC11C; &#xD568;&#xC218; &#xB9CC;&#xB4E4;&#xAE30;</h2>
+<pre><code class="lang-sh"><span class="hljs-keyword">function</span> nameOfFunc {
+  <span class="hljs-built_in">echo</span> <span class="hljs-variable">$1</span>
+}
+</code></pre>
+<p><code>function</code> &#xD0A4;&#xC6CC;&#xB4DC;&#xB85C; &#xB9CC;&#xB4E0;&#xB2E4;. &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xC758; &#xACBD;&#xC6B0; <code>$1</code>&#xBD80;&#xD130; &#xC22B;&#xC790; &#xC62C;&#xB824;&#xAC00;&#xBA74;&#xC11C; &#xC0AC;&#xC6A9;.</p>
+<h2 id="bash&#xC5D0;&#xC11C;-replace&#xD558;&#xAE30;">bash&#xC5D0;&#xC11C; replace&#xD558;&#xAE30;</h2>
+<h3 id="replace">replace</h3>
+<pre><code class="lang-sh">text=<span class="hljs-string">&apos;hello hello hello&apos;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">${text/h/H}</span>&quot;</span> <span class="hljs-comment"># Hello hello hello</span>
+</code></pre>
+<h3 id="replace-all">replace all</h3>
+<pre><code class="lang-sh">text=<span class="hljs-string">&apos;hello hello hello&apos;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">${text//h/H}</span>&quot;</span> <span class="hljs-comment"># Hello Hello Hello</span>
+</code></pre>
 
                                 
                                 </section>
@@ -958,7 +978,7 @@ $ cat hello.txt # goodbye
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"쉘 커멘드","level":"1.3.14.2","depth":3,"next":{"title":"편집기","level":"1.3.14.3","depth":3,"path":"pages/cs/editer.md","ref":"pages/cs/editer.md","articles":[]},"previous":{"title":"용어정리","level":"1.3.14.1","depth":3,"path":"pages/cs/term.md","ref":"pages/cs/term.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/cs/shellCommands.md","mtime":"2022-02-05T11:02:46.912Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-16T14:37:33.306Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"쉘 커멘드","level":"1.3.14.2","depth":3,"next":{"title":"편집기","level":"1.3.14.3","depth":3,"path":"pages/cs/editer.md","ref":"pages/cs/editer.md","articles":[]},"previous":{"title":"용어정리","level":"1.3.14.1","depth":3,"path":"pages/cs/term.md","ref":"pages/cs/term.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/cs/shellCommands.md","mtime":"2022-03-22T04:25:15.481Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-30T11:35:28.054Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

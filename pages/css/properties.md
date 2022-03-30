@@ -51,3 +51,12 @@ p {
 - font-weight
 - font-size/line-height
 - font-family
+
+font-weigth의 기본값은 400임.
+
+margin의 인자 수:
+
+- `margin: 1px`: 상, 하, 좌, 우 1px
+- `margin: 1px 2px`: 상하 1px, 좌우 2px
+- `margin: 1px 2px 1px`: 상 1px, 좌우 2px, 하 1px
+- `margin: 1px 2px 3px 4px`: 상: 1px, 우: 2px, 하: 3px, 좌: 4px
