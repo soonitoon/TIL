@@ -154,6 +154,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.1.2" data-path="../html/tags.html">
+            
+                <a href="../html/tags.html">
+            
+                    
+                    tags
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -878,7 +891,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#xC624;&#xBE0C;&#xC81D;&#xD2B8;-&#xC120;&#xC5B8;-&#xBC29;&#xBC95;">&#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xC120;&#xC5B8; &#xBC29;&#xBC95;</h2>
+                                <p>&#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xC120;&#xC5B8; &#xBC29;&#xBC95;</p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// &#xC0DD;&#xC131;&#xC790; &#xC0AC;&#xC6A9;</span>
 <span class="hljs-keyword">const</span> newObj = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
 
@@ -888,7 +901,7 @@
 <span class="hljs-comment">// &#xC624;&#xBE0C;&#xC81D;&#xD2B8; &#xB9AC;&#xD130;&#xB7F4; &#xC0AC;&#xC6A9;</span>
 <span class="hljs-keyword">const</span> newObj = {};
 </code></pre>
-<h2 id="throw"><code>throw</code></h2>
+<p><code>throw</code></p>
 <ul>
 <li>&#xC0AC;&#xC6A9;&#xC790; &#xC815;&#xC758; &#xC5D0;&#xB7EC;&#xB97C; &#xBC1C;&#xC0DD;&#xC2DC;&#xD0AC; &#xC218; &#xC788;&#xC74C;.</li>
 <li>&#xD568;&#xC218; &#xBE14;&#xB7ED; &#xC548;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xD568;&#xC218; &#xC2E4;&#xD589;&#xC774; &#xC989;&#xC2DC; &#xC911;&#xC9C0;&#xB428;.</li>
@@ -905,7 +918,7 @@
   <span class="hljs-built_in">console</span>.log(err); <span class="hljs-comment">// Error! &#xCD9C;&#xB825;</span>
 }
 </code></pre>
-<h2 id="error-&#xAC1D;&#xCCB4;"><code>Error</code> &#xAC1D;&#xCCB4;</h2>
+<p><code>Error</code> &#xAC1D;&#xCCB4;</p>
 <p>&#xB7F0;&#xD0C0;&#xC784; &#xB3C4;&#xC911; &#xC5D0;&#xB7EC;&#xAC00; &#xBC1C;&#xC0DD;&#xD558;&#xBA74; <code>throw</code> &#xB41C;&#xB2E4;. <code>new</code> &#xC0DD;&#xC131;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC11C; &#xC9C1;&#xC811; &#xC815;&#xC758;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC74C;.</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">try</span> {
   <span class="hljs-keyword">const</span> a = nothing;
@@ -920,7 +933,7 @@
   <span class="hljs-built_in">console</span>.log(err); <span class="hljs-comment">// Something went wrong!</span>
 }
 </code></pre>
-<h2 id="&#xBE44;&#xD2B8;-&#xC5F0;&#xC0B0;&#xC790;">&#xBE44;&#xD2B8; &#xC5F0;&#xC0B0;&#xC790;</h2>
+<p>&#xBE44;&#xD2B8; &#xC5F0;&#xC0B0;&#xC790;</p>
 <ul>
 <li><code>|</code> : OR</li>
 <li><code>&amp;</code> : AND</li>
@@ -937,12 +950,60 @@
 <span class="hljs-comment">// ----------</span>
 <span class="hljs-comment">// 3 = 0011</span>
 </code></pre>
-<h2 id="tostring--parseint"><code>toString() &amp; parseInt()</code></h2>
+<p><code>toString() &amp; parseInt()</code></p>
 <p>&#xCF54;&#xB529; &#xD14C;&#xC2A4;&#xD2B8;&#xC5D0;&#xC11C; &#xC815;&#xC218;&#xB97C; &#xD2B9;&#xC815; &#xC9C4;&#xBC95;&#xC73C;&#xB85C; &#xBCC0;&#xD658;&#xD55C; &#xD6C4;&#xC5D0; &#xC5B4;&#xB5A4; &#xCC98;&#xB9AC;&#xB97C; &#xD558;&#xACE0;, &#xB2E4;&#xC2DC; &#xC815;&#xC218;&#xB85C; &#xBCC0;&#xD658;&#xD558;&#xB294; &#xBB38;&#xC81C;&#xC5D0;&#xC11C; &#xC720;&#xC6A9;&#xD558;&#xAC8C; &#xC4F8; &#xC218; &#xC788;&#xB294; &#xC30D;.</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> int = <span class="hljs-number">3</span>;
 <span class="hljs-keyword">let</span> decimal = int.toString(<span class="hljs-number">3</span>); <span class="hljs-comment">// &#xC815;&#xC218; =&gt; 3&#xC9C4;&#xBC95; &#xBB38;&#xC790;&#xC5F4; &#xBCC0;&#xD658;</span>
 <span class="hljs-comment">// &#xC5B4;&#xB5A4; &#xCC98;&#xB9AC;</span>
 <span class="hljs-keyword">const</span> result = decimal.parseInt(<span class="hljs-number">3</span>); <span class="hljs-comment">// 3&#xC9C4;&#xBC95; &#xBB38;&#xC790;&#xC5F4; =&gt; &#xC815;&#xC218; &#xBCC0;&#xD658;</span>
+</code></pre>
+<p>&#xB3D9;&#xC801; <code>import</code>(<a href="https://ko.javascript.info/modules-dynamic-imports" target="_blank">Ref</a>)</p>
+<ul>
+<li>&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; <code>import</code> &#xBB38;&#xC740; &#xC815;&#xC801;&#xC784;.<ul>
+<li>&#xBCC0;&#xC218;&#xB97C; &#xD1B5;&#xD574; <code>import</code> &#xBB38;&#xC5D0; &#xACBD;&#xB85C;&#xB97C; &#xC804;&#xB2EC;&#xD560; &#xC218; &#xC5C6;&#xC74C;.</li>
+<li>&#xB7F0;&#xD0C0;&#xC784;&#xC774;&#xB098; &#xC870;&#xAC74;&#xBD80;&#xB85C; <code>import</code> &#xD560; &#xC218; &#xC5C6;&#xC74C;.</li>
+<li>&#xC704;&#xC758; &#xAE30;&#xB2A5;&#xC744; &#xC9C0;&#xC6D0;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xC774;&#xC720;&#xB294; &#xBC88;&#xB4E4;&#xB9C1; &#xBC0F; &#xAC00;&#xC9C0;&#xCE58;&#xAE30; &#xC791;&#xC5C5;&#xC774; &#xBD88;&#xAC00;&#xB2A5;&#xD558;&#xAE30; &#xB54C;&#xBB38;.</li>
+</ul>
+</li>
+<li><code>import(module)</code> &#xD45C;&#xD604;&#xC2DD; &#xC0AC;&#xC6A9;&#xD558;&#xAE30;.<ul>
+<li><code>import(module)</code>&#xC740; &#xBAA8;&#xB4C8;&#xC774; <code>export</code>&#xD558;&#xB294; &#xAC83;&#xB4E4;&#xC774; &#xB2F4;&#xAE34; &#xAC1D;&#xCCB4;&#xB97C; &#xD504;&#xB85C;&#xBBF8;&#xC2A4;&#xB85C; &#xBC18;&#xD658;&#xD568;.</li>
+<li>&#xCF54;&#xB4DC; &#xB0B4;&#xBD80; &#xC5B4;&#xB514;&#xC5D0;&#xC11C;&#xB4E0;&#xC9C0; &#xB3D9;&#xC801;&#xC73C;&#xB85C; &#xD638;&#xCD9C;&#xD560; &#xC218; &#xC788;&#xC74C;.</li>
+</ul>
+</li>
+</ul>
+<p>&#xCF54;&#xB4DC; &#xC608;&#xC2DC;:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// src/</span>
+<span class="hljs-comment">// &#x251C;&#x2500; say.js</span>
+<span class="hljs-comment">// &#x251C;&#x2500; main.js</span>
+
+<span class="hljs-comment">// say.js</span>
+<span class="hljs-keyword">const</span> say = () =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Hi&quot;</span>);
+<span class="hljs-keyword">const</span> hi = () =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;say&quot;</span>);
+
+<span class="hljs-keyword">export</span> { say, hi };
+
+<span class="hljs-comment">// main.js</span>
+<span class="hljs-keyword">const</span> { say, hi } = <span class="hljs-keyword">await</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;./say.js&quot;</span>);
+
+say(); <span class="hljs-comment">// Hi</span>
+hi(); <span class="hljs-comment">// say</span>
+</code></pre>
+<ul>
+<li><code>export default</code>&#xB85C; &#xB0B4;&#xBCF4;&#xB0B8; &#xBAA8;&#xB4C8;&#xC740; <code>default</code> &#xD0A4;&#xB85C; &#xCC38;&#xC870; &#xAC00;&#xB2A5;.</li>
+</ul>
+<p>&#xCF54;&#xB4DC; &#xC608;&#xC2DC;:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// say.js</span>
+<span class="hljs-keyword">const</span> say = () =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Hi&quot;</span>);
+<span class="hljs-keyword">const</span> hi = () =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;say&quot;</span>);
+
+<span class="hljs-keyword">export</span> { say };
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> hi;
+
+<span class="hljs-comment">// main.js</span>
+<span class="hljs-keyword">const</span> { say, <span class="hljs-keyword">default</span>: hi } = <span class="hljs-keyword">await</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;./say.js&quot;</span>);
+
+say(); <span class="hljs-comment">// Hi</span>
+hi(); <span class="hljs-comment">// say</span>
 </code></pre>
 
                                 
@@ -983,7 +1044,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"자바스크립트 일반","level":"1.3.3.1","depth":3,"next":{"title":"메소드","level":"1.3.3.2","depth":3,"path":"pages/javascript/method.md","ref":"pages/javascript/method.md","articles":[]},"previous":{"title":"JavaScript","level":"1.3.3","depth":2,"ref":"","articles":[{"title":"자바스크립트 일반","level":"1.3.3.1","depth":3,"path":"pages/javascript/general.md","ref":"pages/javascript/general.md","articles":[]},{"title":"메소드","level":"1.3.3.2","depth":3,"path":"pages/javascript/method.md","ref":"pages/javascript/method.md","articles":[]},{"title":"DOM API","level":"1.3.3.3","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/general.md","mtime":"2021-10-29T07:15:00.884Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-30T11:35:28.054Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"자바스크립트 일반","level":"1.3.3.1","depth":3,"next":{"title":"메소드","level":"1.3.3.2","depth":3,"path":"pages/javascript/method.md","ref":"pages/javascript/method.md","articles":[]},"previous":{"title":"JavaScript","level":"1.3.3","depth":2,"ref":"","articles":[{"title":"자바스크립트 일반","level":"1.3.3.1","depth":3,"path":"pages/javascript/general.md","ref":"pages/javascript/general.md","articles":[]},{"title":"메소드","level":"1.3.3.2","depth":3,"path":"pages/javascript/method.md","ref":"pages/javascript/method.md","articles":[]},{"title":"DOM API","level":"1.3.3.3","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/general.md","mtime":"2022-04-07T08:01:31.553Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-09T03:59:39.386Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

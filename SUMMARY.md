@@ -6,6 +6,7 @@
   - HTML
 
     - [HTML Entities](pages/html/htmlEntities.md)
+    - [tags](pages/html/tags.md)
 
   - CSS
 

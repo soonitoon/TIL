@@ -319,3 +319,14 @@ const regex3 = new RegExp(/abc/, "g");
 // RexExp() 생성자 사용법 2.
 // 패턴을 literal notation으로, 옵션을 문자열로 넘긴다.
 ```
+
+`Document.importNode()`
+
+```typescript
+importNode(node: Node, deep?: boolean)
+```
+
+- [Ref](https://developer.mozilla.org/en-US/docs/Web/API/Document/importNode)
+- 인자로 받은 `Node` 객체를 복사해서 현재 `document`로 가져오는 메소드.
+- `importNode` 메소드만으로는 `document`안에 삽입되지 않음.
+  - `appendChild()` 등의 메소드로 삽입해주어야 함.
