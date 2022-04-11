@@ -21,7 +21,6 @@
 
   - Typescript
 
-    - [추상 클래스](pages/typescript/abstractClass.md)
     - [타입스크립트 일반](pages/typescript/general.md)
 
   - JWT

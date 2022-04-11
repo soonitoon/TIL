@@ -129,3 +129,9 @@ const { say, default: hi } = await import("./say.js");
 say(); // Hi
 hi(); // say
 ```
+
+`A instanceof B`
+
+- A가 B의 인스턴스인지 아닌지를 불리언 값으로 반환하는 연산자.
+- 프로토타입 체인으로 연결되어 있다면 직속 인스턴스가 아니어도 `true`를 반환한다.
+  - 예) 모든 객체는 `Object`에 대해 언제나 인스턴스다.
