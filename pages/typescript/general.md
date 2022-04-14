@@ -75,3 +75,51 @@ console.log(data);
 - `unknown`은 타입의 범위를 좁혀 사용해야 할 의무를 가짐.
   - `unknown` 상태에서는 어떤 속성에도 접근할 수 없음.
   - 반드시 조건문으로 타입을 좁혀 사용해야 함.
+
+인덱스로 타입 접근하기
+
+- `Person` 타입의 속성을 브라켓 안에 인덱스로 사용하여 해당 속성의 타입에 접근할 수 있음. 예제에서 `Age`의 타입은 `Person.age`의 타입인 `number`가 됨.
+
+```typescript
+type Person = { age: number; name: string; alive: boolean };
+type Age = Person["age"];
+```
+
+- 아래의 예시처럼 여러 인덱스를 유니온으로 사용할 수 있음.
+
+```typescript
+type AgeOrName = Person["age" | "name"];
+// type AgeOrName = string | number
+
+type AllOfPerson = Person[keyof Person];
+// type AllOfPerson = number | string | boolean
+```
+
+- 배열 요소의 타입에 접근할 수도 있음. 이때는 특정 요소가 아니라 임의의 요소라는 의미에서 브라켓 안에 `number`라는 키워드로 접근함.
+
+```typescript
+const MyArray = [
+  { name: "Alice", age: 15 },
+  { name: "Bob", age: 23 },
+  { name: "Eve", age: 38 },
+];
+
+type Person = typeof MyArray[number];
+// type Person = {name: string, age: number}
+
+type Age = typeof MyArray[number]["age"];
+// type Age = number
+```
+
+- 주의!: 타입을 인덱스로 참조할 때 사용하는 것은 문자열이 아니라 타입임.
+- 위의 예제에서 `"age"`는 문자열이 아니라 타입으로서의 의미를 가질 때에만 타입의 인덱스로 사용할 수 있음.
+
+```typescript
+const key = "age";
+type Age = Person[key];
+// 에러!
+
+type key = "age";
+type Age = Person[key];
+// type Age = number
+```

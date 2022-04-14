@@ -19,3 +19,13 @@
 ```
 
 `<template>`([Ref](https://developer.mozilla.org/ko/docs/Web/HTML/Element/template))
+
+내용 추가 필요
+
+`<em>`
+
+[Ref](https://www.w3schools.com/tags/tag_em.asp)
+
+- 특정 텍스트를 강조하고 싶을 때 사용함.
+- `em` 안에 있는 텍스트는 대부분의 브라우저에서 _이텔릭체로_ 표시됨.
+- 보이스 오버는 `em` 태그를 만나면 그 부분을 강조해서 읽음.
