@@ -18,9 +18,13 @@
 </datalist>
 ```
 
-`<template>`([Ref](https://developer.mozilla.org/ko/docs/Web/HTML/Element/template))
+`<template>`
 
-내용 추가 필요
+[Ref](https://developer.mozilla.org/ko/docs/Web/HTML/Element/template)
+
+- 나중에 사용하기 위해 미리 만들어둔 HTML 요소의 템플릿
+- `<template>` 안의 요소들은 렌더링 되지 않는다.
+- 나중에 자바스크립트를 통해 해당 템플릿 요소를 불러와 데이터를 집어넣은 뒤, HTML 상의 원하는 위치에 삽입할 수 있다.
 
 `<em>`
 

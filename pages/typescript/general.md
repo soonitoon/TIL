@@ -123,3 +123,30 @@ type key = "age";
 type Age = Person[key];
 // type Age = number
 ```
+
+범용 객체 타입 만들기
+
+- 객체의 속성 이름을 구체적으로 적지 않고 `[key: string]`을 통해 템플릿을 구현함.
+
+```typescript
+type AnyStringObj = {
+  [key: string]: string;
+};
+
+const stringObj1: AnyStringObj = { a: "a" }; // ok
+const stringObj2: AnyStringObj = { b: "b" }; // ok
+```
+
+기존 객체 타입 수정하기
+
+- 별도의 타입을 새로 만들지 않고 기존 타입을 변경할 수 있음.
+- 예를 들어, 다른 타입의 속성으로 이루어진 타입을 같은 속성명을 가지고 `number` 타입을 속성으로 가지는 타입으로 변환할 수 있음.
+
+```typescript
+type ChangeType<T> = {
+  [Key in keyof T]: number;
+};
+
+type StringObj = { a: string };
+type NumberObj = ChangeType<StringObj>; // {a: number}
+```
