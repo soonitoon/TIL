@@ -1134,6 +1134,23 @@ map.set(<span class="hljs-number">3</span>, <span class="hljs-string">&quot;pine
 </ul>
 </li>
 </ul>
+<p><code>AbortController</code></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortController" target="_blank">Ref</a></li>
+<li>&#xC774;&#xBBF8; &#xBCF4;&#xB0B8; &#xC694;&#xCCAD;&#xC744; &#xC6D0;&#xD560; &#xB54C; &#xC911;&#xB2E8;&#xD560; &#xC218; &#xC788;&#xAC8C; &#xD574;&#xC8FC;&#xB294; &#xCEE8;&#xD2B8;&#xB864;&#xB7EC; &#xAC1D;&#xCCB4;.</li>
+<li>&#xC694;&#xCCAD;&#xC744; &#xBCF4;&#xB0BC; &#xB54C; &#xCEE8;&#xD2B8;&#xB864;&#xB7EC; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC758; <code>signal</code>&#xC744; &#xD3EC;&#xD568;&#xD55C; &#xB4A4;&#xC5D0; <code>abort()</code> &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xC694;&#xCCAD;&#xC744; &#xC911;&#xB2E8;&#xD560; &#xC218; &#xC788;&#xB2E4;.</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> controller = <span class="hljs-keyword">new</span> AbortController();
+<span class="hljs-keyword">const</span> { signal } = controller;
+
+<span class="hljs-keyword">const</span> id = setTimeout(() =&gt; controller.abort(), <span class="hljs-number">10000</span>);
+
+<span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> fetch(URL, { signal });
+
+<span class="hljs-keyword">const</span> clearTimeout(id);
+
+<span class="hljs-comment">// 10&#xCD08; &#xD6C4;&#xC5D0;&#xB3C4; &#xC751;&#xB2F5;&#xC774; &#xC644;&#xB8CC;&#xB418;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xC694;&#xCCAD;&#xC744; &#xC911;&#xB2E8;&#xC2DC;&#xD0A8;&#xB2E4;.</span>
+</code></pre>
 
                                 
                                 </section>
@@ -1177,7 +1194,7 @@ map.set(<span class="hljs-number">3</span>, <span class="hljs-string">&quot;pine
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"메소드","level":"1.3.3.2","depth":3,"next":{"title":"DOM API","level":"1.3.3.3","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]},"previous":{"title":"자바스크립트 일반","level":"1.3.3.1","depth":3,"path":"pages/javascript/general.md","ref":"pages/javascript/general.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/method.md","mtime":"2022-04-08T15:42:41.167Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-12T17:19:21.428Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"메소드","level":"1.3.3.2","depth":3,"next":{"title":"DOM API","level":"1.3.3.3","depth":3,"path":"pages/javascript/DOMAPI.md","ref":"pages/javascript/DOMAPI.md","articles":[]},"previous":{"title":"자바스크립트 일반","level":"1.3.3.1","depth":3,"path":"pages/javascript/general.md","ref":"pages/javascript/general.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/javascript/method.md","mtime":"2022-05-14T16:34:42.930Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-15T05:09:20.971Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

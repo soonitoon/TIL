@@ -330,3 +330,22 @@ importNode(node: Node, deep?: boolean)
 - 인자로 받은 `Node` 객체를 복사해서 현재 `document`로 가져오는 메소드.
 - `importNode` 메소드만으로는 `document`안에 삽입되지 않음.
   - `appendChild()` 등의 메소드로 삽입해주어야 함.
+
+`AbortController`
+
+- [Ref](https://developer.mozilla.org/en-US/docs/Web/API/AbortController)
+- 이미 보낸 요청을 원할 때 중단할 수 있게 해주는 컨트롤러 객체.
+- 요청을 보낼 때 컨트롤러 인스턴스의 `signal`을 포함한 뒤에 `abort()` 메소드를 호출해 요청을 중단할 수 있다.
+
+```javascript
+const controller = new AbortController();
+const { signal } = controller;
+
+const id = setTimeout(() => controller.abort(), 10000);
+
+const response = await fetch(URL, { signal });
+
+const clearTimeout(id);
+
+// 10초 후에도 응답이 완료되지 않으면 요청을 중단시킨다.
+```
