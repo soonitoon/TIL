@@ -150,3 +150,21 @@ type ChangeType<T> = {
 type StringObj = { a: string };
 type NumberObj = ChangeType<StringObj>; // {a: number}
 ```
+
+`infer`
+
+- 특정 자리에 들어가는 타입을 변수처럼 사용할 수 있다.
+- 함수 타입을 제너릭으로 받아 반환 타입을 추출하는 예제.
+
+```typescript
+type func = (a: number, b: number) => number;
+
+type GetReturnType<T extends Function> = T extends (...arg: any[]) => infer R
+  ? R
+  : never;
+
+type Return = GetReturnType<func>;
+```
+
+- `extends`로 타입을 검사할 때 `infer R`은 함수의 반환타입을 변수처럼 저장하는 역할을 한다.
+- 만약 어떤 종류의 매개변수를 받는 함수라면 그 반환 타입을 반환하고, 함수가 아니라면 `never` 타입을 반환한다.

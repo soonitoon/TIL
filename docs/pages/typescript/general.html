@@ -1016,6 +1016,23 @@ choi.printName();
 <span class="hljs-keyword">type</span> StringObj = { a: <span class="hljs-built_in">string</span> };
 <span class="hljs-keyword">type</span> NumberObj = ChangeType&lt;StringObj&gt;; <span class="hljs-comment">// {a: number}</span>
 </code></pre>
+<p><code>infer</code></p>
+<ul>
+<li>&#xD2B9;&#xC815; &#xC790;&#xB9AC;&#xC5D0; &#xB4E4;&#xC5B4;&#xAC00;&#xB294; &#xD0C0;&#xC785;&#xC744; &#xBCC0;&#xC218;&#xCC98;&#xB7FC; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;.</li>
+<li>&#xD568;&#xC218; &#xD0C0;&#xC785;&#xC744; &#xC81C;&#xB108;&#xB9AD;&#xC73C;&#xB85C; &#xBC1B;&#xC544; &#xBC18;&#xD658; &#xD0C0;&#xC785;&#xC744; &#xCD94;&#xCD9C;&#xD558;&#xB294; &#xC608;&#xC81C;.</li>
+</ul>
+<pre><code class="lang-typescript"><span class="hljs-keyword">type</span> func = (a: <span class="hljs-built_in">number</span>, b: <span class="hljs-built_in">number</span>) =&gt; <span class="hljs-built_in">number</span>;
+
+<span class="hljs-keyword">type</span> GetReturnType&lt;T extends <span class="hljs-built_in">Function</span>&gt; = T extends (...arg: <span class="hljs-built_in">any</span>[]) =&gt; infer R
+  ? R
+  : never;
+
+<span class="hljs-keyword">type</span> Return = GetReturnType&lt;func&gt;;
+</code></pre>
+<ul>
+<li><code>extends</code>&#xB85C; &#xD0C0;&#xC785;&#xC744; &#xAC80;&#xC0AC;&#xD560; &#xB54C; <code>infer R</code>&#xC740; &#xD568;&#xC218;&#xC758; &#xBC18;&#xD658;&#xD0C0;&#xC785;&#xC744; &#xBCC0;&#xC218;&#xCC98;&#xB7FC; &#xC800;&#xC7A5;&#xD558;&#xB294; &#xC5ED;&#xD560;&#xC744; &#xD55C;&#xB2E4;.</li>
+<li>&#xB9CC;&#xC57D; &#xC5B4;&#xB5A4; &#xC885;&#xB958;&#xC758; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xB97C; &#xBC1B;&#xB294; &#xD568;&#xC218;&#xB77C;&#xBA74; &#xADF8; &#xBC18;&#xD658; &#xD0C0;&#xC785;&#xC744; &#xBC18;&#xD658;&#xD558;&#xACE0;, &#xD568;&#xC218;&#xAC00; &#xC544;&#xB2C8;&#xB77C;&#xBA74; <code>never</code> &#xD0C0;&#xC785;&#xC744; &#xBC18;&#xD658;&#xD55C;&#xB2E4;.</li>
+</ul>
 
                                 
                                 </section>
@@ -1051,7 +1068,7 @@ choi.printName();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"타입스크립트 일반","level":"1.3.4.1","depth":3,"next":{"title":"JWT","level":"1.3.5","depth":2,"ref":"","articles":[{"title":"sign()","level":"1.3.5.1","depth":3,"path":"pages/jwt/sign.md","ref":"pages/jwt/sign.md","articles":[]}]},"previous":{"title":"Typescript","level":"1.3.4","depth":2,"ref":"","articles":[{"title":"타입스크립트 일반","level":"1.3.4.1","depth":3,"path":"pages/typescript/general.md","ref":"pages/typescript/general.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/typescript/general.md","mtime":"2022-04-14T14:29:24.952Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-28T08:39:14.575Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"타입스크립트 일반","level":"1.3.4.1","depth":3,"next":{"title":"JWT","level":"1.3.5","depth":2,"ref":"","articles":[{"title":"sign()","level":"1.3.5.1","depth":3,"path":"pages/jwt/sign.md","ref":"pages/jwt/sign.md","articles":[]}]},"previous":{"title":"Typescript","level":"1.3.4","depth":2,"ref":"","articles":[{"title":"타입스크립트 일반","level":"1.3.4.1","depth":3,"path":"pages/typescript/general.md","ref":"pages/typescript/general.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/typescript/general.md","mtime":"2022-06-01T11:09:31.043Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-01T11:15:39.787Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
