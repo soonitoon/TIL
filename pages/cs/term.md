@@ -11,3 +11,7 @@ Complie, Link, Build
 boilerplates
 
 특별히 수정하지 않고도 여러 상황에서 두루두루 쓸 수 있는 코드를 의미함.
+
+YAML
+
+- 사람 친화적인 데이터 구조 언어
