@@ -1,0 +1,961 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Async vs Sync · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    TIL BOOK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../introduce/introduce.html">
+            
+                <a href="../introduce/introduce.html">
+            
+                    
+                    소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    주제별
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    HTML
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../html/htmlEntities.html">
+            
+                <a href="../html/htmlEntities.html">
+            
+                    
+                    HTML Entities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../html/tags.html">
+            
+                <a href="../html/tags.html">
+            
+                    
+                    tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    CSS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../css/selectors.html">
+            
+                <a href="../css/selectors.html">
+            
+                    
+                    선택자
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../css/properties.html">
+            
+                <a href="../css/properties.html">
+            
+                    
+                    속성
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../javascript/general.html">
+            
+                <a href="../javascript/general.html">
+            
+                    
+                    자바스크립트 일반
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../javascript/method.html">
+            
+                <a href="../javascript/method.html">
+            
+                    
+                    메소드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../javascript/DOMAPI.html">
+            
+                <a href="../javascript/DOMAPI.html">
+            
+                    
+                    DOM API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    Typescript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../typescript/general.html">
+            
+                <a href="../typescript/general.html">
+            
+                    
+                    타입스크립트 일반
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    JWT
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../jwt/sign.html">
+            
+                <a href="../jwt/sign.html">
+            
+                    
+                    sign()
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" >
+            
+                <span>
+            
+                    
+                    bcrypt
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.6.1" data-path="recommandAsync.html">
+            
+                <a href="recommandAsync.html">
+            
+                    
+                    Async vs Sync
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" >
+            
+                <span>
+            
+                    
+                    Axios
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../axios/withCookies.html">
+            
+                <a href="../axios/withCookies.html">
+            
+                    
+                    쿠키
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" >
+            
+                <span>
+            
+                    
+                    HTTP
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.8.1" data-path="../http/statusCode.html">
+            
+                <a href="../http/statusCode.html">
+            
+                    
+                    상태코드
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" >
+            
+                <span>
+            
+                    
+                    프레임워크 & 툴
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.9.1" data-path="../frameworks-and-tools/monorepo.html">
+            
+                <a href="../frameworks-and-tools/monorepo.html">
+            
+                    
+                    모노레포 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.2" data-path="../frameworks-and-tools/express.html">
+            
+                <a href="../frameworks-and-tools/express.html">
+            
+                    
+                    Express.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.3" data-path="../frameworks-and-tools/react.html">
+            
+                <a href="../frameworks-and-tools/react.html">
+            
+                    
+                    React.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" >
+            
+                <span>
+            
+                    
+                    Java ☕️
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.10.1" data-path="../java/class.html">
+            
+                <a href="../java/class.html">
+            
+                    
+                    클래스/객체
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.2" data-path="../java/interface.html">
+            
+                <a href="../java/interface.html">
+            
+                    
+                    인터페이스
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.3" data-path="../java/accessModifier.html">
+            
+                <a href="../java/accessModifier.html">
+            
+                    
+                    접근 지정자
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.4" data-path="../java/method.html">
+            
+                <a href="../java/method.html">
+            
+                    
+                    메소드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.5" data-path="../java/static.html">
+            
+                <a href="../java/static.html">
+            
+                    
+                    static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.6" data-path="../java/final.html">
+            
+                <a href="../java/final.html">
+            
+                    
+                    final
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.7" data-path="../java/generalJava.html">
+            
+                <a href="../java/generalJava.html">
+            
+                    
+                    자바 일반
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" >
+            
+                <span>
+            
+                    
+                    Python3
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.11.1" data-path="../python/functionAndMethod.html">
+            
+                <a href="../python/functionAndMethod.html">
+            
+                    
+                    유용한 함수 & 메소드 정리
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" >
+            
+                <span>
+            
+                    
+                    Git/GitHub
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.12.1" data-path="../gitGithub/general.html">
+            
+                <a href="../gitGithub/general.html">
+            
+                    
+                    Git 일반
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" >
+            
+                <span>
+            
+                    
+                    SQL
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.13.1" data-path="../SQL/basic.html">
+            
+                <a href="../SQL/basic.html">
+            
+                    
+                    SQL 기초
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13.2" data-path="../SQL/database.html">
+            
+                <a href="../SQL/database.html">
+            
+                    
+                    SQL DATABASE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" >
+            
+                <span>
+            
+                    
+                    프로그래밍 모든 것
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.14.1" data-path="../cs/term.html">
+            
+                <a href="../cs/term.html">
+            
+                    
+                    용어정리
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.2" data-path="../cs/shellCommands.html">
+            
+                <a href="../cs/shellCommands.html">
+            
+                    
+                    쉘 커멘드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.3" data-path="../cs/editer.html">
+            
+                <a href="../cs/editer.html">
+            
+                    
+                    편집기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.4" data-path="../cs/regexp.html">
+            
+                <a href="../cs/regexp.html">
+            
+                    
+                    정규표현식
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    타임라인
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../timeline/2021.html">
+            
+                <a href="../timeline/2021.html">
+            
+                    
+                    2021
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../timeline/2022.html">
+            
+                <a href="../timeline/2022.html">
+            
+                    
+                    2022
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Async vs Sync</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="hash-vs-hashsync"><code>hash()</code> vs <code>hashSync()</code></h2>
+<blockquote>
+<p>Why is async mode recommended over sync mode?
+If you are using bcrypt on a simple script, using the sync mode is perfectly fine. However, if you are using bcrypt on a server, the async mode is recommended. This is because the hashing done by bcrypt is CPU intensive, so the sync version will block the event loop and prevent your application from servicing any other inbound requests or events. The async version uses a thread pool which does not block the main event loop.</p>
+<p><a href="https://www.npmjs.com/package/bcrypt" target="_blank">NPM &#xBB38;&#xC11C;</a></p>
+</blockquote>
+<p>&#xACF5;&#xC2DD;&#xBB38;&#xC11C;&#xC5D0; &#xB530;&#xB974;&#xBA74;, &#xC11C;&#xBC84;&#xC5D0;&#xC11C; <code>hash()</code>, <code>compare()</code> &#xC0AC;&#xC6A9; &#xC2DC; &#xBE44;&#xB3D9;&#xAE30; &#xCC98;&#xB9AC;&#xB97C; &#xAD8C;&#xC7A5;&#xD568;. &#xB450; &#xC791;&#xC5C5;&#xC740; CPU &#xC790;&#xC6D0;&#xC744; &#xB9CE;&#xC774; &#xC18C;&#xBAA8;&#xD558;&#xBBC0;&#xB85C; <code>hashSync()</code>, <code>compareSync()</code>&#xB97C; &#xD1B5;&#xD574; &#xB3D9;&#xAE30; &#xCC98;&#xB9AC;&#xB85C; &#xAD6C;&#xD604;&#xD558;&#xBA74; &#xC11C;&#xBC84;&#xAC00; &#xB2E4;&#xB978; &#xC774;&#xBCA4;&#xD2B8;&#xC5D0; &#xB300;&#xC751;&#xD558;&#xC9C0; &#xBABB;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC74C;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> hash = hashSync(password, salt); <span class="hljs-comment">// &#x26D4;&#xFE0F; &#xC11C;&#xBC84; &#xC791;&#xC5C5;&#xC5D0;&#xC11C; &#xAD8C;&#xC7A5;&#xD558;&#xC9C0; &#xC54A;&#xC74C;</span>
+
+<span class="hljs-keyword">const</span> hash <span class="hljs-keyword">await</span> hash(password, salt); <span class="hljs-comment">// &#x2705; &#xAD8C;&#xC7A5;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Async vs Sync","level":"1.3.6.1","depth":3,"next":{"title":"Axios","level":"1.3.7","depth":2,"ref":"","articles":[{"title":"쿠키","level":"1.3.7.1","depth":3,"path":"pages/axios/withCookies.md","ref":"pages/axios/withCookies.md","articles":[]}]},"previous":{"title":"bcrypt","level":"1.3.6","depth":2,"ref":"","articles":[{"title":"Async vs Sync","level":"1.3.6.1","depth":3,"path":"pages/bcrypt/recommandAsync.md","ref":"pages/bcrypt/recommandAsync.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/bcrypt/recommandAsync.md","mtime":"2022-07-03T04:01:36.685Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-14T12:03:51.357Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
